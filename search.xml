@@ -3,6 +3,265 @@
   
     
     <entry>
+      <title><![CDATA[Markdown语法]]></title>
+      <url>/markdown-yu-fa.html</url>
+      <content type="html"><![CDATA[<h1 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 <strong>#</strong> 号可表示 1-6 级标题，一级标题对应一个 <strong>#</strong> 号，二级标题对应两个 <strong>#</strong> 号，以此类推。</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 一级标题
+## 二级标题
+### 三级标题
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>显示效果：</p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3></blockquote>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>编辑模式下可以在段落后面使用一个空行来表示重新开始一个段落。</p>
+<pre class="line-numbers language-sh"><code class="language-sh">chapter1
+
+chapter2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>可以使用以下几种字体：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">*斜体文本*
+_斜体文本_
+**粗体文本**
+__粗体文本__
+***粗斜体文本***
+___粗斜体文本___
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>显示效果：</p>
+<blockquote>
+<p><em>斜体文本</em><br><em>斜体文本</em><br><strong>粗体文本</strong><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><em><strong>粗斜体文本</strong></em></p>
+</blockquote>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
+<pre><code>***
+---
+___
+</code></pre>
+<p>显示效果：</p>
+<blockquote>
+<hr>
+<hr>
+<hr>
+</blockquote>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 <strong>~~</strong> 即可</p>
+<pre><code>~~haha~~
+</code></pre>
+<p>显示效果：</p>
+<blockquote>
+<p><del>haha</del></p>
+</blockquote>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>下划线可以通过 HTML 的 <strong><u></strong> 标签来实现：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>带下划线文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>显示效果：</p>
+<blockquote>
+<p><u>带下划线文本</u></p>
+</blockquote>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>支持有序列表和无序列表。</p>
+<p>无序列表使用星号(<em>****)、加号(<strong>+</strong>)或是减号(</em>*-**)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">* 第一项
+
++ 第一项
+
+- 第一项
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>有序列表使用数字并加上<code>.</code>号来表示</p>
+<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>区块引用是在段落开头使用 <code>&gt;</code> 符号 ，然后后面紧跟一个<strong>空格</strong>符号：</p>
+<pre><code>&gt; 区块引用
+</code></pre>
+<p>显示结果：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个<code>&gt;</code> 符号是最外层，两个 <code>&gt;</code> 符号是第一层嵌套，以此类推：</p>
+<pre><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套
+</code></pre>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p> 第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>另外，在区块中可以保持其他语法的格式效果</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>使用 ``` 表示 或者 ` 表示
+</code></pre>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><pre class="line-numbers language-sh"><code class="language-sh">[链接名称](链接地址)
+
+或者
+
+<链接地址>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a href="http://hpstu.github.io/">这是一个链接</a></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
+<li>开头一个感叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址（或者文件地址，最好使用相对地址），最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</li>
+</ul>
+<pre><code>![alt 属性文本](图片地址)
+
+![alt 属性文本](图片地址 &quot;可选标题&quot;)
+</code></pre>
+<p> 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
+<pre><code>&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;
+</code></pre>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 <strong>|</strong> 来分隔不同的单元格，使用 <strong>-</strong> 来分隔表头和其他行。</p>
+<pre class="line-numbers language-sh"><code class="language-sh">|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>我们可以设置表格的对齐方式：</strong></p>
+<ul>
+<li><strong>-:</strong> 设置内容和标题栏居右对齐。</li>
+<li><strong>:-</strong> 设置内容和标题栏居左对齐。</li>
+<li><strong>:-:</strong> 设置内容和标题栏居中对齐。</li>
+</ul>
+<pre><code>| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+</code></pre>
+<h2 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h2><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 </p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>使用反斜杠转义特殊字符：</p>
+<pre><code>\
+</code></pre>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>待更…</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Eigen]]></title>
+      <url>/eigen.html</url>
+      <content type="html"><![CDATA[<h1 id="Eigen"><a href="#Eigen" class="headerlink" title="Eigen"></a>Eigen</h1><pre class="line-numbers language-c++"><code class="language-c++">a = a.transpose(); // !!! do NOT do this !!!
+// For in-place transposition, as for instance in a = a.transpose(), simply use the transposeInPlace() function:
+a.transposeInPlace();
+//  Eigen treats matrix multiplication as a special case and takes care of introducing a temporary here, so it will compile m=m*m as:
+// tmp = m*m;
+// m = tmp;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-C++"><code class="language-C++">#include <iostream>
+#include <Eigen/Dense>
+ 
+using namespace std;
+int main()
+&#123;
+  Eigen::Matrix2d mat;
+  mat << 1, 2,
+         3, 4;
+  cout << "Here is mat.sum():       " << mat.sum()       << endl;
+  cout << "Here is mat.prod():      " << mat.prod()      << endl;
+  cout << "Here is mat.mean():      " << mat.mean()      << endl;
+  cout << "Here is mat.minCoeff():  " << mat.minCoeff()  << endl;
+  cout << "Here is mat.maxCoeff():  " << mat.maxCoeff()  << endl;
+  cout << "Here is mat.trace():     " << mat.trace()     << endl;
+&#125;
+/*
+Here is mat.sum():       10
+Here is mat.prod():      24
+Here is mat.mean():      2.5
+Here is mat.minCoeff():  1
+Here is mat.maxCoeff():  4
+Here is mat.trace():     5
+*/
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[c++多线程]]></title>
+      <url>/c-duo-xian-cheng.html</url>
+      <content type="html"><![CDATA[<h1 id="C-多线程"><a href="#C-多线程" class="headerlink" title="C++多线程"></a>C++多线程</h1><p>引入头文件：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <thread>  
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>链接库：</p>
+<pre class="line-numbers language-cmake"><code class="language-cmake">target_link_libraries(xxx pthread)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>线程</strong><br>• 进程可以包含多个线程<br>• 主线程：从main函数开始，main函数执行完，主线程结束，进程结束<br>• 其他线程：需要我们自己创建，入口可以是函数、类、lambda表达式<br>• 进程是否执行完毕的标志是：主线程是否执行完，如果主线程执行完毕了，就代表整个进程执行完<br>了，一般来说，此时如果其他子线程还没有执行完，也会被强行终止</p>
+<h2 id="创建子线程"><a href="#创建子线程" class="headerlink" title="创建子线程"></a>创建子线程</h2><pre class="line-numbers language-c++"><code class="language-c++">std::thread    // 多线程类
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">int main()&#123;
+    
+    thrad th1(xx);        // 使用其创建子线程对象的时候，子线程就直接运行了。
+    ...
+    th1.join();            // 汇合，表示等待子线程运行完，主线程再接着运行。（小溪汇入大河）
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">int main()&#123;
+    
+    thrad th2(xx);        // 使用其创建子线程对象的时候，子线程就直接运行了。
+    ...
+    th2.detach();        // 分离，表示子线程脱离子线程，各走各的，互不相关（分流了），注意，此时如果主线程运行完毕，则直接关闭所有线程，子线程没运行完也停止运行。（夭折了），少用。
+    
+    th2.joinable()        // joinable()判断是否可以成功使用join()或者detach(),如果返回true，证明可以调用join()或者detach(),如果返回false，证明调用过join()或者detach()，join()和detach()都不能再调用了
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>查看线程ID:</p>
+<pre class="line-numbers language-c++"><code class="language-c++"> this_thread::get_id()    //  this_thread是一个namespace,
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="进程间安全（防止读写冲突，就给它上锁）"><a href="#进程间安全（防止读写冲突，就给它上锁）" class="headerlink" title="进程间安全（防止读写冲突，就给它上锁）"></a>进程间安全（防止读写冲突，就给它上锁）</h2><pre class="line-numbers language-c++"><code class="language-c++">#include <mutex>  // 互斥锁头文件 ，mutex也是一个对象，相当于一把锁。
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>使用方法：</p>
+<p>先创建一个锁对象：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">mutex myMutex;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>上锁是防止多个线程<strong>同时</strong>对<strong>同一个数据快</strong>进行读写，造成冲突，（也就是前一个线程刚写入一半数据，你就过来读了），正确姿势是等他写完你再读，或读完你再写。所以，当其中一个线程拿到一把锁时：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">// 线程1
+myMutex.lock();            
+cout << "putInData 子线程：放入一个数据" << i << endl;
+dataQuene.push_back(i);
+myMutex.unlock();
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-C++"><code class="language-C++">// 线程2
+myMutex.lock();            
+cout << "takeOutData 子线程：取出一个数据" << dataQuene.front() << endl;
+dataQuene.pop_front();
+myMutex.unlock();
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这两个线程为互斥关系，各自当执行到<code>myMutex.lock()</code>时，必须等一个拿到锁的代码快完整执行到释放锁<code>myMutex.unlock()</code>了，另一个才可能拿到锁继续执行。</p>
+<blockquote>
+<p>注意：<code>lock()</code>与<code>unlock()</code>必须成对出现</p>
+</blockquote>
+<p><strong>lock_guard</strong></p>
+<ul>
+<li>内部构造时相当于执行了lock，析构时相当于执行unlock</li>
+<li>简单但不如lock()和unlock()灵活，通过大括号来实现，控制生命周期</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">mutex myMutex;
+
+&#123;
+    lock_guard<mutex> dataGuard(myMutex);        // lock_guard<mutex>创建对象，参数为锁对象
+    ...
+    ...    
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>unique_lock</strong></p>
+<p>std::unique_lock要比std::lock_guard功能更多，有更多的成员函数，更灵活,但是更灵活的代价是占用空间相对更大一点且相对更慢一点</p>
+<pre><code>mutex myMutex;
+
+&#123;
+    unique_lock&lt;mutex&gt; dataOutUnique(myMutex);    // unique_lock&lt;mutex&gt;创建对象，参数为锁对象
+    ...
+    ...    
+&#125;
+</code></pre>
+<p><strong>死锁产生原因及防止方法</strong></p>
+<p>当两个线程同时拿着两把及以上的相同的锁时，上锁的顺序必须要一致，否则会发生死锁。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[C++面向对象]]></title>
       <url>/c-mian-xiang-dui-xiang.html</url>
       <content type="html"><![CDATA[<h1 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object Oriented"></a>Object Oriented</h1><h2 id="Header-头文件-布局"><a href="#Header-头文件-布局" class="headerlink" title="Header(头文件)布局"></a>Header(头文件)布局</h2><pre class="line-numbers language-c++"><code class="language-c++">#ifndef __COMPLEX__
@@ -80,18 +339,25 @@ cout << c1.real();
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="操作符重载（操作符也相当于是函数）"><a href="#操作符重载（操作符也相当于是函数）" class="headerlink" title="操作符重载（操作符也相当于是函数）"></a>操作符重载（操作符也相当于是函数）</h2><p> 所有的成员函数隐藏了一个<code>this</code>参数（即对象的地址指针），在声明函数的时候<strong>不能</strong>显式声明，但可以显式调用</p>
-<h1 id="Object-Based"><a href="#Object-Based" class="headerlink" title="Object  Based"></a>Object  Based</h1><h2 id="Big-Three-三个特殊函数"><a href="#Big-Three-三个特殊函数" class="headerlink" title="Big Three 三个特殊函数"></a>Big Three 三个特殊函数</h2><pre class="line-numbers language-c++"><code class="language-c++">class String
+<h1 id="Object-Based"><a href="#Object-Based" class="headerlink" title="Object  Based"></a>Object  Based</h1><h2 id="Big-Three-三个特殊函数（class-with-pointer-members-必须有copy-ctor-和-copy-op"><a href="#Big-Three-三个特殊函数（class-with-pointer-members-必须有copy-ctor-和-copy-op" class="headerlink" title="Big Three 三个特殊函数（class with pointer members 必须有copy ctor 和 copy op  )"></a>Big Three 三个特殊函数（class with pointer members 必须有copy ctor 和 copy op  )</h2><pre class="line-numbers language-c++"><code class="language-c++">class String
 &#123;
 public:
 String(const char* cstr = 0); 
 String(const String& str);                 // 1. 拷贝构造函数，参数为相同对象
 String& operator=(const String& str);     // 2. 拷贝赋值函数，参数为相同对象
-~String();                         // 3. 析构函数，当对象死亡时自动调用它，并不是它让对象死亡
+~String();                          // 3. 析构函数，当对象死亡时自动调用它，并不是它让对象死亡
 char* get_c_str() const &#123; return m_data; &#125;
 private:
 char* m_data;
 &#125;;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">Complex* pc = new Complex(1,2);
+...
+delete pc;
+// 编译器转化为：
+//Complex::~Complex(pc); // 析构函数
+//operator delete(pc); // 释放内存，其内部调用 free(pc)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       
         
@@ -124,7 +390,9 @@ TYPE const value;
 <p>const修饰类的成员函数，用const修饰的成员函数不能改变对象的成员变量。一般把const写在成员函数的最后。</p>
 </li>
 </ol>
-<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>声明静态成员，包括静态数据成员和静态成员函数，它们被类的所有对象共享，静态数据成员在使用前必须初始化，而静态成员函数只能访问静态数据成员，不能访问非静态数据成员，因为该函数不含有this指针。</p>
+<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>声明静态成员，包括静态数据成员和静态成员函数，它们被类的所有对象共享，静态数据成员在使用前必须初始化，而静态成员函数只能访问静态数据成员，不能访问非静态数据成员，因为该函数不含有this指针。、</p>
+<p>写在class内的东西都是声明而不是定义，因此对于静态成员需要在类外面给出其定义。静态成员在初始化时不能加static关键字，因为加了static关键字表明该变量只在当前文件内访问，而类设计时类中的成员变量是可能在其他文件中被访问的，两者相悖，因此这里不能加static关键字。</p>
+<p>当静态成员为public时对其的访问可用对象名加.符号进行访问，也可以用类名加：：作用域解析运算符进行访问。</p>
 <ol>
 <li><p>面向过程的static关键字 </p>
 <p>（1）静态全局变量：</p>
@@ -138,13 +406,13 @@ TYPE const value;
 <p>   （2）静态局部变量：<br>   在局部变量前，加上关键字static，该变量就被定义成为一个静态局部变量。<br>   静态局部变量保存在全局数据区，而不是保存在栈中，每次的值保持到下一次函数调用，直到下次赋新值。<br>   静态局部变量有以下特点：</p>
 <ul>
 <li>1、该变量在全局数据区分配内存；</li>
-<li>2、静态局部变量在程序执行到该对象的声明处时被首次初始化，即以后的函数调用不再进行初始化；</li>
+<li>2、静态局部变量在程序执行到该对象的声明处时被首次初始化，即以后的函数调用**不再进行初始化(跳过 <code>static int a = 4;</code>这一句，后面的赋值<code>a = 5</code>照常执行)**；</li>
 <li>3、静态局部变量一般在声明处初始化，如果没有显式初始化，程序自动初始化为0；</li>
 <li>4、它始终驻留在全局数据区，直到程序运行结束。但其作用域为局部作用域，当定义它的函数或语句块结束时，其作用域随之结束</li>
 </ul>
 <p>   （3）静态函数：<br>   在函数的返回类型前加上static关键字，函数即被定义为静态函数。静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其它文件使用。其它文件中可以定义相同名字的函数，不会发生冲突。</p>
 <ol start="2">
-<li>面向对象的static关键字<br>（1）静态数据成员<br>在类内数据成员的声明前加上关键字static，该数据成员就是类内的静态数据成员。<br>对于非静态数据成员，每个类对象都有自己的拷贝。而静态数据成员被当作是类的成员。无论这个类的对象被定义了多少个，静态数据成员在程序中也只有一份拷贝，由该类型的所有对象共享访问。</li>
+<li>面向对象的static关键字<br>（1）静态数据成员<br>在类内数据成员的声明前加上关键字static，该数据成员就是类内的静态数据成员。<br>对于非静态数据成员，每个类对象都有自己的拷贝。而静态数据成员被当作是类的成员。无论这个类的对象被定义了多少个，静态数据成员在程序中也只有一份拷贝，由该类型的所有对象共享访问。静态函数可以访问类的静态成员变量，且只能访问静态成员变量。调用时可以使用对象名加.符号进行调用，也可以使用类名加：：作用于解析运算符进行调用。因此静态函数中不能使用this指针访问静态成员，因为当使用：：进行<strong>调用静态函数时，此时没有传入this指针，所以它访问的数据都不是自己的，而是类共有的，这个数据只能是类成员变量，即静态数据了。</strong></li>
 </ol>
 <ul>
 <li>1、对该类的多个对象来说，静态数据成员只分配一次内存，供所有对象共用。</li>
@@ -152,7 +420,7 @@ TYPE const value;
 <li>3、静态数据成员和普通数据成员一样遵从public,protected,private访问规则。</li>
 <li>4、静态数据成员在全局数据区分配内存，属于本类的所有对象共享，所以，它不属于特定的类对象。</li>
 <li>5、在没有产生类对象时其作用域就可见，即在没有产生类的实例时，我们就可以操作它；</li>
-<li>6、静态数据成员初始化与一般数据成员初始化不同。静态数据成员初始化的格式为： <code>＜数据类型＞＜类名＞::＜静态数据成员名＞=＜值＞</code></li>
+<li>6、静态数据成员初始化与一般数据成员初始化不同。静态数据成员初始化的格式为： <code>＜数据类型＞＜类名＞::＜静态数据成员名＞=＜值＞</code>（前面不加<code>static</code>,否则就被锁定只能在这个文件使用了，这不是类想要的结果）</li>
 <li>7、类的静态数据成员有两种访问形式：<code>＜类对象名＞.＜静态数据成员名＞ 或 ＜类类型名＞::＜静态数据成员名＞</code></li>
 <li>8、静态数据成员没有进入程序的全局名字空间，因此不存在与程序中其它全局名字冲突的可能性。</li>
 </ul>
@@ -202,6 +470,23 @@ TYPE const value;
 </ul>
 <h2 id="cast"><a href="#cast" class="headerlink" title="*_cast"></a>*_cast</h2><p>显式类型转换，C++延续了C风格的强制类型转换的语法。dynamic_cast是动态的，需要运行时支持；其它都是静态检查，相比C风格的类型转换更加细化，增强了类型安全性。C++支持四种关键字对不同形式的类型转换进行分别处理。使用格式：<br><code>转换关键字&lt;类型&gt;(表达式)</code></p>
 <p>1、<code>static_cast</code>和C风格类型转换功能完全相同，它属于在编译时期静态的类型转换。如果把一个double类型转换为整形，形式如下：<br><code>static_cast&lt;int&gt;(0.1);</code><br><code>static_cast</code>功能有所限制，比如不能转化struct类型到int，不能转化指针到double等。另外，它不能在转换中消除const和volatile属性。</p>
+<p>运算符 <strong><code>static_cast</code></strong> <strong>可用于将指向基类的指针转换为指向派生类的指针等操作</strong>。 此类转换并非始终安全。</p>
+<p>在下面的示例中，因为 <code>D* pd2 = static_cast&lt;D*&gt;(pb);</code> 可能有不在 <code>D</code> 内的字段和方法，所以行 <code>B</code> 不安全。 但是，因为 <code>B* pb2 = static_cast&lt;B*&gt;(pd);</code> 始终包含所有 <code>D</code>，所以行 <code>B</code> 是安全的转换。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">// static_cast_Operator.cpp
+// compile with: /LD
+class B &#123;&#125;;
+
+class D : public B &#123;&#125;;
+
+void f(B* pb, D* pd) &#123;
+   D* pd2 = static_cast<D*>(pb);   // Not safe, D can have fields
+                                   // and methods that are not in B.
+
+   B* pb2 = static_cast<B*>(pd);   // Safe conversion, D always
+                                   // contains all of B.
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>与 <a href="https://docs.microsoft.com/zh-cn/cpp/cpp/dynamic-cast-operator?view=msvc-170">dynamic_cast相反</a>，不会对 的转换进行运行时 检查 <code>pb</code>。 由 <code>pb</code> 指向的对象可能不是 <code>D</code> 类型的对象，在这种情况下使用 <code>*pd2</code> 会是灾难性的。 例如，调用 <code>D</code> 类（而非 <code>B</code> 类）的成员函数可能会导致访问冲突</p>
 <p>2、const_cast用于消除引用或者指针的const或者volatile属性。<br><code>const int &amp;ci=100;</code><br><code>int &amp;i=const_cast&lt;int&amp;&gt;(ci);</code><br>通过这种方式，ci引用的内存单元虽然无法通过修改ci改变，但是可以修改i改变内存的值。这里是把const属性消除，这里想多说一点的是把const加上的问题。</p>
 <p>3、<code>dynamic_cast</code>一般出现在类到子类或兄弟类的转换，并要求基类有虚函数。而且它能提供转换后的结果和状态，一旦转换失败则返回空指针。如果没有继承关系的转换一般使用<code>static_cast</code>。</p>
 <p>4、<code>reinterpret_casts</code>一般用作函数指针的转换，而且使用它的代码可移植性很差，因为无法确定编译器的函数调用方式等。有可能会导致函数调用出错，一般不常用。</p>

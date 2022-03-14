@@ -455,7 +455,7 @@ class ostream;          // forward decla">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -690,18 +690,25 @@ cout << c1.real();
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="操作符重载（操作符也相当于是函数）"><a href="#操作符重载（操作符也相当于是函数）" class="headerlink" title="操作符重载（操作符也相当于是函数）"></a>操作符重载（操作符也相当于是函数）</h2><p> 所有的成员函数隐藏了一个<code>this</code>参数（即对象的地址指针），在声明函数的时候<strong>不能</strong>显式声明，但可以显式调用</p>
-<h1 id="Object-Based"><a href="#Object-Based" class="headerlink" title="Object  Based"></a>Object  Based</h1><h2 id="Big-Three-三个特殊函数"><a href="#Big-Three-三个特殊函数" class="headerlink" title="Big Three 三个特殊函数"></a>Big Three 三个特殊函数</h2><pre class="line-numbers language-c++"><code class="language-c++">class String
+<h1 id="Object-Based"><a href="#Object-Based" class="headerlink" title="Object  Based"></a>Object  Based</h1><h2 id="Big-Three-三个特殊函数（class-with-pointer-members-必须有copy-ctor-和-copy-op"><a href="#Big-Three-三个特殊函数（class-with-pointer-members-必须有copy-ctor-和-copy-op" class="headerlink" title="Big Three 三个特殊函数（class with pointer members 必须有copy ctor 和 copy op  )"></a>Big Three 三个特殊函数（class with pointer members 必须有copy ctor 和 copy op  )</h2><pre class="line-numbers language-c++"><code class="language-c++">class String
 &#123;
 public:
 String(const char* cstr = 0); 
 String(const String& str);                 // 1. 拷贝构造函数，参数为相同对象
 String& operator=(const String& str);     // 2. 拷贝赋值函数，参数为相同对象
-~String();                         // 3. 析构函数，当对象死亡时自动调用它，并不是它让对象死亡
+~String();                          // 3. 析构函数，当对象死亡时自动调用它，并不是它让对象死亡
 char* get_c_str() const &#123; return m_data; &#125;
 private:
 char* m_data;
 &#125;;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">Complex* pc = new Complex(1,2);
+...
+delete pc;
+// 编译器转化为：
+//Complex::~Complex(pc); // 析构函数
+//operator delete(pc); // 释放内存，其内部调用 free(pc)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -778,41 +785,40 @@ char* m_data;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-mian-xiang-dui-xiang.html">
+                <a href="/c-duo-xian-cheng.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="C++面向对象">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="c++多线程">
                         
-                        <span class="card-title">C++面向对象</span>
+                        <span class="card-title">c++多线程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Object OrientedHeader(头文件)布局#ifndef __COMPLEX__
-#define __COMPLEX__
+                            C++多线程引入头文件：
+#include   
 
-#include 
+链接库：
+target_link_libraries(xxx pthread)
 
-class ostream;          // forward decla
+线程• 进程可以包含多个线程• 主线程：从main函数开始，main函数执行完，主线程结束，进程结束• 其
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-12
+                        </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -827,7 +833,7 @@ class ostream;          // forward decla
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="C++关键字">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++关键字">
                         
                         <span class="card-title">C++关键字</span>
                     </div>
@@ -983,7 +989,7 @@ const定义常量成员，包括const数据成员和const成员函数，const数
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">19.5k
+            <span class="white-color">21.6k
              丨            
           
 
@@ -1052,7 +1058,7 @@ const定义常量成员，包括const数据成员和const成员函数，const数
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">19.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">21.6k</span>
     </div>
 </footer>
 
