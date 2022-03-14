@@ -4,19 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Markdown语法, 被动学习">
+    <meta name="keywords" content="c++指针, 被动学习">
     <meta name="baidu-site-verification" content="fmlEuI34ir" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="Markdown格式标题使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。
-# 一级标题
-## 二级标题
-### 三级标题
-
-显示效果：
-
-一级标题二级标题三级标题
-段落编辑模式下可以在段落后">
+    <meta name="description" content="C++指针&amp;amp;函数复杂类型解析一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,
+解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高）
+int p; //这是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Markdown语法 | hpstu`s Blog</title>
+    <title>c++指针 | hpstu`s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -458,13 +452,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Markdown语法
+                        c++指针
                     </div>
                 </div>
             </div>
@@ -600,7 +594,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    917
+                    1.1k
                 </div>
                 
 
@@ -618,133 +612,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 <strong>#</strong> 号可表示 1-6 级标题，一级标题对应一个 <strong>#</strong> 号，二级标题对应两个 <strong>#</strong> 号，以此类推。</p>
-<pre class="line-numbers language-sh"><code class="language-sh"># 一级标题
-## 二级标题
-### 三级标题
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>显示效果：</p>
-<blockquote>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3></blockquote>
-<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>编辑模式下可以在段落后面使用一个空行来表示重新开始一个段落。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">chapter1
-
-chapter2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>可以使用以下几种字体：</p>
-<pre class="line-numbers language-sh"><code class="language-sh">*斜体文本*
-_斜体文本_
-**粗体文本**
-__粗体文本__
-***粗斜体文本***
-___粗斜体文本___
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>显示效果：</p>
-<blockquote>
-<p><em>斜体文本</em><br><em>斜体文本</em><br><strong>粗体文本</strong><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><em><strong>粗斜体文本</strong></em></p>
-</blockquote>
-<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
-<pre><code>***
----
-___
-</code></pre>
-<p>显示效果：</p>
-<blockquote>
-<hr>
-<hr>
-<hr>
-</blockquote>
-<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 <strong>~~</strong> 即可</p>
-<pre><code>~~haha~~
-</code></pre>
-<p>显示效果：</p>
-<blockquote>
-<p><del>haha</del></p>
-</blockquote>
-<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>下划线可以通过 HTML 的 <strong><u></strong> 标签来实现：</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>带下划线文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>
+                <h1 id="C-指针-amp-函数"><a href="#C-指针-amp-函数" class="headerlink" title="C++指针&amp;函数"></a>C++指针&amp;函数</h1><h2 id="复杂类型解析"><a href="#复杂类型解析" class="headerlink" title="复杂类型解析"></a>复杂类型解析</h2><p>一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,</p>
+<p>解析原则:<strong>从变量名处起,根据运算符优先级结合,一步一步分析</strong>.（括号的优先级比<code>*</code>优先级高）</p>
+<pre class="line-numbers language-c++"><code class="language-c++">int p; //这是一个普通的整型变量
+int *p; //首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以P是一个返回整型数据的指针
+int p[3]; //首先从P 处开始,先与[]结合,说明P 是一个数组,然后与int 结合,说明数组里的元素是整型的,所以P 是一个由整型数据组成的数组
+int *p[3]; //首先从P 处开始,先与[]结合,因为其优先级比*高,所以P 是一个数组,然后再与*结合,说明数组里的元素是指针类型,然后再与int 结合,说明指针所指向的内容的类型是整型的,所以P 是一个由返回整型数据的指针所组成的数组
+int (*p)[3]; //首先从P 处开始,先与*结合,说明P 是一个指针然后再与[]结合(与"()"这步可以忽略,只是为了改变优先级),说明指针所指向的内容是一个数组,然后再与int 结合,说明数组里的元素是整型的.所以P 是一个指向由整型数据组成的数组的指针
+int **p; //首先从P 开始,先与*结合,说是P 是一个指针,然后再与*结合,说明指针所指向的元素是指针,然后再与int 结合,说明该指针所指向的元素是整型数据.由于二级指针以及更高级的指针极少用在复杂的类型中,所以后面更复杂的类型我们就不考虑多级指针了,最多只考虑一级指针.
+int p(int); //从P 处起,先与()结合,说明P 是一个函数,然后进入()里分析,说明该函数有一个整型变量的参数,然后再与外面的int 结合,说明函数的返回值是一个整型数据
+Int (*p)(int); //从P 处开始,先与指针结合,说明P 是一个指针,然后与()结合,说明指针指向的是一个函数,然后再与()里的int 结合,说明函数有一个int 型的参数,再与最外层的int 结合,说明函数的返回类型是整型,所以P 是一个指向有一个整型参数且返回类型为整型的函数的指针
+int *(*p(int))[3]; //可以先跳过,不看这个类型,过于复杂从P 开始,先与()结合,说明P 是一个函数,然后进入()里面,与int 结合,说明函数有一个整型变量参数,然后再与外面的*结合,说明函数返回的是一个指针,,然后到最外面一层,先与[]结合,说明返回的指针指向的是一个数组,然后再与*结合,说明数组里的元素是指针,然后再与int 结合,说明指针指向的内容是整型数据.所以P 是一个参数为一个整数据且返回一个指向由整型指针变量组成的数组的指针变量的函数.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">int *p[3];
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>显示效果：</p>
-<blockquote>
-<p><u>带下划线文本</u></p>
-</blockquote>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>支持有序列表和无序列表。</p>
-<p>无序列表使用星号(<em>****)、加号(<strong>+</strong>)或是减号(</em>*-**)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
-<pre class="line-numbers language-sh"><code class="language-sh">* 第一项
-
-+ 第一项
-
-- 第一项
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>有序列表使用数字并加上<code>.</code>号来表示</p>
-<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
-<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>区块引用是在段落开头使用 <code>&gt;</code> 符号 ，然后后面紧跟一个<strong>空格</strong>符号：</p>
-<pre><code>&gt; 区块引用
-</code></pre>
-<p>显示结果：</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<p>另外区块是可以嵌套的，一个<code>&gt;</code> 符号是最外层，两个 <code>&gt;</code> 符号是第一层嵌套，以此类推：</p>
-<pre><code>&gt; 最外层
-&gt; &gt; 第一层嵌套
-&gt; &gt; &gt; 第二层嵌套
-</code></pre>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p> 第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>另外，在区块中可以保持其他语法的格式效果</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>使用 ``` 表示 或者 ` 表示
-</code></pre>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><pre class="line-numbers language-sh"><code class="language-sh">[链接名称](链接地址)
-
-或者
-
-<链接地址>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a target="_blank" rel="noopener" href="http://hpstu.github.io/">这是一个链接</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
-<li>开头一个感叹号 !</li>
-<li>接着一个方括号，里面放上图片的替代文字</li>
-<li>接着一个普通括号，里面放上图片的网址（或者文件地址，最好使用相对地址），最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</li>
-</ul>
-<pre><code>![alt 属性文本](图片地址)
-
-![alt 属性文本](图片地址 &quot;可选标题&quot;)
-</code></pre>
-<p> 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
-<pre><code>&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;
-</code></pre>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 <strong>|</strong> 来分隔不同的单元格，使用 <strong>-</strong> 来分隔表头和其他行。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>我们可以设置表格的对齐方式：</strong></p>
-<ul>
-<li><strong>-:</strong> 设置内容和标题栏居右对齐。</li>
-<li><strong>:-</strong> 设置内容和标题栏居左对齐。</li>
-<li><strong>:-:</strong> 设置内容和标题栏居中对齐。</li>
-</ul>
-<pre><code>| 左对齐 | 右对齐 | 居中对齐 |
-| :-----| ----: | :----: |
-| 单元格 | 单元格 | 单元格 |
-| 单元格 | 单元格 | 单元格 |
-</code></pre>
-<h2 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h2><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 </p>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
-<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>使用反斜杠转义特殊字符：</p>
-<pre><code>\
-</code></pre>
-<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>待更…</p>
+<p>首先从变量<code>p</code>开始看起，<code>p</code>与<code>[]</code>结合，说明<code>p</code>是一个数组，那么就要问了，这个数据里放的数据是什么类型，欸，与最近的<code>*</code>结合，说明这个数组里的数据是指针，那么又要问了，这个指针指向什么类型，哦，原来指的是<code>int</code>类型，那么结果就出来了。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">int (*p)[3]; 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>同理: <code>p</code>是一个指针，这个指针指向一个数组，这个数组的类型是<code>int</code>型。</p>
+<h2 id="函数基本知识"><a href="#函数基本知识" class="headerlink" title="函数基本知识"></a>函数基本知识</h2><p>C++对于返回值的类型有一定的限制：不能是数组，可以是其它任何类型–整数、浮点数、指针、结构和对象。（数组可以作为结构、对象组成部分来返回）</p>
+<p><strong>在C++中，当（且仅当）用于函数头或函数原型中，int * arr和int arr[ ] 的含义才相同，都意味着arr是一个int指针。</strong></p>
 
             </div>
             <hr />
@@ -779,9 +666,9 @@ ___
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Markdown语法》
+                    《c++指针》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/markdown-yu-fa.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/c-zhi-zhen.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 HP
             </a> 采用
@@ -825,21 +712,20 @@ ___
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-zhi-zhen.html">
+                <a href="/c-rong-qi.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c++指针">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C++容器">
                         
-                        <span class="card-title">c++指针</span>
+                        <span class="card-title">C++容器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++指针&amp;函数复杂类型解析一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,
-解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高）
-int p; //这是
+                            C++容器vector
+vector是STL中最常见的容器，它是一种顺序容器，支持随机访问。vector是一块连续分配的内存，从数据安排的角度来讲，和数组极其相似，不同的地方就是：数组是静态分配空间，一旦分配了空间的大小，就不可再改变了；而
                         
                     </div>
                     <div class="publish-info">
@@ -861,25 +747,32 @@ int p; //这是
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/eigen.html">
+                <a href="/markdown-yu-fa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Eigen">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Markdown语法">
                         
-                        <span class="card-title">Eigen</span>
+                        <span class="card-title">Markdown语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Eigena = a.transpose(); // !!! do NOT do this !!!
-// For in-place transposition, as for instance in a = a.transpose(), s
+                            Markdown格式标题使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。
+# 一级标题
+## 二级标题
+### 三级标题
+
+显示效果：
+
+一级标题二级标题三级标题
+段落编辑模式下可以在段落后
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-14
                             </span>
                         <span class="publish-author">
                             

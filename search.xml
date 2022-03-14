@@ -3,6 +3,123 @@
   
     
     <entry>
+      <title><![CDATA[C++容器]]></title>
+      <url>/c-rong-qi.html</url>
+      <content type="html"><![CDATA[<h1 id="C-容器"><a href="#C-容器" class="headerlink" title="C++容器"></a>C++容器</h1><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><blockquote>
+<p>vector是STL中最常见的容器，它是一种顺序容器，支持随机访问。vector是一块连续分配的内存，从数据安排的角度来讲，和数组极其相似，不同的地方就是：数组是静态分配空间，一旦分配了空间的大小，就不可再改变了；而vector是动态分配空间，随着元素的不断插入，它会按照自身的一套机制不断扩充自身的容量。</p>
+</blockquote>
+<blockquote>
+<p>vector的扩充机制：按照容器现在容量的一倍进行增长。vector容器分配的是一块连续的内存空间，每次容器的增长，并不是在原有连续的内存空间后再进行简单的叠加，而是重新申请一块更大的新内存，并把现有容器中的元素逐个复制过去，然后销毁旧的内存。</p>
+</blockquote>
+<blockquote>
+<p>vector数据结构，采用的是连续的线性空间，属于线性存储.</p>
+</blockquote>
+<ol>
+<li><code>vector</code>对象的定义和初始化</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>操作调用方式</th>
+<th>操作说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Vector&lt;T&gt; v1; </code></td>
+<td><code>Vector</code>保存类型为T的对象。默认构造函数<code>v1</code>为空</td>
+</tr>
+<tr>
+<td><code>Vector&lt;T&gt; v2(v1);</code></td>
+<td><code>V2</code>是<code>v1</code>的一个副本</td>
+</tr>
+<tr>
+<td><code>Vector&lt;T&gt; v3(n , i);</code></td>
+<td><code>V3</code>包含n个值为i的元素</td>
+</tr>
+<tr>
+<td><code>Vector&lt;T&gt; v4(n);</code></td>
+<td><code>V4</code>含有值初始化的元素的n个副本</td>
+</tr>
+</tbody></table>
+<p>注：对C++的容器来说，动态添加元素的效率，要比直接静态初始化元素的效率高</p>
+<p>例1.1 :声明一个int向量以替代一维的数组:<code>vector &lt;int&gt; a;</code>(等于声明了一个int数组a[],大小没有指定,可以动态的向里面添加删除)。</p>
+<p>例1.2: 用<code>vector</code>代替二维数组.其实只要声明一个一维数组向量即可,而一个数组的名字其实代表的是它的首地址,所以只要声明一个地址的向量即可,即:<code>ector &lt;int *&gt; a</code>.</p>
+<ol start="2">
+<li>对象的操作</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>操作调用方式</th>
+<th>操作说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>v.empty()</code></td>
+<td>判断v是否为空</td>
+</tr>
+<tr>
+<td><code>v.size()</code></td>
+<td>返回v中元素的个数</td>
+</tr>
+<tr>
+<td><code> v.push_back(t)</code></td>
+<td>向v的末尾添加一个元素</td>
+</tr>
+<tr>
+<td><code>V[n]    </code></td>
+<td>返回v中位置为n的元素</td>
+</tr>
+<tr>
+<td><code>V1 = v2 </code></td>
+<td>把v1中元素替换为v2中元素副本</td>
+</tr>
+<tr>
+<td><code>V1==v2   </code></td>
+<td>判断是否相等</td>
+</tr>
+<tr>
+<td><code> !=, &lt;, &lt;=, &gt;, &gt;=</code></td>
+<td>直接用于vector对象的相互比较</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>1.push_back  在数组的最后添加一个数据<br>2.pop_back  去掉数组的最后一个数据<br>3.at        得到编号位置的数据<br>4.begin      得到数组头的指针<br>5.end       得到数组的最后一个单元+1的指针<br>6．front    得到数组头的引用<br>7.back      得到数组的最后一个单元的引用<br>8.max_size   得到vector最大可以是多大<br>9.capacity    当前vector分配的大小<br>10.size      当前使用数据的大小<br>11.resize     改变当前使用数据的大小，如果它比当前使用的大，者填充默认值<br>12.reserve   改变当前vecotr所分配空间的大小<br>13.erase     删除指针指向的数据项<br>14.clear     清空当前的vector<br>15.rbegin    将vector反转后的开始指针返回(其实就是原来的end-1)<br>16.rend     将vector反转构的结束指针返回(其实就是原来的begin-1)<br>17.empty    判断vector是否为空<br>18.swap     与另一个vector交换数据</p>
+</blockquote>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[c++指针]]></title>
+      <url>/c-zhi-zhen.html</url>
+      <content type="html"><![CDATA[<h1 id="C-指针-amp-函数"><a href="#C-指针-amp-函数" class="headerlink" title="C++指针&amp;函数"></a>C++指针&amp;函数</h1><h2 id="复杂类型解析"><a href="#复杂类型解析" class="headerlink" title="复杂类型解析"></a>复杂类型解析</h2><p>一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,</p>
+<p>解析原则:<strong>从变量名处起,根据运算符优先级结合,一步一步分析</strong>.（括号的优先级比<code>*</code>优先级高）</p>
+<pre class="line-numbers language-c++"><code class="language-c++">int p; //这是一个普通的整型变量
+int *p; //首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以P是一个返回整型数据的指针
+int p[3]; //首先从P 处开始,先与[]结合,说明P 是一个数组,然后与int 结合,说明数组里的元素是整型的,所以P 是一个由整型数据组成的数组
+int *p[3]; //首先从P 处开始,先与[]结合,因为其优先级比*高,所以P 是一个数组,然后再与*结合,说明数组里的元素是指针类型,然后再与int 结合,说明指针所指向的内容的类型是整型的,所以P 是一个由返回整型数据的指针所组成的数组
+int (*p)[3]; //首先从P 处开始,先与*结合,说明P 是一个指针然后再与[]结合(与"()"这步可以忽略,只是为了改变优先级),说明指针所指向的内容是一个数组,然后再与int 结合,说明数组里的元素是整型的.所以P 是一个指向由整型数据组成的数组的指针
+int **p; //首先从P 开始,先与*结合,说是P 是一个指针,然后再与*结合,说明指针所指向的元素是指针,然后再与int 结合,说明该指针所指向的元素是整型数据.由于二级指针以及更高级的指针极少用在复杂的类型中,所以后面更复杂的类型我们就不考虑多级指针了,最多只考虑一级指针.
+int p(int); //从P 处起,先与()结合,说明P 是一个函数,然后进入()里分析,说明该函数有一个整型变量的参数,然后再与外面的int 结合,说明函数的返回值是一个整型数据
+Int (*p)(int); //从P 处开始,先与指针结合,说明P 是一个指针,然后与()结合,说明指针指向的是一个函数,然后再与()里的int 结合,说明函数有一个int 型的参数,再与最外层的int 结合,说明函数的返回类型是整型,所以P 是一个指向有一个整型参数且返回类型为整型的函数的指针
+int *(*p(int))[3]; //可以先跳过,不看这个类型,过于复杂从P 开始,先与()结合,说明P 是一个函数,然后进入()里面,与int 结合,说明函数有一个整型变量参数,然后再与外面的*结合,说明函数返回的是一个指针,,然后到最外面一层,先与[]结合,说明返回的指针指向的是一个数组,然后再与*结合,说明数组里的元素是指针,然后再与int 结合,说明指针指向的内容是整型数据.所以P 是一个参数为一个整数据且返回一个指向由整型指针变量组成的数组的指针变量的函数.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">int *p[3];
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>首先从变量<code>p</code>开始看起，<code>p</code>与<code>[]</code>结合，说明<code>p</code>是一个数组，那么就要问了，这个数据里放的数据是什么类型，欸，与最近的<code>*</code>结合，说明这个数组里的数据是指针，那么又要问了，这个指针指向什么类型，哦，原来指的是<code>int</code>类型，那么结果就出来了。</p>
+<pre class="line-numbers language-c++"><code class="language-c++">int (*p)[3]; 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>同理: <code>p</code>是一个指针，这个指针指向一个数组，这个数组的类型是<code>int</code>型。</p>
+<h2 id="函数基本知识"><a href="#函数基本知识" class="headerlink" title="函数基本知识"></a>函数基本知识</h2><p>C++对于返回值的类型有一定的限制：不能是数组，可以是其它任何类型–整数、浮点数、指针、结构和对象。（数组可以作为结构、对象组成部分来返回）</p>
+<p><strong>在C++中，当（且仅当）用于函数头或函数原型中，int * arr和int arr[ ] 的含义才相同，都意味着arr是一个int指针。</strong></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Markdown语法]]></title>
       <url>/markdown-yu-fa.html</url>
       <content type="html"><![CDATA[<h1 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 <strong>#</strong> 号可表示 1-6 级标题，一级标题对应一个 <strong>#</strong> 号，二级标题对应两个 <strong>#</strong> 号，以此类推。</p>
