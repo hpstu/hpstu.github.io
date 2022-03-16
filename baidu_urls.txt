@@ -1,3 +1,5 @@
+https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html
+https://www.hpstu.cn/ransac.html
 https://www.hpstu.cn/c-rong-qi.html
 https://www.hpstu.cn/c-zhi-zhen.html
 https://www.hpstu.cn/markdown-yu-fa.html
@@ -6,7 +8,6 @@ https://www.hpstu.cn/c-duo-xian-cheng.html
 https://www.hpstu.cn/c-mian-xiang-dui-xiang.html
 https://www.hpstu.cn/c-guan-jian-zi.html
 https://www.hpstu.cn/git2.html
-https://www.hpstu.cn/hexo.html
 https://www.hpstu.cn/git.html
 https://www.hpstu.cn/bash.html
 https://www.hpstu.cn/ubuntu.html

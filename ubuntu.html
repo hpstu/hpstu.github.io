@@ -1,74 +1,55 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-
-
+<!DOCTYPE html>
+<html lang=zh>
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="Ubuntu 命令, 被动学习">
-    <meta name="baidu-site-verification" content="fmlEuI34ir" />
-    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
-    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
-    <meta name="description" content="Ubuntu 命令1、文件&amp;#x2F;文件夹管理
-ls 列出当前目录下的所有文件（不显示隐藏文件）listq
-
-cd 或者 cd ~进入用户主目录 Change Directory
-
-cd -返回进入此目录之前所在的目录
-
-mkdir di">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Ubuntu 命令 | hpstu`s Blog</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-    <style type="text/css">
-        
-    </style>
-
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?4d1d73af45a62734730491a6b6c41da4";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-    })();
-   </script>
-
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Ubuntu 命令 | Hexo</title>
+  <meta name="description" content="Ubuntu 命令1、文件&#x2F;文件夹管理 ls 列出当前目录下的所有文件（不显示隐藏文件）listq  cd 或者 cd ~进入用户主目录 Change Directory  cd -返回进入此目录之前所在的目录  mkdir dirname 新建目录 Make Directory  rmdir dirname 删除空目录  rm filename 删除文件Remove Directory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 命令">
+<meta property="og:url" content="https://www.hpstu.cn/ubuntu.html">
+<meta property="og:site_name" content="hpstu&#96;s Blog">
+<meta property="og:description" content="Ubuntu 命令1、文件&#x2F;文件夹管理 ls 列出当前目录下的所有文件（不显示隐藏文件）listq  cd 或者 cd ~进入用户主目录 Change Directory  cd -返回进入此目录之前所在的目录  mkdir dirname 新建目录 Make Directory  rmdir dirname 删除空目录  rm filename 删除文件Remove Directory">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-06T02:54:21.000Z">
+<meta property="article:modified_time" content="2022-03-15T13:55:54.770Z">
+<meta property="article:author" content="HP">
+<meta property="article:tag" content="ubuntu">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hpstu.cn/ubuntu.html">
+  
+    <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
   
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
-
-    
-
-    <script>
-        (function(){
-        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-    </script>
-
-    <meta name="baidu-site-verification" content="" />
-
-
-
-
-<style type="text/css" lang="css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style type="text/css" lang="css">
     #loading-container{
         position: fixed;
         top: 0;
@@ -202,426 +183,288 @@ mkdir di">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
- <div id="loading-container">
-     <p class="loading-text"></p> 
-     <div class="loading-image">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div> 
-         <div></div>
-     </div>
- </div><body>
+<body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      <div class="search" id="search-form-wrap">
 
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">hpstu`s Blog</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
-<ul class="right">
-    
-    <li class="hide-on-med-and-down">
-        <a href="/" class="waves-effect waves-light">
-            
-            <span>首页</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/tags" class="waves-effect waves-light">
-            
-            <span>标签</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/categories" class="waves-effect waves-light">
-            
-            <span>分类</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/archives" class="waves-effect waves-light">
-            
-            <span>归档</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/about" class="waves-effect waves-light">
-            
-            <span>关于</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/friends" class="waves-effect waves-light">
-            
-            <span>友情链接</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/contact" class="waves-effect waves-light">
-            
-            <span>留言板</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
-        </a>
-    </li>
-</ul>
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">hpstu`s Blog</div>
-        <div class="logo-desc">
-            
-            C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode | Mathematics | Academic | Tools
-            
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
         </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
     </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
 
-    
 
-    <ul class="menu-list mobile-menu-list">
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
         
-        <li>
-            <a href="/" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                首页
-            </a>
-        </li>
         
-        <li>
-            <a href="/tags" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                标签
-            </a>
-        </li>
-        
-        <li>
-            <a href="/categories" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                分类
-            </a>
-        </li>
-        
-        <li>
-            <a href="/archives" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                归档
-            </a>
-        </li>
-        
-        <li>
-            <a href="/about" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                关于
-            </a>
-        </li>
-        
-        <li>
-            <a href="/friends" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                友情链接
-            </a>
-        </li>
-        
-        <li>
-            <a href="/contact" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-link"></i>
-                
-                留言板
-            </a>
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
         </li>
         
         
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/hpstu" class="waves-effect waves-light" target="_blank">
-                <i class="fa fa-github-square fa-fw"></i>Fork Me
-            </a>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
         </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
     </ul>
-</div>
 
-        </div>
-
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/hpstu" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
     </nav>
-
+  </div>
 </header>
 
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <div class="description center-align post-title">
-                        Ubuntu 命令
-                    </div>
-                </div>
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享学习心得！</p>
             </div>
         </div>
     </div>
 </div>
 
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/">关键字</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/RANSAC/">RANSAC</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/">SLAM库</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/Eigen/">Eigen</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cmake/">cmake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/bash/">bash</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
 
-
-<main class="post-container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
 
-    #articleContent :focus {
-        outline: none;
-    }
 
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Github/" style="font-size: 13px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 13px;">博客搭建</a>
+    </div>
+  </div>
 
-    .toc-widget {
-        padding-left: 20px;
-    }
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
 
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
 
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 20px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                        <a href="/tags/ubuntu/" target="_blank">
-                            <span class="chip bg-color">ubuntu</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-nei-zhi-ku-he-han-shu.html" class="title">C++内置库以及函数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-15T05:32:14.000Z" itemprop="datePublished">2022-03-15</time>
+              </p>
             </div>
-
-            <div class="post-info">
-                <div class="post-date info-break-policy">
-                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-06
-                </div>
-
-                <div class="post-author info-break-policy">
-                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
-                    
-                    HP
-                    
-                </div>
-
-                
-                
-                <div class="info-break-policy">
-                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
-                </div>
-                
-                
-
-                
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/SLAM/">SLAM</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/SLAM/RANSAC/">RANSAC</a>
+              </p>
+              <p class="item-title">
+                <a href="/ransac.html" class="title">RANSAC</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T13:20:39.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
             </div>
-        </div>
-        <hr class="clearfix">
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="Ubuntu-命令"><a href="#Ubuntu-命令" class="headerlink" title="Ubuntu 命令"></a>Ubuntu 命令</h1><h2 id="1、文件-x2F-文件夹管理"><a href="#1、文件-x2F-文件夹管理" class="headerlink" title="1、文件&#x2F;文件夹管理"></a>1、文件&#x2F;文件夹管理</h2><ul>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-rong-qi.html" class="title">C++容器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-zhi-zhen.html" class="title">c++指针</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T08:20:25.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Markdown/">Markdown</a>
+              </p>
+              <p class="item-title">
+                <a href="/markdown-yu-fa.html" class="title">Markdown语法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T01:26:34.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu-%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%96%87%E4%BB%B6-x2F-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%AE%A1%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1、文件&#x2F;文件夹管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD"><span class="toc-number">1.2.</span> <span class="toc-text">2、程序安装与卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%89%93%E5%8C%85-x2F-%E8%A7%A3%E5%8E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3、打包&#x2F;解压</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.</span> <span class="toc-text">4、用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">5、系统管理</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Ubuntu" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ubuntu 命令
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/ubuntu.html" class="article-date">
+	  <time datetime="2022-03-06T02:54:21.000Z" itemprop="datePublished">2022-03-06</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/ubuntu.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="Ubuntu-命令"><a href="#Ubuntu-命令" class="headerlink" title="Ubuntu 命令"></a>Ubuntu 命令</h1><h2 id="1、文件-x2F-文件夹管理"><a href="#1、文件-x2F-文件夹管理" class="headerlink" title="1、文件&#x2F;文件夹管理"></a>1、文件&#x2F;文件夹管理</h2><ul>
 <li><p><code>ls</code> 列出当前目录下的所有文件（不显示隐藏文件）listq</p>
 </li>
 <li><p><code>cd</code> 或者 <code>cd ~</code>进入用户主目录 Change Directory</p>
@@ -788,478 +631,162 @@ mkdir di">
   https: https://127.0.0.1:7890
 </code></pre>
 
-            </div>
-            <hr />
-
-            
-
-            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
-<div id="article-share">
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/ubuntu.html" title="Ubuntu 命令" target="_blank" rel="external">https://www.hpstu.cn/ubuntu.html</a>
+    </li>
     
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
 </div>
 
-<script src="/libs/share/js/social-share.min.js"></script>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        <p class="reprint-tip">
-            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
-            <span>转载规则</span>
-        </p>
-        
-            <div class="center-align">
-                <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
-                    <img alt=""
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
-                </a>
-            </div>
-            <br/>
-            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                  property="dct:title" rel="dct:type">
-                    《Ubuntu 命令》
-                </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/ubuntu.html" property="cc:attributionName"
-               rel="cc:attributionURL">
-                HP
-            </a> 采用
-            <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
-                知识共享署名 4.0 国际许可协议
-            </a>进行许可。
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-        </div>
-    </div>
-
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
-
+    <li class="prev">
+      <a href="/bash.html" title="bash"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
     
-
     
-
+    <li class="next">
+      <a href="/cmake.html" title="cmake"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
-
     
-
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/bash.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="bash">
-                        
-                        <span class="card-title">bash</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            bash 执行方式脚本执行方式：
-
-直接输入文件及其路径（绝对路径或者相对路径）./haha.sh   
-/home/hp/桌面/haha.sh
-
-
-也可以将脚本文件作为参数传给Shell程序，使其解释并执行脚本文件的·内容bash ./h
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-06
-                        </span>
-                        <span class="publish-author">
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/bash/" target="_blank">
-                        <span class="chip bg-color">bash</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/cmake.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="cmake">
-                        
-                        <span class="card-title">cmake</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-05
-                            </span>
-                        <span class="publish-author">
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-</div>
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
-            headingSelector: 'h1, h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h1, h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
+  </ul>
+  
+  
+  
+  <div class="bar-right">
     
+  </div>
+  </div>
+</nav>
+  
+
 
 </main>
 
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
 
-    <footer class="page-footer bg-color">
-    <div class="container row center-align">
-       <div class="Copy-right">
-            &copy; 2020 Yshawlon. All Rights Reserved.
-
-                    
-           <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
-           
-            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">23.6k
-             丨            
-          
-
-            <span id="sitetime"></span>
-
-            
-            
-        </div>        
-        <div class="social-link ">
-    <a href="https://github.com/hpstu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
-    </a>
-
-
-
-
-
-
-
-
-
-    <a href="mailto:202021002338@smail.xtu.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
-</div>
-    </div>
-    <div class="container row center-align">
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
-      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
-    </div>
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Coding Pages">
-      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Coding</span></a>
-    </div>
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://www.cloud.tencent.com/" target="_blank" title="腾讯云提供域名相关服务">
-      <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">Tencent cloud</span></a>
-    </div>
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
-      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
-    </div>
-    <div class="github-badge">
-        <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
-      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery</span></a>
-    </div>
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
-      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
-    </div>
-    <div class="github-badge">
-      <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
-      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-    </div>
-    <div class="github-badge">
-      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
-    </div>
-    <div class="github-badge">
-      <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
-    </div>
-    <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">23.6k</span>
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
     </div>
 </footer>
-
-<div class="progress-bar"></div>
-
-<!-- 不蒜子计数初始值纠正 -->
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script>
-    $(document).ready(function () {
-
-        var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 20000;
-
-        function fixCount() {
-            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
-                clearInterval(int);
-            }
-            if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
-                clearInterval(int);
-            }
-        }
-    });
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 
-<script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2020, 01, 01, 00, 00, 00); //北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
 </script>
 
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-$(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
-});
-</script>
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fa fa-angle-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '');
-</script>
+<script src="/js/insight.js"></script>
 
 
 
+
+
+
+   
+
+
+
+
+   
     
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
 
-    
+     
 
-    <!-- 雪花特效 -->
-    
 
-   <!--单击显示文字-->
-   <script type="text/javascript" src="/js/click_show_text.js"></script> 
 
-   <!--动态线条背景-->
-   <script type="text/javascript"
-   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-   </script>
 
-   <script async src =“ https://cdn.jsdelivr.net/npm/perfops-rom”> </ script>
 
-  <!--自定义看板娘-->
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <script src="/live2d-widget/autoload.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
 
 </body>
-
 </html>

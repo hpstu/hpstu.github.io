@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>C++内置库以及函数 | Hexo</title>
+  <meta name="description" content="C++内置库以及函数sizeof 定义   sizeof是一个操作符（operator）。 其作用是返回一个对象或类型所占的内存字节数。   语法   sizeof有三种语法形式： 1） sizeof (object); &#x2F;&#x2F;sizeof (对象) 2） sizeof object;  &#x2F;&#x2F;sizeof 对象 3） sizeof (type_name); &#x2F;&#x2F;sizeof (类型)  对象可以是各">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++内置库以及函数">
+<meta property="og:url" content="https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html">
+<meta property="og:site_name" content="hpstu&#96;s Blog">
+<meta property="og:description" content="C++内置库以及函数sizeof 定义   sizeof是一个操作符（operator）。 其作用是返回一个对象或类型所占的内存字节数。   语法   sizeof有三种语法形式： 1） sizeof (object); &#x2F;&#x2F;sizeof (对象) 2） sizeof object;  &#x2F;&#x2F;sizeof 对象 3） sizeof (type_name); &#x2F;&#x2F;sizeof (类型)  对象可以是各">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-15T05:32:14.000Z">
+<meta property="article:modified_time" content="2022-03-15T13:51:39.438Z">
+<meta property="article:author" content="HP">
+<meta property="article:tag" content="被动学习">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html">
+  
+    <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loaderҳ����ʧ���ý����ķ�ʽ*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo���ֶ��� */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//ǿ����ʾloading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享学习心得！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/">关键字</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/RANSAC/">RANSAC</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/">SLAM库</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/Eigen/">Eigen</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cmake/">cmake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/bash/">bash</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Github/" style="font-size: 13px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 13px;">博客搭建</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-nei-zhi-ku-he-han-shu.html" class="title">C++内置库以及函数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-15T05:32:14.000Z" itemprop="datePublished">2022-03-15</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/SLAM/">SLAM</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/SLAM/RANSAC/">RANSAC</a>
+              </p>
+              <p class="item-title">
+                <a href="/ransac.html" class="title">RANSAC</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T13:20:39.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-rong-qi.html" class="title">C++容器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-zhi-zhen.html" class="title">c++指针</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T08:20:25.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Markdown/">Markdown</a>
+              </p>
+              <p class="item-title">
+                <a href="/markdown-yu-fa.html" class="title">Markdown语法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T01:26:34.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%86%85%E7%BD%AE%E5%BA%93%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">C++内置库以及函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sizeof"><span class="toc-number">1.1.</span> <span class="toc-text">sizeof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.2.</span> <span class="toc-text">C++字符串</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-C内置库和函数" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++内置库以及函数
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/c-nei-zhi-ku-he-han-shu.html" class="article-date">
+	  <time datetime="2022-03-15T05:32:14.000Z" itemprop="datePublished">2022-03-15</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/c-nei-zhi-ku-he-han-shu.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="C-内置库以及函数"><a href="#C-内置库以及函数" class="headerlink" title="C++内置库以及函数"></a>C++内置库以及函数</h1><h2 id="sizeof"><a href="#sizeof" class="headerlink" title="sizeof"></a>sizeof</h2><ol>
+<li><strong>定义</strong></li>
+</ol>
+<blockquote>
+<p>sizeof是一个操作符（operator）。</p>
+<p>其作用是返回一个对象或类型所占的<strong>内存字节数</strong>。</p>
+</blockquote>
+<ol start="2">
+<li><strong>语法</strong></li>
+</ol>
+<blockquote>
+<p>sizeof有三种语法形式：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">1） sizeof (object); //sizeof (对象)
+2） sizeof object;  //sizeof 对象
+3） sizeof (type_name); //sizeof (类型)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>对象可以是各种类型的变量，以及表达式（一般sizeof不会对表达式进行计算）。</p>
+<p>sizeof对对象求内存大小，最终都是转换为对对象的数据类型进行求值。</p>
+<p>sizeof (表达式); &#x2F;&#x2F;值为表达式的最终结果的数据类型的大小</p>
+</blockquote>
+<ul>
+<li><p><strong>基本数据类型的sizeof</strong></p>
+<ul>
+<li><p>这里的基本数据类型是指short、int、long、float、double这样的简单内置数据类型。</p>
+<p>由于它们的内存大小是和系统相关的，所以在不同的系统下取值可能不同。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">int i;  
+sizeof(int); //值为4  
+sizeof(i); //值为4，等价于sizeof(int)  
+sizeof i; //值为4  
+sizeof(2); //值为4，等价于sizeof(int)，因为2的类型为int  
+sizeof(2 + 3.14); //值为8，等价于sizeof(double)，因为此表达式的结果的类型为double  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>结构体的sizeof</strong></p>
+<ul>
+<li><p>结构体的sizeof涉及到字节对齐问题。</p>
+<p>为什么需要字节对齐？计算机组成原理教导我们这样有助于加快计算机的取数速度，否则就得多花指令周期了。为此，编译器默认会对结构体进行处理（实际上其它地方的数据变量也是如此），让宽度为2的基本数据类型（short等）都位于能被2整除的地址上，让宽度为4的基本数据类型（int等）都位于能被4整除的地址上，依次类推。这样，两个数中间就可能需要加入填充字节，所以整个结构体的sizeof值就增长了。</p>
+<p>注意：空结构体（不含数据成员）的sizeof值为1。试想一个“不占空间“的变量如何被取地址、两个不同的“空结构体”变量又如何得以区分呢，于是，“空结构体”变量也得被存储，这样编译器也就只能为其分配一个字节的空间用于占位了。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">struct S1  
+&#123;  
+    char a;  
+    int b;  
+&#125;;  
+sizeof(S1); //值为8，字节对齐，在char之后会填充3个字节。  
+  
+struct S2  
+&#123;  
+&#125;;  
+sizeof(S2); //值为1，空结构体也占内存
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>数组的sizeof</strong></p>
+<p>数组的sizeof值等于数组所占用的内存字节数。</p>
+<p>注意：1）<strong>当字符数组表示字符串时，其sizeof值将’&#x2F;0’计算进去。</strong></p>
+<p>​           2）<strong>当数组为形参时，其sizeof值相当于指针的sizeof值。</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">char a[10];  
+char n[] = "abc";   
+  
+cout<<"char a[10] "<<sizeof(a)<<endl;//数组，值为10  
+  
+cout<<"char n[] = abc "<<sizeof(n)<<endl;//字符串数组，将'/0'计算进去，值为4
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>指针的sizeof</strong></p>
+<p>指针是用来记录另一个对象的地址，所以指针的内存大小当然就等于计算机内部地址总线的宽度。</p>
+<p>在32位计算机中，一个指针变量的返回值必定是4。</p>
+<p><strong>指针变量的sizeof值与指针所指的对象没有任何关系。</strong></p>
+</li>
+</ul>
+<h2 id="C-字符串"><a href="#C-字符串" class="headerlink" title="C++字符串"></a>C++字符串</h2><p>C++大大增强了对字符串的支持，除了可以使用C风格的字符串，还可以使用内置的 string 类。string 类处理起字符串来会方便很多，完全可以代替C语言中的字符数组或字符串指针</p>
+<p>string 是 C++ 中常用的一个类</p>
+<p>使用 string 类需要包含头文件<code>&lt;string&gt;</code>，下面的例子介绍了几种定义 string 变量（对象）的方法：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
+#include <string>
+using namespace std;
+
+int main()&#123;
+    string s1;
+    string s2 = "c plus plus";
+    string s3 = s2;
+    string s4 (5, 's');
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>变量 s1 只是定义但没有初始化，编译器会将默认值赋给 s1，默认值是<code>&quot;&quot;</code>，也即空字符串。</p>
+<p>变量 s2 在定义的同时被初始化为<code>&quot;c plus plus&quot;</code>。与C风格的字符串不同，string 的结尾<strong>没有结束标志</strong><code>&#39;\0&#39;</code>。</p>
+<p>变量 s3 在定义的时候直接用 s2 进行初始化，因此 s3 的内容也是<code>&quot;c plus plus&quot;</code>。</p>
+<p>变量 s4 被初始化为由 5 个<code>&#39;s&#39;</code>字符组成的字符串，也就是<code>&quot;sssss&quot;</code>。</p>
+<p>从上面的代码可以看出，string 变量可以直接通过赋值操作符<code>=</code>进行赋值。string 变量也可以用C风格的字符串进行赋值，例如，s2 是用一个字符串常量进行初始化的，而 s3 则是通过 s2 变量进行初始化的。</p>
+</blockquote>
+<ul>
+<li><p>转换为C风格的字符串：</p>
+<p>虽然 C++ 提供了 string 类来替代C语言中的字符串，但是在实际编程中，有时候必须要使用C风格的字符串（例如打开文件时的路径），为此，string 类为我们提供了一个转换函数 c_str()，该函数能够将 string 字符串转换为C风格的字符串，并返回该字符串的 const 指针（const char*）。</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">string path = "D:\\demo.txt";
+FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为c风格字符串，该函数返回一个指向 FILE 结构的指针。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>为了使用C语言中的 fopen() 函数打开文件，必须将 string 字符串转换为C风格的字符串。</strong></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html" title="C++内置库以及函数" target="_blank" rel="external">https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/ransac.html" title="RANSAC"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

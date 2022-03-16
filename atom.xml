@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hpstu.cn/"/>
-  <updated>2022-03-14T11:42:45.041Z</updated>
+  <updated>2022-03-15T13:51:39.438Z</updated>
   <id>https://www.hpstu.cn/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C++内置库以及函数</title>
+    <link href="https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html"/>
+    <id>https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html</id>
+    <published>2022-03-15T05:32:14.000Z</published>
+    <updated>2022-03-15T13:51:39.438Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;C-内置库以及函数&quot;&gt;&lt;a href=&quot;#C-内置库以及函数&quot; class=&quot;headerlink&quot; title=&quot;C++内置库以及函数&quot;&gt;&lt;/a&gt;C++内置库以及函数&lt;/h1&gt;&lt;h2 id=&quot;sizeof&quot;&gt;&lt;a href=&quot;#sizeof&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="内置库和函数" scheme="https://www.hpstu.cn/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RANSAC</title>
+    <link href="https://www.hpstu.cn/ransac.html"/>
+    <id>https://www.hpstu.cn/ransac.html</id>
+    <published>2022-03-14T13:20:39.000Z</published>
+    <updated>2022-03-15T13:59:04.121Z</updated>
+    
+    <summary type="html">
+    
+      RANSAC算法
+    
+    </summary>
+    
+      <category term="SLAM" scheme="https://www.hpstu.cn/categories/SLAM/"/>
+    
+      <category term="RANSAC" scheme="https://www.hpstu.cn/categories/SLAM/RANSAC/"/>
+    
+    
+      <category term="RANSAC" scheme="https://www.hpstu.cn/tags/RANSAC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++容器</title>
     <link href="https://www.hpstu.cn/c-rong-qi.html"/>
     <id>https://www.hpstu.cn/c-rong-qi.html</id>
     <published>2022-03-14T11:08:32.000Z</published>
-    <updated>2022-03-14T11:42:45.041Z</updated>
+    <updated>2022-03-15T13:52:11.747Z</updated>
     
     <summary type="html">
     
@@ -35,6 +83,10 @@
     
     </summary>
     
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="容器" scheme="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/"/>
+    
     
   </entry>
   
@@ -43,7 +95,7 @@
     <link href="https://www.hpstu.cn/c-zhi-zhen.html"/>
     <id>https://www.hpstu.cn/c-zhi-zhen.html</id>
     <published>2022-03-14T08:20:25.000Z</published>
-    <updated>2022-03-14T10:54:37.110Z</updated>
+    <updated>2022-03-15T13:52:33.353Z</updated>
     
     <summary type="html">
     
@@ -57,6 +109,10 @@
     
     </summary>
     
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="指针" scheme="https://www.hpstu.cn/categories/C/%E6%8C%87%E9%92%88/"/>
+    
     
   </entry>
   
@@ -65,7 +121,7 @@
     <link href="https://www.hpstu.cn/markdown-yu-fa.html"/>
     <id>https://www.hpstu.cn/markdown-yu-fa.html</id>
     <published>2022-03-14T01:26:34.000Z</published>
-    <updated>2022-03-14T02:16:59.242Z</updated>
+    <updated>2022-03-15T13:54:31.281Z</updated>
     
     <summary type="html">
     
@@ -79,6 +135,8 @@
     
     </summary>
     
+      <category term="Markdown" scheme="https://www.hpstu.cn/categories/Markdown/"/>
+    
     
   </entry>
   
@@ -87,7 +145,7 @@
     <link href="https://www.hpstu.cn/eigen.html"/>
     <id>https://www.hpstu.cn/eigen.html</id>
     <published>2022-03-13T12:03:14.000Z</published>
-    <updated>2022-03-13T12:18:03.238Z</updated>
+    <updated>2022-03-15T13:53:36.399Z</updated>
     
     <summary type="html">
     
@@ -101,6 +159,10 @@
     
     </summary>
     
+      <category term="SLAM库" scheme="https://www.hpstu.cn/categories/SLAM%E5%BA%93/"/>
+    
+      <category term="Eigen" scheme="https://www.hpstu.cn/categories/SLAM%E5%BA%93/Eigen/"/>
+    
     
   </entry>
   
@@ -109,7 +171,7 @@
     <link href="https://www.hpstu.cn/c-duo-xian-cheng.html"/>
     <id>https://www.hpstu.cn/c-duo-xian-cheng.html</id>
     <published>2022-03-12T07:17:55.000Z</published>
-    <updated>2022-03-12T10:41:48.431Z</updated>
+    <updated>2022-03-15T13:49:09.819Z</updated>
     
     <summary type="html">
     
@@ -124,6 +186,10 @@
     
     </summary>
     
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="多线程" scheme="https://www.hpstu.cn/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
     
   </entry>
   
@@ -132,7 +198,7 @@
     <link href="https://www.hpstu.cn/c-mian-xiang-dui-xiang.html"/>
     <id>https://www.hpstu.cn/c-mian-xiang-dui-xiang.html</id>
     <published>2022-03-11T02:39:35.000Z</published>
-    <updated>2022-03-11T05:29:38.312Z</updated>
+    <updated>2022-03-15T13:51:06.019Z</updated>
     
     <summary type="html">
     
@@ -146,6 +212,10 @@
     
     </summary>
     
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="面向对象" scheme="https://www.hpstu.cn/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
     
   </entry>
   
@@ -154,7 +224,7 @@
     <link href="https://www.hpstu.cn/c-guan-jian-zi.html"/>
     <id>https://www.hpstu.cn/c-guan-jian-zi.html</id>
     <published>2022-03-11T01:59:07.000Z</published>
-    <updated>2022-03-13T14:30:30.938Z</updated>
+    <updated>2022-03-15T13:49:57.611Z</updated>
     
     <summary type="html">
     
@@ -168,6 +238,10 @@
     
     </summary>
     
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+      <category term="关键字" scheme="https://www.hpstu.cn/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
     
   </entry>
   
@@ -176,7 +250,7 @@
     <link href="https://www.hpstu.cn/git2.html"/>
     <id>https://www.hpstu.cn/git2.html</id>
     <published>2022-03-10T13:40:07.000Z</published>
-    <updated>2022-03-10T14:32:14.735Z</updated>
+    <updated>2022-03-15T13:54:03.940Z</updated>
     
     <summary type="html">
     
@@ -190,19 +264,7 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>hexo</title>
-    <link href="https://www.hpstu.cn/hexo.html"/>
-    <id>https://www.hpstu.cn/hexo.html</id>
-    <published>2022-03-10T13:35:48.000Z</published>
-    <updated>2022-03-10T13:35:48.329Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
+      <category term="git" scheme="https://www.hpstu.cn/categories/git/"/>
     
     
   </entry>
@@ -212,13 +274,15 @@
     <link href="https://www.hpstu.cn/git.html"/>
     <id>https://www.hpstu.cn/git.html</id>
     <published>2022-03-06T04:27:04.000Z</published>
-    <updated>2022-03-10T13:40:40.258Z</updated>
+    <updated>2022-03-15T13:53:54.159Z</updated>
     
     <summary type="html">
     
       git介绍
     
     </summary>
+    
+      <category term="git" scheme="https://www.hpstu.cn/categories/git/"/>
     
     
       <category term="git" scheme="https://www.hpstu.cn/tags/git/"/>
@@ -230,7 +294,7 @@
     <link href="https://www.hpstu.cn/bash.html"/>
     <id>https://www.hpstu.cn/bash.html</id>
     <published>2022-03-06T04:16:37.000Z</published>
-    <updated>2022-03-06T04:25:37.000Z</updated>
+    <updated>2022-03-15T13:47:49.962Z</updated>
     
     <summary type="html">
     
@@ -244,6 +308,10 @@
     
     </summary>
     
+      <category term="ubuntu" scheme="https://www.hpstu.cn/categories/ubuntu/"/>
+    
+      <category term="bash" scheme="https://www.hpstu.cn/categories/ubuntu/bash/"/>
+    
     
       <category term="bash" scheme="https://www.hpstu.cn/tags/bash/"/>
     
@@ -254,7 +322,7 @@
     <link href="https://www.hpstu.cn/ubuntu.html"/>
     <id>https://www.hpstu.cn/ubuntu.html</id>
     <published>2022-03-06T02:54:21.000Z</published>
-    <updated>2022-03-06T04:07:32.000Z</updated>
+    <updated>2022-03-15T13:55:54.770Z</updated>
     
     <summary type="html">
     
@@ -268,6 +336,8 @@
     
     </summary>
     
+      <category term="Ubuntu" scheme="https://www.hpstu.cn/categories/Ubuntu/"/>
+    
     
       <category term="ubuntu" scheme="https://www.hpstu.cn/tags/ubuntu/"/>
     
@@ -278,11 +348,13 @@
     <link href="https://www.hpstu.cn/cmake.html"/>
     <id>https://www.hpstu.cn/cmake.html</id>
     <published>2022-03-05T13:47:10.000Z</published>
-    <updated>2022-03-05T13:47:10.208Z</updated>
+    <updated>2022-03-15T13:48:25.847Z</updated>
     
     <summary type="html">
     
     </summary>
+    
+      <category term="cmake" scheme="https://www.hpstu.cn/categories/cmake/"/>
     
     
   </entry>
@@ -314,7 +386,7 @@
     <link href="https://www.hpstu.cn/1.html"/>
     <id>https://www.hpstu.cn/1.html</id>
     <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2021-10-24T08:43:41.000Z</updated>
+    <updated>2022-03-15T13:47:16.957Z</updated>
     
     <summary type="html">
     
@@ -322,8 +394,8 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/1/01.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font color=magenta
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;作为一名计算机爱好者，摸索了一周搭建出自己的博客。目前只学   
         
       
     

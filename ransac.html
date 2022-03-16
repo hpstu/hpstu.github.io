@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>RANSAC | Hexo</title>
+  <meta name="description" content="RANSAC算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RANSAC">
+<meta property="og:url" content="https://www.hpstu.cn/ransac.html">
+<meta property="og:site_name" content="hpstu&#96;s Blog">
+<meta property="og:description" content="RANSAC算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-14T13:20:39.000Z">
+<meta property="article:modified_time" content="2022-03-15T13:59:04.121Z">
+<meta property="article:author" content="HP">
+<meta property="article:tag" content="RANSAC">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hpstu.cn/ransac.html">
+  
+    <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loaderҳ����ʧ���ý����ķ�ʽ*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo���ֶ��� */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//ǿ����ʾloading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享学习心得！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/">关键字</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/RANSAC/">RANSAC</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/">SLAM库</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/Eigen/">Eigen</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cmake/">cmake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/bash/">bash</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Github/" style="font-size: 13px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 13px;">博客搭建</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-nei-zhi-ku-he-han-shu.html" class="title">C++内置库以及函数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-15T05:32:14.000Z" itemprop="datePublished">2022-03-15</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/SLAM/">SLAM</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/SLAM/RANSAC/">RANSAC</a>
+              </p>
+              <p class="item-title">
+                <a href="/ransac.html" class="title">RANSAC</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T13:20:39.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-rong-qi.html" class="title">C++容器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a>
+              </p>
+              <p class="item-title">
+                <a href="/c-zhi-zhen.html" class="title">c++指针</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T08:20:25.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Markdown/">Markdown</a>
+              </p>
+              <p class="item-title">
+                <a href="/markdown-yu-fa.html" class="title">Markdown语法</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-14T01:26:34.000Z" itemprop="datePublished">2022-03-14</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">算法流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">代码示例</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-RANSAC" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RANSAC
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/ransac.html" class="article-date">
+	  <time datetime="2022-03-14T13:20:39.000Z" itemprop="datePublished">2022-03-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/SLAM/">SLAM</a>►<a class="article-category-link" href="/categories/SLAM/RANSAC/">RANSAC</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/RANSAC/" rel="tag">RANSAC</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/ransac.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><p>对于N个点构成的集合P，我们假定最少通过n个点可以拟合出正确的模型，也就是说样本集合中有N − n个噪声点。具体的执行下列操作：</p>
+<ol>
+<li>从数据集中随机选择一组最小样本拟合模型H，</li>
+<li>使用其他所有数据验证模型并从中取出符合阈值的内点，</li>
+<li>如果内点数量达到阈值则保存该次所有内点，否则抛弃步骤2中的内点，执行步骤4，</li>
+<li>重复以上步骤k次（即迭代k次）并更新内点（即保存步骤2中的最多内点）【可设置提前退出迭代机制，即内点足够多时退出（很难判断）】</li>
+<li>然后使用最小二乘法重新拟合模型（步骤4中的所有内点）</li>
+</ol>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><ol>
+<li>初始内点的确定</li>
+</ol>
+<p>算法第1步中选择内点时，通常选择能确定模型的最少点，比如两点确定一条直线，3点确定一个平面。在求解单应性矩阵的时候，就是4个点对8个点确定一个矩阵模型。</p>
+<ol start="2">
+<li>迭代次数的确定</li>
+</ol>
+<p>通常来说N的值比较大，那么随机选择点的时候，点与点的组合就很多，如果不对迭代次数进行限制，运算量就会很大。因为算法第2步要用剩余点对模型进行测试，如果点的数量较多，这一步的运算量很大。包括后面的第3，4步。其实我们只要保证我们估计模型的时候使用的都是内点即可。</p>
+<p>假设是内点的概率为$p$:</p>
+<p>$$p&#x3D; \frac{n_i}{n_i + n_o}$$</p>
+<p> $n_i$为内点数量,$n_o$ 为外点数量。那么我们每次计算模型使用$n$个点的情况下，选取的点集中至少有一个外点的概率就是：$1 - t^n$那么在迭代$k$次的情况下，$(1-t^n)^k$就是次迭代都至少有1个外点的概率。<br>那么能够得到$n$个正确的点来估计模型的概率就是：</p>
+<p>$$P&#x3D;1 - (1 - t^n)^t$$</p>
+<p>两边取对数，就可以得到最少迭代次数:</p>
+<p>$$k &#x3D; \frac{\log(1-P)}{\log(1-t^n)}$$</p>
+<p>这里$P$是希望通过算法得到正确模型的最少概率，$k$是关于$P$单调递增的,$k$就是在$P$确定情况下的最少迭代次数。$t$通常未知，那么我们可以采用自适应的办法，在开始的时候设置一个较大的迭代次数$k$，然后通过每次迭代中更新$t$来更新迭代次数。</p>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p>这里使用RANSAC算法来拟合直线:python代码如下：</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> random
+<span class="token keyword">import</span> math
+
+<span class="token keyword">class</span> <span class="token class-name">ransacMatchingTest</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> sigma<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> prob<span class="token operator">=</span><span class="token number">0.95</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        self<span class="token punctuation">.</span>X <span class="token operator">=</span> X
+        self<span class="token punctuation">.</span>Y <span class="token operator">=</span> Y
+        self<span class="token punctuation">.</span>sigma <span class="token operator">=</span> sigma
+        self<span class="token punctuation">.</span>prob <span class="token operator">=</span> prob
+
+    <span class="token keyword">def</span> <span class="token function">runMatch</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        preInlier <span class="token operator">=</span> <span class="token number">0</span>
+        iters <span class="token operator">=</span> <span class="token number">10000</span>
+        best_a <span class="token operator">=</span> <span class="token number">0</span>
+        best_b <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>iters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true"># sample points</span>
+            sampleIndex <span class="token operator">=</span> random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+            x1 <span class="token operator">=</span> self<span class="token punctuation">.</span>X<span class="token punctuation">[</span>sampleIndex<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+            y1 <span class="token operator">=</span> self<span class="token punctuation">.</span>Y<span class="token punctuation">[</span>sampleIndex<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+            x2 <span class="token operator">=</span> self<span class="token punctuation">.</span>X<span class="token punctuation">[</span>sampleIndex<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+            y2 <span class="token operator">=</span> self<span class="token punctuation">.</span>Y<span class="token punctuation">[</span>sampleIndex<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+            <span class="token comment" spellcheck="true"># Compute mode</span>
+            a <span class="token operator">=</span> <span class="token punctuation">(</span>y2 <span class="token operator">-</span> y1<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>x2 <span class="token operator">-</span> x1<span class="token punctuation">)</span>
+            b <span class="token operator">=</span> y1 <span class="token operator">-</span> a <span class="token operator">*</span> x1
+
+            <span class="token comment" spellcheck="true"># Get number of inlier</span>
+            inlier <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">for</span> index <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                y_estimate <span class="token operator">=</span> a <span class="token operator">*</span> self<span class="token punctuation">.</span>X<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> b
+                <span class="token keyword">if</span> abs<span class="token punctuation">(</span>y_estimate <span class="token operator">-</span> self<span class="token punctuation">.</span>Y<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>sigma<span class="token punctuation">:</span>
+                    inlier <span class="token operator">=</span> inlier <span class="token operator">+</span> <span class="token number">1</span>
+
+            <span class="token keyword">if</span> inlier <span class="token operator">></span> preInlier<span class="token punctuation">:</span>
+                <span class="token comment" spellcheck="true"># Update iteration times</span>
+                iters <span class="token operator">=</span> math<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span>self<span class="token punctuation">.</span>prob<span class="token punctuation">)</span> <span class="token operator">/</span> math<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> pow<span class="token punctuation">(</span>inlier <span class="token operator">/</span> self<span class="token punctuation">.</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>            <span class="token comment" spellcheck="true"># 这句好像没起作用</span>
+                preInlier <span class="token operator">=</span> inlier
+                best_a <span class="token operator">=</span> a
+                best_b <span class="token operator">=</span> b
+            <span class="token comment" spellcheck="true"># While inliers over half of input set then break</span>
+            <span class="token keyword">if</span> inlier <span class="token operator">></span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+
+        <span class="token keyword">return</span> best_a<span class="token punctuation">,</span> best_b
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span>
+    Y <span class="token operator">=</span> <span class="token number">4</span> <span class="token operator">*</span> X <span class="token operator">+</span> <span class="token number">6</span>
+
+    randomX <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    randomY <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true"># Add mode noise</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        randomX<span class="token punctuation">.</span>append<span class="token punctuation">(</span>X<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        randomY<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Y<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># Add random noise</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        randomX<span class="token punctuation">.</span>append<span class="token punctuation">(</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        randomY<span class="token punctuation">.</span>append<span class="token punctuation">(</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    RANDOMX <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>randomX<span class="token punctuation">)</span>
+    RANDOMY <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>randomY<span class="token punctuation">)</span>
+
+    ransac <span class="token operator">=</span> ransacMatchingTest<span class="token punctuation">(</span>RANDOMX<span class="token punctuation">,</span> RANDOMY<span class="token punctuation">,</span> sigma<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> prob<span class="token operator">=</span><span class="token number">0.95</span><span class="token punctuation">)</span><span class="token punctuation">.</span>runMatch<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    preY <span class="token operator">=</span> ransac<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> RANDOMX <span class="token operator">+</span> ransac<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+    fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    ax1<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>RANDOMX<span class="token punctuation">,</span> RANDOMY<span class="token punctuation">)</span>
+
+    ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>RANDOMX<span class="token punctuation">,</span> preY<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/ransac.html" title="RANSAC" target="_blank" rel="external">https://www.hpstu.cn/ransac.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/c-nei-zhi-ku-he-han-shu.html" title="C++内置库以及函数"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/c-rong-qi.html" title="C++容器"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
