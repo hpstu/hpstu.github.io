@@ -9,6 +9,8 @@ password:
 summary:
 tags: bash 
 categories:
+- ubuntu
+- bash
 keywords:
 description:
 ---

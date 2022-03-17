@@ -8,7 +8,7 @@ date: 2022-03-06 10:54:21
 password:
 summary:
 tags: ubuntu
-categories:
+categories: Ubuntu
 keywords: ubuntu
 description:
 ---

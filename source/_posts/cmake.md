@@ -8,7 +8,7 @@ date: 2022-03-05 21:47:10
 password:
 summary:
 tags:
-categories:
+categories: cmake
 keywords:
 description:
 ---

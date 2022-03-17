@@ -9,6 +9,8 @@ password:
 summary:
 tags:
 categories:
+- C++
+- 关键字
 keywords:
 description:
 ---

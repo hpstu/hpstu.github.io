@@ -8,7 +8,7 @@ date: 2022-03-06 12:27:04
 password:
 summary:
 tags: git
-categories:
+categories: git
 keywords: git
 description: git介绍
 ---

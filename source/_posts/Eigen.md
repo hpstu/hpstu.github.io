@@ -8,7 +8,9 @@ date: 2022-03-13 20:03:14
 password:
 summary:
 tags:
-categories:
+categories: 
+- SLAM库
+- Eigen
 keywords:
 description:
 ---

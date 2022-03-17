@@ -8,7 +8,9 @@ date: 2022-03-12 15:17:55
 password:
 summary:
 tags:
-categories:
+categories: 
+- C++
+- 多线程
 keywords:
 description:
 ---

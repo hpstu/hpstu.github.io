@@ -9,6 +9,8 @@ password:
 summary:
 tags:
 categories:
+- C++
+- 面向对象
 keywords:
 description:
 ---
