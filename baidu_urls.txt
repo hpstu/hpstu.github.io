@@ -1,3 +1,4 @@
+https://www.hpstu.cn/paper/bi-ji.html
 https://www.hpstu.cn/vinsnote.html
 https://www.hpstu.cn/ctips.html
 https://www.hpstu.cn/c-mo-ban.html
@@ -15,5 +16,4 @@ https://www.hpstu.cn/git.html
 https://www.hpstu.cn/bash.html
 https://www.hpstu.cn/ubuntu.html
 https://www.hpstu.cn/cmake.html
-https://www.hpstu.cn/paper/bi-ji.html
 https://www.hpstu.cn/1.html

@@ -18,15 +18,15 @@
   
   
   <title>c++指针 | Hexo</title>
-  <meta name="description" content="C++指针&amp;函数复杂类型解析一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样, 解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高） int p; &#x2F;&#x2F;这是一个普通的整型变量 int *p; &#x2F;&#x2F;首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以">
+  <meta name="description" content="C++指针&amp;函数  复杂类型解析 一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样, 解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高） 123456789int p; &#x2F;&#x2F;这是一个普通的整型变量int *p; &#x2F;&#x2F;首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++指针">
 <meta property="og:url" content="https://www.hpstu.cn/c-zhi-zhen.html">
 <meta property="og:site_name" content="hpstu&#96;s Blog">
-<meta property="og:description" content="C++指针&amp;函数复杂类型解析一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样, 解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高） int p; &#x2F;&#x2F;这是一个普通的整型变量 int *p; &#x2F;&#x2F;首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以">
+<meta property="og:description" content="C++指针&amp;函数  复杂类型解析 一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样, 解析原则:从变量名处起,根据运算符优先级结合,一步一步分析.（括号的优先级比*优先级高） 123456789int p; &#x2F;&#x2F;这是一个普通的整型变量int *p; &#x2F;&#x2F;首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-14T08:20:25.000Z">
-<meta property="article:modified_time" content="2022-03-15T13:52:33.353Z">
+<meta property="article:modified_time" content="2022-03-24T14:47:08.519Z">
 <meta property="article:author" content="HP">
 <meta property="article:tag" content="被动学习">
 <meta name="twitter:card" content="summary">
@@ -336,6 +336,21 @@
                 
               </p>
               <p class="item-title">
+                <a href="/paper/bi-ji.html" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-24T14:47:08.821Z" itemprop="datePublished">2022-03-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
                 <a href="/vinsnote.html" class="title">VINSnote</a>
               </p>
               <p class="item-date">
@@ -389,21 +404,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/SLAM/">SLAM</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/SLAM/RANSAC/">RANSAC</a>
-              </p>
-              <p class="item-title">
-                <a href="/ransac.html" class="title">RANSAC</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-14T13:20:39.000Z" itemprop="datePublished">2022-03-14</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -419,7 +419,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E6%8C%87%E9%92%88-amp-%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">C++指针&amp;函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%E8%A7%A3%E6%9E%90"><span class="toc-number">1.1.</span> <span class="toc-text">复杂类型解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">函数基本知识</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c%E6%8C%87%E9%92%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text"> C++指针&amp;函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%E8%A7%A3%E6%9E%90"><span class="toc-number">1.1.</span> <span class="toc-text"> 复杂类型解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text"> 函数基本知识</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -461,25 +461,17 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="C-指针-amp-函数"><a href="#C-指针-amp-函数" class="headerlink" title="C++指针&amp;函数"></a>C++指针&amp;函数</h1><h2 id="复杂类型解析"><a href="#复杂类型解析" class="headerlink" title="复杂类型解析"></a>复杂类型解析</h2><p>一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,</p>
+        <h1 id="c指针函数"><a class="markdownIt-Anchor" href="#c指针函数"></a> C++指针&amp;函数</h1>
+<h2 id="复杂类型解析"><a class="markdownIt-Anchor" href="#复杂类型解析"></a> 复杂类型解析</h2>
+<p>一个类型里会出现很多运算符,他们也像普通的表达式一样,有优先级,其优先级和运算优先级一样,</p>
 <p>解析原则:<strong>从变量名处起,根据运算符优先级结合,一步一步分析</strong>.（括号的优先级比<code>*</code>优先级高）</p>
-<pre class="line-numbers language-c++"><code class="language-c++">int p; //这是一个普通的整型变量
-int *p; //首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以P是一个返回整型数据的指针
-int p[3]; //首先从P 处开始,先与[]结合,说明P 是一个数组,然后与int 结合,说明数组里的元素是整型的,所以P 是一个由整型数据组成的数组
-int *p[3]; //首先从P 处开始,先与[]结合,因为其优先级比*高,所以P 是一个数组,然后再与*结合,说明数组里的元素是指针类型,然后再与int 结合,说明指针所指向的内容的类型是整型的,所以P 是一个由返回整型数据的指针所组成的数组
-int (*p)[3]; //首先从P 处开始,先与*结合,说明P 是一个指针然后再与[]结合(与"()"这步可以忽略,只是为了改变优先级),说明指针所指向的内容是一个数组,然后再与int 结合,说明数组里的元素是整型的.所以P 是一个指向由整型数据组成的数组的指针
-int **p; //首先从P 开始,先与*结合,说是P 是一个指针,然后再与*结合,说明指针所指向的元素是指针,然后再与int 结合,说明该指针所指向的元素是整型数据.由于二级指针以及更高级的指针极少用在复杂的类型中,所以后面更复杂的类型我们就不考虑多级指针了,最多只考虑一级指针.
-int p(int); //从P 处起,先与()结合,说明P 是一个函数,然后进入()里分析,说明该函数有一个整型变量的参数,然后再与外面的int 结合,说明函数的返回值是一个整型数据
-Int (*p)(int); //从P 处开始,先与指针结合,说明P 是一个指针,然后与()结合,说明指针指向的是一个函数,然后再与()里的int 结合,说明函数有一个int 型的参数,再与最外层的int 结合,说明函数的返回类型是整型,所以P 是一个指向有一个整型参数且返回类型为整型的函数的指针
-int *(*p(int))[3]; //可以先跳过,不看这个类型,过于复杂从P 开始,先与()结合,说明P 是一个函数,然后进入()里面,与int 结合,说明函数有一个整型变量参数,然后再与外面的*结合,说明函数返回的是一个指针,,然后到最外面一层,先与[]结合,说明返回的指针指向的是一个数组,然后再与*结合,说明数组里的元素是指针,然后再与int 结合,说明指针指向的内容是整型数据.所以P 是一个参数为一个整数据且返回一个指向由整型指针变量组成的数组的指针变量的函数.
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c++"><code class="language-c++">int *p[3];
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> p; <span class="comment">//这是一个普通的整型变量</span></span><br><span class="line"><span class="type">int</span> *p; <span class="comment">//首先从P 处开始,先与*结合,所以说明P 是一个指针,然后再与int 结合,说明指针所指向的内容的类型为int 型.所以P是一个返回整型数据的指针</span></span><br><span class="line"><span class="type">int</span> p[<span class="number">3</span>]; <span class="comment">//首先从P 处开始,先与[]结合,说明P 是一个数组,然后与int 结合,说明数组里的元素是整型的,所以P 是一个由整型数据组成的数组</span></span><br><span class="line"><span class="type">int</span> *p[<span class="number">3</span>]; <span class="comment">//首先从P 处开始,先与[]结合,因为其优先级比*高,所以P 是一个数组,然后再与*结合,说明数组里的元素是指针类型,然后再与int 结合,说明指针所指向的内容的类型是整型的,所以P 是一个由返回整型数据的指针所组成的数组</span></span><br><span class="line"><span class="built_in">int</span> (*p)[<span class="number">3</span>]; <span class="comment">//首先从P 处开始,先与*结合,说明P 是一个指针然后再与[]结合(与&quot;()&quot;这步可以忽略,只是为了改变优先级),说明指针所指向的内容是一个数组,然后再与int 结合,说明数组里的元素是整型的.所以P 是一个指向由整型数据组成的数组的指针</span></span><br><span class="line"><span class="type">int</span> **p; <span class="comment">//首先从P 开始,先与*结合,说是P 是一个指针,然后再与*结合,说明指针所指向的元素是指针,然后再与int 结合,说明该指针所指向的元素是整型数据.由于二级指针以及更高级的指针极少用在复杂的类型中,所以后面更复杂的类型我们就不考虑多级指针了,最多只考虑一级指针.</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">p</span><span class="params">(<span class="type">int</span>)</span></span>; <span class="comment">//从P 处起,先与()结合,说明P 是一个函数,然后进入()里分析,说明该函数有一个整型变量的参数,然后再与外面的int 结合,说明函数的返回值是一个整型数据</span></span><br><span class="line"><span class="built_in">Int</span> (*p)(<span class="type">int</span>); <span class="comment">//从P 处开始,先与指针结合,说明P 是一个指针,然后与()结合,说明指针指向的是一个函数,然后再与()里的int 结合,说明函数有一个int 型的参数,再与最外层的int 结合,说明函数的返回类型是整型,所以P 是一个指向有一个整型参数且返回类型为整型的函数的指针</span></span><br><span class="line"><span class="type">int</span> *(*<span class="built_in">p</span>(<span class="type">int</span>))[<span class="number">3</span>]; <span class="comment">//可以先跳过,不看这个类型,过于复杂从P 开始,先与()结合,说明P 是一个函数,然后进入()里面,与int 结合,说明函数有一个整型变量参数,然后再与外面的*结合,说明函数返回的是一个指针,,然后到最外面一层,先与[]结合,说明返回的指针指向的是一个数组,然后再与*结合,说明数组里的元素是指针,然后再与int 结合,说明指针指向的内容是整型数据.所以P 是一个参数为一个整数据且返回一个指向由整型指针变量组成的数组的指针变量的函数.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
 <p>首先从变量<code>p</code>开始看起，<code>p</code>与<code>[]</code>结合，说明<code>p</code>是一个数组，那么就要问了，这个数据里放的数据是什么类型，欸，与最近的<code>*</code>结合，说明这个数组里的数据是指针，那么又要问了，这个指针指向什么类型，哦，原来指的是<code>int</code>类型，那么结果就出来了。</p>
-<pre class="line-numbers language-c++"><code class="language-c++">int (*p)[3]; 
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> (*p)[<span class="number">3</span>]; </span><br></pre></td></tr></table></figure>
 <p>同理: <code>p</code>是一个指针，这个指针指向一个数组，这个数组的类型是<code>int</code>型。</p>
-<h2 id="函数基本知识"><a href="#函数基本知识" class="headerlink" title="函数基本知识"></a>函数基本知识</h2><p>C++对于返回值的类型有一定的限制：不能是数组，可以是其它任何类型–整数、浮点数、指针、结构和对象。（数组可以作为结构、对象组成部分来返回）</p>
+<h2 id="函数基本知识"><a class="markdownIt-Anchor" href="#函数基本知识"></a> 函数基本知识</h2>
+<p>C++对于返回值的类型有一定的限制：不能是数组，可以是其它任何类型–整数、浮点数、指针、结构和对象。（数组可以作为结构、对象组成部分来返回）</p>
 <p><strong>在C++中，当（且仅当）用于函数头或函数原型中，int * arr和int arr[ ] 的含义才相同，都意味着arr是一个int指针。</strong></p>
 
       
