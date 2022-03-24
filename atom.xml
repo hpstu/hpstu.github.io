@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hpstu.cn/"/>
-  <updated>2022-03-15T13:51:39.438Z</updated>
+  <updated>2022-03-24T13:40:34.882Z</updated>
   <id>https://www.hpstu.cn/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VINSnote</title>
+    <link href="https://www.hpstu.cn/vinsnote.html"/>
+    <id>https://www.hpstu.cn/vinsnote.html</id>
+    <published>2022-03-24T12:48:35.000Z</published>
+    <updated>2022-03-24T13:40:34.882Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;vins笔记&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#vins笔记&quot;&gt;&lt;/a&gt; VINS笔记&lt;/h1&gt;
+&lt;h2 id=&quot;编程实现四元数和李代数更新&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Tips</title>
+    <link href="https://www.hpstu.cn/ctips.html"/>
+    <id>https://www.hpstu.cn/ctips.html</id>
+    <published>2022-03-17T10:07:40.000Z</published>
+    <updated>2022-03-17T10:46:49.366Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;文件操作&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#文件操作&quot;&gt;&lt;/a&gt; 文件操作&lt;/h2&gt;
+&lt;p&gt;文件类型分为两种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;文本文件&lt;/strong&gt;     - 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://www.hpstu.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++模板</title>
+    <link href="https://www.hpstu.cn/c-mo-ban.html"/>
+    <id>https://www.hpstu.cn/c-mo-ban.html</id>
+    <published>2022-03-16T14:19:21.000Z</published>
+    <updated>2022-03-17T10:46:58.959Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;c-模板&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#c-模板&quot;&gt;&lt;/a&gt; C++ 模板&lt;/h1&gt;
+&lt;h2 id=&quot;函数模板&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#函数模板&quot;&gt;&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C++内置库以及函数</title>
@@ -69,7 +144,7 @@
     <link href="https://www.hpstu.cn/c-rong-qi.html"/>
     <id>https://www.hpstu.cn/c-rong-qi.html</id>
     <published>2022-03-14T11:08:32.000Z</published>
-    <updated>2022-03-15T13:52:11.747Z</updated>
+    <updated>2022-03-17T08:22:57.486Z</updated>
     
     <summary type="html">
     
@@ -77,7 +152,8 @@
       
         
         
-          &lt;h1 id=&quot;C-容器&quot;&gt;&lt;a href=&quot;#C-容器&quot; class=&quot;headerlink&quot; title=&quot;C++容器&quot;&gt;&lt;/a&gt;C++容器&lt;/h1&gt;&lt;h2 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;c容器&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#c容器&quot;&gt;&lt;/a&gt; C++容器&lt;/h1&gt;
+&lt;h2 id=&quot;vector&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#vector&quot;&gt;&lt;/a&gt;
         
       
     
@@ -171,7 +247,7 @@
     <link href="https://www.hpstu.cn/c-duo-xian-cheng.html"/>
     <id>https://www.hpstu.cn/c-duo-xian-cheng.html</id>
     <published>2022-03-12T07:17:55.000Z</published>
-    <updated>2022-03-15T13:49:09.819Z</updated>
+    <updated>2022-03-18T13:05:33.651Z</updated>
     
     <summary type="html">
     
@@ -179,8 +255,9 @@
       
         
         
-          &lt;h1 id=&quot;C-多线程&quot;&gt;&lt;a href=&quot;#C-多线程&quot; class=&quot;headerlink&quot; title=&quot;C++多线程&quot;&gt;&lt;/a&gt;C++多线程&lt;/h1&gt;&lt;p&gt;引入头文件：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-c++&quot;&gt;&lt;code
+          &lt;h1 id=&quot;c多线程&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#c多线程&quot;&gt;&lt;/a&gt; C++多线程&lt;/h1&gt;
+&lt;p&gt;引入头文件：&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     

@@ -3,6 +3,131 @@
   
     
     <entry>
+      <title><![CDATA[VINSnote]]></title>
+      <url>/vinsnote.html</url>
+      <content type="html"><![CDATA[<h1 id="vins笔记"><a class="markdownIt-Anchor" href="#vins笔记"></a> VINS笔记</h1>
+<h2 id="编程实现四元数和李代数更新"><a class="markdownIt-Anchor" href="#编程实现四元数和李代数更新"></a> 编程实现四元数和李代数更新</h2>
+<p>可以使用四元数或旋转矩阵存储旋转变量。当我们用计算出来的 ω对某旋转更新时，有两种不同方式：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msup><mi mathvariant="bold">R</mi><mi mathvariant="bold">′</mi></msup></mrow><mo>←</mo><mrow><mi mathvariant="bold">R</mi></mrow><mspace width="0.16667em"></mspace><mi>exp</mi><mrow><mo>(</mo><mrow><mover accent="true"><mrow><mi>ω</mi></mrow><mo>^</mo></mover></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">\bold{R^\prime}\leftarrow \bold{R}\,\exp{({\hat{\omega}})}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.801892em;"></span><span class="strut bottom" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathbf">R</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathbf">′</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mrel">←</span><span class="mord displaystyle textstyle uncramped"><span class="mord mathbf">R</span></span><span class="mord mspace thinspace"></span><span class="mop">exp</span><span class="mord displaystyle textstyle uncramped"><span class="mopen">(</span><span class="mord displaystyle textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">ω</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mclose">)</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">OR
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mi mathvariant="normal">′</mi><mo>←</mo><mi>q</mi><mo>⨂</mo><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>ω</mi><msup><mo>]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">q\prime\leftarrow q\bigotimes[1,\frac{1}{2}\omega]^T
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathrm">′</span><span class="mrel">←</span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="op-symbol large-op mop" style="top:-0.000004999999999977245em;">⨂</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.03588em;">ω</span><span class="mclose"><span class="mclose">]</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//初始化旋转矩阵</span></span><br><span class="line">    Eigen:: Matrix3d R=Eigen::<span class="built_in">AngleAxisd</span>(M_PI/<span class="number">4</span>,Eigen::<span class="built_in">Vector3d</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>)).<span class="built_in">toRotationMatrix</span>();</span><br><span class="line">    std::cout&lt;&lt;R.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    <span class="function">Quaterniond <span class="title">q</span><span class="params">(R)</span></span>;</span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_R</span><span class="params">(R)</span></span>;</span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_q</span><span class="params">(q)</span></span>;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO(3) from matrix: &quot;</span>&lt;&lt; SO3_R.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3 from quaternion&quot;</span>&lt;&lt; SO3_q.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="function">Vector3d <span class="title">update_w</span><span class="params">(<span class="number">0.01</span>,<span class="number">0.02</span>,<span class="number">0.03</span>)</span></span>;<span class="comment">//更新量</span></span><br><span class="line">    Sophus::SO3d SO3_updated = SO3_R * Sophus::SO3d::<span class="built_in">exp</span>(update_w);<span class="comment">//右乘更新</span></span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3_updated = &quot;</span>&lt;&lt; endl &lt;&lt; SO3_updated.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="function">Quaterniond <span class="title">update_q</span><span class="params">(<span class="number">1</span>, update_w(<span class="number">0</span>) / <span class="number">2</span>, update_w(<span class="number">1</span>) / <span class="number">2</span>, update_w(<span class="number">2</span>) / <span class="number">2</span>)</span></span>;  <span class="comment">//[1,1/2w]</span></span><br><span class="line">    update_q.<span class="built_in">normalize</span>();<span class="comment">//归一化处理</span></span><br><span class="line">    Eigen::Quaterniond q_updated=q * update_q;</span><br><span class="line">    <span class="comment">//q_updated.normalize();//note:对更新量单独归一化或者更新完进行归一化都可以，结果一致</span></span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_q_updated</span><span class="params">(q_updated)</span></span>;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3_q_updated = &quot;</span>&lt;&lt; endl &lt;&lt; SO3_q_updated.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="VINSnote%5Cquaternion.png" alt="quaternion" /></p>
+<p><img src="https://img-blog.csdnimg.cn/20191123115613193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20191123115656646.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70" alt="" /></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[C++ Tips]]></title>
+      <url>/ctips.html</url>
+      <content type="html"><![CDATA[<h2 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作"></a> 文件操作</h2>
+<p>文件类型分为两种：</p>
+<ol>
+<li><strong>文本文件</strong>     -  文件以文本的<strong>ASCII码</strong>形式存储在计算机中</li>
+<li><strong>二进制文件</strong> -  文件以文本的<strong>二进制</strong>形式存储在计算机中，用户一般不能直接读懂它们</li>
+</ol>
+<p>操作文件的三大类:</p>
+<ol>
+<li>ofstream：写操作</li>
+<li>ifstream： 读操作</li>
+<li>fstream ： 读写操作</li>
+</ol>
+<p><code>ofstream ofs</code> 默认打开方式是<code>ios::out</code>，</p>
+<p><code>ofs &lt;&lt; &quot;balabala&quot;</code></p>
+<p><code>ifstream ifs</code>默认打开方式是<code>ios:in</code></p>
+<p><code>ifs &gt;&gt; str</code></p>
+<p><code>&gt;&gt;</code>,<code>&lt;&lt;</code> 箭头的朝向表示数据流到哪。一般文件流在前面。</p>
+<p>文件<strong>打开方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>打开方式</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ios::in</td>
+<td>为读文件而打开文件</td>
+</tr>
+<tr>
+<td>ios::out</td>
+<td>为写文件而打开文件</td>
+</tr>
+<tr>
+<td>ios::ate</td>
+<td>初始位置：文件尾</td>
+</tr>
+<tr>
+<td>ios::app</td>
+<td>追加方式写文件</td>
+</tr>
+<tr>
+<td>ios::trunc</td>
+<td>如果文件存在先删除，再创建</td>
+</tr>
+<tr>
+<td>ios::binary</td>
+<td>二进制方式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="文本文件"><a class="markdownIt-Anchor" href="#文本文件"></a> 文本文件</h3>
+<ol>
+<li>写文件步骤如下：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span>					<span class="comment">// 包含头文件     </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ofstream ofs;					<span class="comment">// 创建流对象</span></span><br><span class="line">    ofs.<span class="built_in">open</span>((<span class="string">&quot;文件路径&quot;</span>,打开方式)	   <span class="comment">// 打开文件 （信息就保存在ofs这个流对象里了）</span></span><br><span class="line">    ofs &lt;&lt; <span class="string">&quot;写入数据&quot;</span>;</span><br><span class="line">    ...</span><br><span class="line">    ofs.<span class="built_in">close</span>();					<span class="comment">// 关闭文件，内容就刷新到文件里了         </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()&#123;</span><br><span class="line">    ofstream <span class="built_in">ofs</span>(<span class="string">&quot;文件路径&quot;</span>,打开方式)	<span class="comment">// 调用构造方式。</span></span><br><span class="line">    ofs &lt;&lt; <span class="string">&quot;写入数据&quot;</span>;</span><br><span class="line">    ...</span><br><span class="line">    ofs.<span class="built_in">close</span>();</span><br><span class="line">&#125;             </span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>读文件步骤如下：</li>
+</ol>
+<p>读文件与写文件步骤相似，但是读取方式相对于比较多</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!ifs.<span class="built_in">is_open</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件打开失败&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//第一种方式</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs &gt;&gt; buf)</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第二种</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs.getline(buf,sizeof(buf)))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第三种</span></span><br><span class="line">	<span class="comment">//string buf;</span></span><br><span class="line">	<span class="comment">//while (getline(ifs, buf))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	<span class="keyword">while</span> ((c = ifs.<span class="built_in">get</span>()) != EOF)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; c;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ifs.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[C++模板]]></title>
+      <url>/c-mo-ban.html</url>
+      <content type="html"><![CDATA[<h1 id="c-模板"><a class="markdownIt-Anchor" href="#c-模板"></a> C++ 模板</h1>
+<h2 id="函数模板"><a class="markdownIt-Anchor" href="#函数模板"></a> 函数模板</h2>
+<p>模板函数与普通函数的区别：</p>
+<ul>
+<li>函数模板<strong>不允许</strong>自动类型转换 ， 但传入实参时可以自动进行类型推导，不用加<code>&lt;type &gt;</code></li>
+<li>普通函数能够自动进行类型转换</li>
+</ul>
+<p>同名函数优先调用普通函数，除非显式加<code>&lt; type&gt;</code></p>
+<h2 id="类模板"><a class="markdownIt-Anchor" href="#类模板"></a> 类模板</h2>
+<p>调用时，类模板必须显示式指定类型</p>
+<p><strong>类模板派生普通类</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Person</span>()&#123;</span><br><span class="line">        mAge = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    T mAge;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 1 派生类为普通类,需要指定类型 &lt;int&gt;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubPerson1</span> : <span class="keyword">public</span> Person&lt;<span class="type">int</span>&gt;&#123;				</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 派生类为模板类</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubPerson2</span> : <span class="keyword">public</span> Person&lt;T&gt;&#123;				</span><br><span class="line">    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>不要滥用友元</p>
+<p>类模板<code>.h</code>文件·和<code>.cpp</code>文件分离编译在调用是会引发二次编译问题，所以一半将声明和实现都放在一个文件里，定义成<code>.hpp</code>文件。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> C++ </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[C++内置库以及函数]]></title>
       <url>/c-nei-zhi-ku-he-han-shu.html</url>
       <content type="html"><![CDATA[<h1 id="C-内置库以及函数"><a href="#C-内置库以及函数" class="headerlink" title="C++内置库以及函数"></a>C++内置库以及函数</h1><h2 id="sizeof"><a href="#sizeof" class="headerlink" title="sizeof"></a>sizeof</h2><ol>
@@ -259,7 +384,9 @@ FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为
     <entry>
       <title><![CDATA[C++容器]]></title>
       <url>/c-rong-qi.html</url>
-      <content type="html"><![CDATA[<h1 id="C-容器"><a href="#C-容器" class="headerlink" title="C++容器"></a>C++容器</h1><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><blockquote>
+      <content type="html"><![CDATA[<h1 id="c容器"><a class="markdownIt-Anchor" href="#c容器"></a> C++容器</h1>
+<h2 id="vector"><a class="markdownIt-Anchor" href="#vector"></a> vector</h2>
+<blockquote>
 <p>vector是STL中最常见的容器，它是一种顺序容器，支持随机访问。vector是一块连续分配的内存，从数据安排的角度来讲，和数组极其相似，不同的地方就是：数组是静态分配空间，一旦分配了空间的大小，就不可再改变了；而vector是动态分配空间，随着元素的不断插入，它会按照自身的一套机制不断扩充自身的容量。</p>
 </blockquote>
 <blockquote>
@@ -278,8 +405,9 @@ FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为
 <th>操作说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td><code>Vector&lt;T&gt; v1; </code></td>
+<tbody>
+<tr>
+<td><code>Vector&lt;T&gt; v1;</code></td>
 <td><code>Vector</code>保存类型为T的对象。默认构造函数<code>v1</code>为空</td>
 </tr>
 <tr>
@@ -294,7 +422,8 @@ FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为
 <td><code>Vector&lt;T&gt; v4(n);</code></td>
 <td><code>V4</code>含有值初始化的元素的n个副本</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>注：对C++的容器来说，动态添加元素的效率，要比直接静态初始化元素的效率高</p>
 <p>例1.1 :声明一个int向量以替代一维的数组:<code>vector &lt;int&gt; a;</code>(等于声明了一个int数组a[],大小没有指定,可以动态的向里面添加删除)。</p>
 <p>例1.2: 用<code>vector</code>代替二维数组.其实只要声明一个一维数组向量即可,而一个数组的名字其实代表的是它的首地址,所以只要声明一个地址的向量即可,即:<code>ector &lt;int *&gt; a</code>.</p>
@@ -308,7 +437,8 @@ FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为
 <th>操作说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>v.empty()</code></td>
 <td>判断v是否为空</td>
 </tr>
@@ -317,29 +447,48 @@ FILE* fp = fopen(path.c_str(), "rt"); // FILE是一个结构体，fopen参数为
 <td>返回v中元素的个数</td>
 </tr>
 <tr>
-<td><code> v.push_back(t)</code></td>
+<td><code>v.push_back(t)</code></td>
 <td>向v的末尾添加一个元素</td>
 </tr>
 <tr>
-<td><code>V[n]    </code></td>
+<td><code>V[n]</code></td>
 <td>返回v中位置为n的元素</td>
 </tr>
 <tr>
-<td><code>V1 = v2 </code></td>
+<td><code>V1 = v2</code></td>
 <td>把v1中元素替换为v2中元素副本</td>
 </tr>
 <tr>
-<td><code>V1==v2   </code></td>
+<td><code>V1==v2</code></td>
 <td>判断是否相等</td>
 </tr>
 <tr>
-<td><code> !=, &lt;, &lt;=, &gt;, &gt;=</code></td>
+<td><code>!=, &lt;, &lt;=, &gt;, &gt;=</code></td>
 <td>直接用于vector对象的相互比较</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <blockquote>
-<p>1.push_back  在数组的最后添加一个数据<br>2.pop_back  去掉数组的最后一个数据<br>3.at        得到编号位置的数据<br>4.begin      得到数组头的指针<br>5.end       得到数组的最后一个单元+1的指针<br>6．front    得到数组头的引用<br>7.back      得到数组的最后一个单元的引用<br>8.max_size   得到vector最大可以是多大<br>9.capacity    当前vector分配的大小<br>10.size      当前使用数据的大小<br>11.resize     改变当前使用数据的大小，如果它比当前使用的大，者填充默认值<br>12.reserve   改变当前vecotr所分配空间的大小<br>13.erase     删除指针指向的数据项<br>14.clear     清空当前的vector<br>15.rbegin    将vector反转后的开始指针返回(其实就是原来的end-1)<br>16.rend     将vector反转构的结束指针返回(其实就是原来的begin-1)<br>17.empty    判断vector是否为空<br>18.swap     与另一个vector交换数据</p>
+<p>1.push_back  在数组的最后添加一个数据<br />
+2.pop_back  去掉数组的最后一个数据<br />
+<a href="http://3.at">3.at</a>        得到编号位置的数据<br />
+4.begin      得到数组头的指针<br />
+5.end       得到数组的最后一个单元+1的指针<br />
+6．front    得到数组头的引用<br />
+7.back      得到数组的最后一个单元的引用<br />
+8.max_size   得到vector最大可以是多大<br />
+9.capacity    当前vector分配的大小<br />
+10.size      当前使用数据的大小<br />
+11.resize     改变当前使用数据的大小，如果它比当前使用的大，者填充默认值<br />
+12.reserve   改变当前vecotr所分配空间的大小<br />
+13.erase     删除指针指向的数据项<br />
+14.clear     清空当前的vector<br />
+15.rbegin    将vector反转后的开始指针返回(其实就是原来的end-1)<br />
+16.rend     将vector反转构的结束指针返回(其实就是原来的begin-1)<br />
+17.empty    判断vector是否为空<br />
+18.swap     与另一个vector交换数据</p>
 </blockquote>
+<h2 id="string"><a class="markdownIt-Anchor" href="#string"></a> string</h2>
 ]]></content>
       
         <categories>
@@ -581,80 +730,44 @@ Here is mat.trace():     5
     <entry>
       <title><![CDATA[c++多线程]]></title>
       <url>/c-duo-xian-cheng.html</url>
-      <content type="html"><![CDATA[<h1 id="C-多线程"><a href="#C-多线程" class="headerlink" title="C++多线程"></a>C++多线程</h1><p>引入头文件：</p>
-<pre class="line-numbers language-c++"><code class="language-c++">#include <thread>  
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+      <content type="html"><![CDATA[<h1 id="c多线程"><a class="markdownIt-Anchor" href="#c多线程"></a> C++多线程</h1>
+<p>引入头文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span>  </span></span><br></pre></td></tr></table></figure>
 <p>链接库：</p>
-<pre class="line-numbers language-cmake"><code class="language-cmake">target_link_libraries(xxx pthread)
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>线程</strong><br>• 进程可以包含多个线程<br>• 主线程：从main函数开始，main函数执行完，主线程结束，进程结束<br>• 其他线程：需要我们自己创建，入口可以是函数、类、lambda表达式<br>• 进程是否执行完毕的标志是：主线程是否执行完，如果主线程执行完毕了，就代表整个进程执行完<br>了，一般来说，此时如果其他子线程还没有执行完，也会被强行终止</p>
-<h2 id="创建子线程"><a href="#创建子线程" class="headerlink" title="创建子线程"></a>创建子线程</h2><pre class="line-numbers language-c++"><code class="language-c++">std::thread    // 多线程类
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-c++"><code class="language-c++">int main()&#123;
-    
-    thrad th1(xx);        // 使用其创建子线程对象的时候，子线程就直接运行了。
-    ...
-    th1.join();            // 汇合，表示等待子线程运行完，主线程再接着运行。（小溪汇入大河）
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c++"><code class="language-c++">int main()&#123;
-    
-    thrad th2(xx);        // 使用其创建子线程对象的时候，子线程就直接运行了。
-    ...
-    th2.detach();        // 分离，表示子线程脱离子线程，各走各的，互不相关（分流了），注意，此时如果主线程运行完毕，则直接关闭所有线程，子线程没运行完也停止运行。（夭折了），少用。
-    
-    th2.joinable()        // joinable()判断是否可以成功使用join()或者detach(),如果返回true，证明可以调用join()或者detach(),如果返回false，证明调用过join()或者detach()，join()和detach()都不能再调用了
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_link_libraries</span>(xxx pthread)</span><br></pre></td></tr></table></figure>
+<p><strong>线程</strong><br />
+• 进程可以包含多个线程<br />
+• 主线程：从main函数开始，main函数执行完，主线程结束，进程结束<br />
+• 其他线程：需要我们自己创建，入口可以是函数、类、lambda表达式<br />
+• 进程是否执行完毕的标志是：主线程是否执行完，如果主线程执行完毕了，就代表整个进程执行完<br />
+了，一般来说，此时如果其他子线程还没有执行完，也会被强行终止</p>
+<h2 id="创建子线程"><a class="markdownIt-Anchor" href="#创建子线程"></a> 创建子线程</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::thread	<span class="comment">// 多线程类</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function">thrad <span class="title">th1</span><span class="params">(xx)</span></span>;		<span class="comment">// 使用其创建子线程对象的时候，子线程就直接运行了。</span></span><br><span class="line">    ...</span><br><span class="line">	th1.<span class="built_in">join</span>();			<span class="comment">// 汇合，表示等待子线程运行完，主线程再接着运行。（小溪汇入大河）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function">thrad <span class="title">th2</span><span class="params">(xx)</span></span>;		<span class="comment">// 使用其创建子线程对象的时候，子线程就直接运行了。</span></span><br><span class="line">    ...</span><br><span class="line">	th2.<span class="built_in">detach</span>();		<span class="comment">// 分离，表示子线程脱离子线程，各走各的，互不相关（分流了），注意，此时如果主线程运行完毕，则直接关闭所有线程，子线程没运行完也停止运行。（夭折了），少用。</span></span><br><span class="line">    </span><br><span class="line">    th2.<span class="built_in">joinable</span>()		<span class="comment">// joinable()判断是否可以成功使用join()或者detach(),如果返回true，证明可以调用join()或者detach(),如果返回false，证明调用过join()或者detach()，join()和detach()都不能再调用了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>查看线程ID:</p>
-<pre class="line-numbers language-c++"><code class="language-c++"> this_thread::get_id()    //  this_thread是一个namespace,
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="进程间安全（防止读写冲突，就给它上锁）"><a href="#进程间安全（防止读写冲突，就给它上锁）" class="headerlink" title="进程间安全（防止读写冲突，就给它上锁）"></a>进程间安全（防止读写冲突，就给它上锁）</h2><pre class="line-numbers language-c++"><code class="language-c++">#include <mutex>  // 互斥锁头文件 ，mutex也是一个对象，相当于一把锁。
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this_thread::<span class="built_in">get_id</span>()	<span class="comment">//  this_thread是一个namespace,</span></span><br></pre></td></tr></table></figure>
+<h2 id="进程间安全防止读写冲突就给它上锁"><a class="markdownIt-Anchor" href="#进程间安全防止读写冲突就给它上锁"></a> 进程间安全（防止读写冲突，就给它上锁）</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span>  <span class="comment">// 互斥锁头文件 ，mutex也是一个对象，相当于一把锁。</span></span></span><br></pre></td></tr></table></figure>
 <p>使用方法：</p>
 <p>先创建一个锁对象：</p>
-<pre class="line-numbers language-c++"><code class="language-c++">mutex myMutex;
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mutex myMutex;</span><br></pre></td></tr></table></figure>
 <p>上锁是防止多个线程<strong>同时</strong>对<strong>同一个数据快</strong>进行读写，造成冲突，（也就是前一个线程刚写入一半数据，你就过来读了），正确姿势是等他写完你再读，或读完你再写。所以，当其中一个线程拿到一把锁时：</p>
-<pre class="line-numbers language-c++"><code class="language-c++">// 线程1
-myMutex.lock();            
-cout << "putInData 子线程：放入一个数据" << i << endl;
-dataQuene.push_back(i);
-myMutex.unlock();
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-C++"><code class="language-C++">// 线程2
-myMutex.lock();            
-cout << "takeOutData 子线程：取出一个数据" << dataQuene.front() << endl;
-dataQuene.pop_front();
-myMutex.unlock();
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 线程1</span></span><br><span class="line">myMutex.<span class="built_in">lock</span>();			</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;putInData 子线程：放入一个数据&quot;</span> &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">dataQuene.<span class="built_in">push_back</span>(i);</span><br><span class="line">myMutex.<span class="built_in">unlock</span>();</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 线程2</span></span><br><span class="line">myMutex.<span class="built_in">lock</span>();			</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;takeOutData 子线程：取出一个数据&quot;</span> &lt;&lt; dataQuene.<span class="built_in">front</span>() &lt;&lt; endl;</span><br><span class="line">dataQuene.<span class="built_in">pop_front</span>();</span><br><span class="line">myMutex.<span class="built_in">unlock</span>();</span><br></pre></td></tr></table></figure>
 <p>这两个线程为互斥关系，各自当执行到<code>myMutex.lock()</code>时，必须等一个拿到锁的代码快完整执行到释放锁<code>myMutex.unlock()</code>了，另一个才可能拿到锁继续执行。</p>
 <blockquote>
-<p>注意：<code>lock()</code>与<code>unlock()</code>必须成对出现</p>
+<p>注意：<code>lock()</code>与<code>unlock()</code>必须成对出现，锁定后不解锁，或者重复解锁都会出问题</p>
 </blockquote>
 <p><strong>lock_guard</strong></p>
 <ul>
 <li>内部构造时相当于执行了lock，析构时相当于执行unlock</li>
 <li>简单但不如lock()和unlock()灵活，通过大括号来实现，控制生命周期</li>
 </ul>
-<pre class="line-numbers language-c++"><code class="language-c++">mutex myMutex;
-
-&#123;
-    lock_guard<mutex> dataGuard(myMutex);        // lock_guard<mutex>创建对象，参数为锁对象
-    ...
-    ...    
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mutex myMutex;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">lock_guard&lt;mutex&gt; <span class="title">dataGuard</span><span class="params">(myMutex)</span></span>;		<span class="comment">// lock_guard&lt;mutex&gt;创建对象，参数为锁对象</span></span><br><span class="line">	...</span><br><span class="line">    ...    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>unique_lock</strong></p>
 <p>std::unique_lock要比std::lock_guard功能更多，有更多的成员函数，更灵活,但是更灵活的代价是占用空间相对更大一点且相对更慢一点</p>
-<pre><code>mutex myMutex;
-
-&#123;
-    unique_lock&lt;mutex&gt; dataOutUnique(myMutex);    // unique_lock&lt;mutex&gt;创建对象，参数为锁对象
-    ...
-    ...    
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mutex myMutex;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    unique_lock&lt;mutex&gt; dataOutUnique(myMutex);	// unique_lock&lt;mutex&gt;创建对象，参数为锁对象</span><br><span class="line">	...</span><br><span class="line">    ...    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>死锁产生原因及防止方法</strong></p>
 <p>当两个线程同时拿着两把及以上的相同的锁时，上锁的顺序必须要一致，否则会发生死锁。</p>
 ]]></content>

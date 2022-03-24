@@ -17,19 +17,25 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>分类: 容器 | Hexo</title>
-  <meta name="description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hpstu&#96;s Blog">
-<meta property="og:url" content="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <title>VINSnote | Hexo</title>
+  <meta name="description" content="VINS笔记  编程实现四元数和李代数更新 可以使用四元数或旋转矩阵存储旋转变量。当我们用计算出来的 ω对某旋转更新时，有两种不同方式： R′←Rexp(ω^)\bold{R^\prime}\leftarrow \bold{R}\,\exp{({\hat{\omega}})} R​′​​←Rexp(​ω​^​​) OROR OR q′←q⨂[1,12ω]Tq\prime\leftarrow q\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VINSnote">
+<meta property="og:url" content="https://www.hpstu.cn/vinsnote.html">
 <meta property="og:site_name" content="hpstu&#96;s Blog">
-<meta property="og:description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
+<meta property="og:description" content="VINS笔记  编程实现四元数和李代数更新 可以使用四元数或旋转矩阵存储旋转变量。当我们用计算出来的 ω对某旋转更新时，有两种不同方式： R′←Rexp(ω^)\bold{R^\prime}\leftarrow \bold{R}\,\exp{({\hat{\omega}})} R​′​​←Rexp(​ω​^​​) OROR OR q′←q⨂[1,12ω]Tq\prime\leftarrow q\">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.hpstu.cn/VINSnote%5Cquaternion.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191123115613193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191123115656646.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-03-24T12:48:35.000Z">
+<meta property="article:modified_time" content="2022-03-24T13:40:34.882Z">
 <meta property="article:author" content="HP">
 <meta property="article:tag" content="被动学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hpstu.cn/VINSnote%5Cquaternion.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <link rel="canonical" href="https://www.hpstu.cn/vinsnote.html">
   
     <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
   
@@ -39,6 +45,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -410,85 +418,125 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">分类: 容器</h1>
-      <p class="hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/Blog/">Blog</a></li>
-          
-          <li><a href="/categories/C/">C++</a></li>
-          
-          <li><a href="/categories/C/内置库和函数/">内置库和函数</a></li>
-          
-          <li><a href="/categories/C/关键字/">关键字</a></li>
-          
-          <li><a href="/categories/SLAM库/">SLAM库</a></li>
-          
-          <li><a href="/categories/Markdown/">Markdown</a></li>
-          
-          <li><a href="/categories/C/面向对象/">面向对象</a></li>
-          
-          <li><a href="/categories/SLAM/">SLAM</a></li>
-          
-          <li><a href="/categories/ubuntu/">ubuntu</a></li>
-          
-          <li><a href="/categories/C/容器/">容器</a></li>
-          
-          <li><a href="/categories/Ubuntu/">Ubuntu</a></li>
-          
-          <li><a href="/categories/cmake/">cmake</a></li>
-          
-          <li><a href="/categories/SLAM库/Eigen/">Eigen</a></li>
-          
-          <li><a href="/categories/SLAM/RANSAC/">RANSAC</a></li>
-          
-          <li><a href="/categories/ubuntu/bash/">bash</a></li>
-          
-          <li><a href="/categories/C/多线程/">多线程</a></li>
-          
-          <li><a href="/categories/C/指针/">指针</a></li>
-          
-          <li><a href="/categories/git/">git</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapse容器" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              容器
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-        </h4>
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vins%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text"> VINS笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%9B%9B%E5%85%83%E6%95%B0%E5%92%8C%E6%9D%8E%E4%BB%A3%E6%95%B0%E6%9B%B4%E6%96%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 编程实现四元数和李代数更新</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-VINSnote" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VINSnote
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/vinsnote.html" class="article-date">
+	  <time datetime="2022-03-24T12:48:35.000Z" itemprop="datePublished">2022-03-24</time>
+	</a>
+</span>
+        
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/vinsnote.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
     </div>
-    <div id="collapse容器" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading容器">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/c-rong-qi.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> C++容器
-</a>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="vins笔记"><a class="markdownIt-Anchor" href="#vins笔记"></a> VINS笔记</h1>
+<h2 id="编程实现四元数和李代数更新"><a class="markdownIt-Anchor" href="#编程实现四元数和李代数更新"></a> 编程实现四元数和李代数更新</h2>
+<p>可以使用四元数或旋转矩阵存储旋转变量。当我们用计算出来的 ω对某旋转更新时，有两种不同方式：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><msup><mi mathvariant="bold">R</mi><mi mathvariant="bold">′</mi></msup></mrow><mo>←</mo><mrow><mi mathvariant="bold">R</mi></mrow><mspace width="0.16667em"></mspace><mi>exp</mi><mrow><mo>(</mo><mrow><mover accent="true"><mrow><mi>ω</mi></mrow><mo>^</mo></mover></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">\bold{R^\prime}\leftarrow \bold{R}\,\exp{({\hat{\omega}})}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.801892em;"></span><span class="strut bottom" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathbf">R</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathbf">′</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mrel">←</span><span class="mord displaystyle textstyle uncramped"><span class="mord mathbf">R</span></span><span class="mord mspace thinspace"></span><span class="mop">exp</span><span class="mord displaystyle textstyle uncramped"><span class="mopen">(</span><span class="mord displaystyle textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">ω</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mclose">)</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">OR
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mi mathvariant="normal">′</mi><mo>←</mo><mi>q</mi><mo>⨂</mo><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>ω</mi><msup><mo>]</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">q\prime\leftarrow q\bigotimes[1,\frac{1}{2}\omega]^T
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mord mathrm">′</span><span class="mrel">←</span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="op-symbol large-op mop" style="top:-0.000004999999999977245em;">⨂</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.03588em;">ω</span><span class="mclose"><span class="mclose">]</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//初始化旋转矩阵</span></span><br><span class="line">    Eigen:: Matrix3d R=Eigen::<span class="built_in">AngleAxisd</span>(M_PI/<span class="number">4</span>,Eigen::<span class="built_in">Vector3d</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>)).<span class="built_in">toRotationMatrix</span>();</span><br><span class="line">    std::cout&lt;&lt;R.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    <span class="function">Quaterniond <span class="title">q</span><span class="params">(R)</span></span>;</span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_R</span><span class="params">(R)</span></span>;</span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_q</span><span class="params">(q)</span></span>;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO(3) from matrix: &quot;</span>&lt;&lt; SO3_R.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3 from quaternion&quot;</span>&lt;&lt; SO3_q.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="function">Vector3d <span class="title">update_w</span><span class="params">(<span class="number">0.01</span>,<span class="number">0.02</span>,<span class="number">0.03</span>)</span></span>;<span class="comment">//更新量</span></span><br><span class="line">    Sophus::SO3d SO3_updated = SO3_R * Sophus::SO3d::<span class="built_in">exp</span>(update_w);<span class="comment">//右乘更新</span></span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3_updated = &quot;</span>&lt;&lt; endl &lt;&lt; SO3_updated.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="function">Quaterniond <span class="title">update_q</span><span class="params">(<span class="number">1</span>, update_w(<span class="number">0</span>) / <span class="number">2</span>, update_w(<span class="number">1</span>) / <span class="number">2</span>, update_w(<span class="number">2</span>) / <span class="number">2</span>)</span></span>;  <span class="comment">//[1,1/2w]</span></span><br><span class="line">    update_q.<span class="built_in">normalize</span>();<span class="comment">//归一化处理</span></span><br><span class="line">    Eigen::Quaterniond q_updated=q * update_q;</span><br><span class="line">    <span class="comment">//q_updated.normalize();//note:对更新量单独归一化或者更新完进行归一化都可以，结果一致</span></span><br><span class="line">    <span class="function">Sophus::SO3d <span class="title">SO3_q_updated</span><span class="params">(q_updated)</span></span>;</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;SO3_q_updated = &quot;</span>&lt;&lt; endl &lt;&lt; SO3_q_updated.<span class="built_in">matrix</span>()&lt;&lt;std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="VINSnote%5Cquaternion.png" alt="quaternion" /></p>
+<p><img src="https://img-blog.csdnimg.cn/20191123115613193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20191123115656646.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70" alt="" /></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/vinsnote.html" title="VINSnote" target="_blank" rel="external">https://www.hpstu.cn/vinsnote.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
 
-              
-            </div>
-        </div>
-    </div>
-</div>
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/ctips.html" title="C++ Tips"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -541,6 +589,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 

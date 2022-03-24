@@ -17,19 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>分类: 容器 | Hexo</title>
-  <meta name="description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hpstu&#96;s Blog">
-<meta property="og:url" content="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <title>C++模板 | Hexo</title>
+  <meta name="description" content="C++ 模板  函数模板 模板函数与普通函数的区别：  函数模板不允许自动类型转换 ， 但传入实参时可以自动进行类型推导，不用加&lt;type &gt; 普通函数能够自动进行类型转换  同名函数优先调用普通函数，除非显式加&lt; type&gt;  类模板 调用时，类模板必须显示式指定类型 类模板派生普通类 12345678910111213141516171819template &lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++模板">
+<meta property="og:url" content="https://www.hpstu.cn/c-mo-ban.html">
 <meta property="og:site_name" content="hpstu&#96;s Blog">
-<meta property="og:description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
+<meta property="og:description" content="C++ 模板  函数模板 模板函数与普通函数的区别：  函数模板不允许自动类型转换 ， 但传入实参时可以自动进行类型推导，不用加&lt;type &gt; 普通函数能够自动进行类型转换  同名函数优先调用普通函数，除非显式加&lt; type&gt;  类模板 调用时，类模板必须显示式指定类型 类模板派生普通类 12345678910111213141516171819template &lt;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-16T14:19:21.000Z">
+<meta property="article:modified_time" content="2022-03-17T10:46:58.959Z">
 <meta property="article:author" content="HP">
 <meta property="article:tag" content="被动学习">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <link rel="canonical" href="https://www.hpstu.cn/c-mo-ban.html">
   
     <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
   
@@ -39,6 +41,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -410,85 +414,135 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">分类: 容器</h1>
-      <p class="hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/Blog/">Blog</a></li>
-          
-          <li><a href="/categories/C/">C++</a></li>
-          
-          <li><a href="/categories/C/内置库和函数/">内置库和函数</a></li>
-          
-          <li><a href="/categories/C/关键字/">关键字</a></li>
-          
-          <li><a href="/categories/SLAM库/">SLAM库</a></li>
-          
-          <li><a href="/categories/Markdown/">Markdown</a></li>
-          
-          <li><a href="/categories/C/面向对象/">面向对象</a></li>
-          
-          <li><a href="/categories/SLAM/">SLAM</a></li>
-          
-          <li><a href="/categories/ubuntu/">ubuntu</a></li>
-          
-          <li><a href="/categories/C/容器/">容器</a></li>
-          
-          <li><a href="/categories/Ubuntu/">Ubuntu</a></li>
-          
-          <li><a href="/categories/cmake/">cmake</a></li>
-          
-          <li><a href="/categories/SLAM库/Eigen/">Eigen</a></li>
-          
-          <li><a href="/categories/SLAM/RANSAC/">RANSAC</a></li>
-          
-          <li><a href="/categories/ubuntu/bash/">bash</a></li>
-          
-          <li><a href="/categories/C/多线程/">多线程</a></li>
-          
-          <li><a href="/categories/C/指针/">指针</a></li>
-          
-          <li><a href="/categories/git/">git</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapse容器" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              容器
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-        </h4>
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c-%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text"> C++ 模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text"> 函数模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.2.</span> <span class="toc-text"> 类模板</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-C模板" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++模板
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/c-mo-ban.html" class="article-date">
+	  <time datetime="2022-03-16T14:19:21.000Z" itemprop="datePublished">2022-03-16</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/c-mo-ban.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
     </div>
-    <div id="collapse容器" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading容器">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/c-rong-qi.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> C++容器
-</a>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="c-模板"><a class="markdownIt-Anchor" href="#c-模板"></a> C++ 模板</h1>
+<h2 id="函数模板"><a class="markdownIt-Anchor" href="#函数模板"></a> 函数模板</h2>
+<p>模板函数与普通函数的区别：</p>
+<ul>
+<li>函数模板<strong>不允许</strong>自动类型转换 ， 但传入实参时可以自动进行类型推导，不用加<code>&lt;type &gt;</code></li>
+<li>普通函数能够自动进行类型转换</li>
+</ul>
+<p>同名函数优先调用普通函数，除非显式加<code>&lt; type&gt;</code></p>
+<h2 id="类模板"><a class="markdownIt-Anchor" href="#类模板"></a> 类模板</h2>
+<p>调用时，类模板必须显示式指定类型</p>
+<p><strong>类模板派生普通类</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Person</span>()&#123;</span><br><span class="line">        mAge = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    T mAge;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 1 派生类为普通类,需要指定类型 &lt;int&gt;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubPerson1</span> : <span class="keyword">public</span> Person&lt;<span class="type">int</span>&gt;&#123;				</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 派生类为模板类</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubPerson2</span> : <span class="keyword">public</span> Person&lt;T&gt;&#123;				</span><br><span class="line">    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>不要滥用友元</p>
+<p>类模板<code>.h</code>文件·和<code>.cpp</code>文件分离编译在调用是会引发二次编译问题，所以一半将声明和实现都放在一个文件里，定义成<code>.hpp</code>文件。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/c-mo-ban.html" title="C++模板" target="_blank" rel="external">https://www.hpstu.cn/c-mo-ban.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
 
-              
-            </div>
-        </div>
-    </div>
-</div>
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/ctips.html" title="C++ Tips"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/c-nei-zhi-ku-he-han-shu.html" title="C++内置库以及函数"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -541,6 +595,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 

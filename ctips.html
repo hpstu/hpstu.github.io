@@ -17,19 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>分类: 容器 | Hexo</title>
-  <meta name="description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hpstu&#96;s Blog">
-<meta property="og:url" content="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <title>C++ Tips | Hexo</title>
+  <meta name="description" content="文件操作 文件类型分为两种：  文本文件     -  文件以文本的ASCII码形式存储在计算机中 二进制文件 -  文件以文本的二进制形式存储在计算机中，用户一般不能直接读懂它们  操作文件的三大类:  ofstream：写操作 ifstream： 读操作 fstream ： 读写操作  ofstream ofs 默认打开方式是ios::out， ofs &lt;&lt; &quot;bala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ Tips">
+<meta property="og:url" content="https://www.hpstu.cn/ctips.html">
 <meta property="og:site_name" content="hpstu&#96;s Blog">
-<meta property="og:description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
+<meta property="og:description" content="文件操作 文件类型分为两种：  文本文件     -  文件以文本的ASCII码形式存储在计算机中 二进制文件 -  文件以文本的二进制形式存储在计算机中，用户一般不能直接读懂它们  操作文件的三大类:  ofstream：写操作 ifstream： 读操作 fstream ： 读写操作  ofstream ofs 默认打开方式是ios::out， ofs &lt;&lt; &quot;bala">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-17T10:07:40.000Z">
+<meta property="article:modified_time" content="2022-03-17T10:46:49.366Z">
 <meta property="article:author" content="HP">
-<meta property="article:tag" content="被动学习">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/index.html">
+  <link rel="canonical" href="https://www.hpstu.cn/ctips.html">
   
     <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
   
@@ -39,6 +41,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -410,85 +414,183 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">分类: 容器</h1>
-      <p class="hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/Blog/">Blog</a></li>
-          
-          <li><a href="/categories/C/">C++</a></li>
-          
-          <li><a href="/categories/C/内置库和函数/">内置库和函数</a></li>
-          
-          <li><a href="/categories/C/关键字/">关键字</a></li>
-          
-          <li><a href="/categories/SLAM库/">SLAM库</a></li>
-          
-          <li><a href="/categories/Markdown/">Markdown</a></li>
-          
-          <li><a href="/categories/C/面向对象/">面向对象</a></li>
-          
-          <li><a href="/categories/SLAM/">SLAM</a></li>
-          
-          <li><a href="/categories/ubuntu/">ubuntu</a></li>
-          
-          <li><a href="/categories/C/容器/">容器</a></li>
-          
-          <li><a href="/categories/Ubuntu/">Ubuntu</a></li>
-          
-          <li><a href="/categories/cmake/">cmake</a></li>
-          
-          <li><a href="/categories/SLAM库/Eigen/">Eigen</a></li>
-          
-          <li><a href="/categories/SLAM/RANSAC/">RANSAC</a></li>
-          
-          <li><a href="/categories/ubuntu/bash/">bash</a></li>
-          
-          <li><a href="/categories/C/多线程/">多线程</a></li>
-          
-          <li><a href="/categories/C/指针/">指针</a></li>
-          
-          <li><a href="/categories/git/">git</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapse容器" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              容器
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-        </h4>
-    </div>
-    <div id="collapse容器" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading容器">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/c-rong-qi.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-14T11:08:32.000Z" itemprop="datePublished">2022-03-14</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> C++容器
-</a>
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text"> 文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text"> 文本文件</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-cTips" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++ Tips
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/ctips.html" class="article-date">
+	  <time datetime="2022-03-17T10:07:40.000Z" itemprop="datePublished">2022-03-17</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/C/" rel="tag">C++</a>
+  </span>
 
 
-              
-            </div>
-        </div>
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/ctips.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
     </div>
-</div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作"></a> 文件操作</h2>
+<p>文件类型分为两种：</p>
+<ol>
+<li><strong>文本文件</strong>     -  文件以文本的<strong>ASCII码</strong>形式存储在计算机中</li>
+<li><strong>二进制文件</strong> -  文件以文本的<strong>二进制</strong>形式存储在计算机中，用户一般不能直接读懂它们</li>
+</ol>
+<p>操作文件的三大类:</p>
+<ol>
+<li>ofstream：写操作</li>
+<li>ifstream： 读操作</li>
+<li>fstream ： 读写操作</li>
+</ol>
+<p><code>ofstream ofs</code> 默认打开方式是<code>ios::out</code>，</p>
+<p><code>ofs &lt;&lt; &quot;balabala&quot;</code></p>
+<p><code>ifstream ifs</code>默认打开方式是<code>ios:in</code></p>
+<p><code>ifs &gt;&gt; str</code></p>
+<p><code>&gt;&gt;</code>,<code>&lt;&lt;</code> 箭头的朝向表示数据流到哪。一般文件流在前面。</p>
+<p>文件<strong>打开方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>打开方式</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ios::in</td>
+<td>为读文件而打开文件</td>
+</tr>
+<tr>
+<td>ios::out</td>
+<td>为写文件而打开文件</td>
+</tr>
+<tr>
+<td>ios::ate</td>
+<td>初始位置：文件尾</td>
+</tr>
+<tr>
+<td>ios::app</td>
+<td>追加方式写文件</td>
+</tr>
+<tr>
+<td>ios::trunc</td>
+<td>如果文件存在先删除，再创建</td>
+</tr>
+<tr>
+<td>ios::binary</td>
+<td>二进制方式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="文本文件"><a class="markdownIt-Anchor" href="#文本文件"></a> 文本文件</h3>
+<ol>
+<li>写文件步骤如下：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span>					<span class="comment">// 包含头文件     </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ofstream ofs;					<span class="comment">// 创建流对象</span></span><br><span class="line">    ofs.<span class="built_in">open</span>((<span class="string">&quot;文件路径&quot;</span>,打开方式)	   <span class="comment">// 打开文件 （信息就保存在ofs这个流对象里了）</span></span><br><span class="line">    ofs &lt;&lt; <span class="string">&quot;写入数据&quot;</span>;</span><br><span class="line">    ...</span><br><span class="line">    ofs.<span class="built_in">close</span>();					<span class="comment">// 关闭文件，内容就刷新到文件里了         </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()&#123;</span><br><span class="line">    ofstream <span class="built_in">ofs</span>(<span class="string">&quot;文件路径&quot;</span>,打开方式)	<span class="comment">// 调用构造方式。</span></span><br><span class="line">    ofs &lt;&lt; <span class="string">&quot;写入数据&quot;</span>;</span><br><span class="line">    ...</span><br><span class="line">    ofs.<span class="built_in">close</span>();</span><br><span class="line">&#125;             </span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>读文件步骤如下：</li>
+</ol>
+<p>读文件与写文件步骤相似，但是读取方式相对于比较多</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!ifs.<span class="built_in">is_open</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件打开失败&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//第一种方式</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs &gt;&gt; buf)</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第二种</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs.getline(buf,sizeof(buf)))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第三种</span></span><br><span class="line">	<span class="comment">//string buf;</span></span><br><span class="line">	<span class="comment">//while (getline(ifs, buf))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	<span class="keyword">while</span> ((c = ifs.<span class="built_in">get</span>()) != EOF)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; c;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ifs.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/ctips.html" title="C++ Tips" target="_blank" rel="external">https://www.hpstu.cn/ctips.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/vinsnote.html" title="VINSnote"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/c-mo-ban.html" title="C++模板"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -541,6 +643,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
