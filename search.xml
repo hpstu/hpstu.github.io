@@ -3,6 +3,283 @@
   
     
     <entry>
+      <title><![CDATA[clion]]></title>
+      <url>/clion.html</url>
+      <content type="html"><![CDATA[<h2 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h2>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + /</td>
+<td>注释(取消注释)选择的行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + /</td>
+<td>块注释</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F</td>
+<td>高级查找</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>复制当前行、或者选择的块</td>
+</tr>
+<tr>
+<td>Alt + Shift + Click</td>
+<td>将插入符号放置在多个位置</td>
+</tr>
+<tr>
+<td><strong>CTRL+ALT+I</strong></td>
+<td><strong>自动缩进</strong></td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>参数信息（在方法中调用参数）</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>快速修正（给出提示信息）</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + L</td>
+<td>代码格式化</td>
+</tr>
+<tr>
+<td><strong>运行类</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Alt + Shift + F10</td>
+<td>运行模式配置</td>
+</tr>
+<tr>
+<td>Alt + Shift + F9</td>
+<td>调试模式配置</td>
+</tr>
+<tr>
+<td>Shift + F10</td>
+<td>运行</td>
+</tr>
+<tr>
+<td>Shift + F9</td>
+<td>调试</td>
+</tr>
+<tr>
+<td><strong>导航类</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Ctrl+B   /   Ctrl+Click</td>
+<td>跳转到声明</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + B</td>
+<td>跳转到定义</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + I</td>
+<td>查看快速定义</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + B</td>
+<td>跳转到类型声明</td>
+</tr>
+<tr>
+<td>Ctrl + ]   /  Ctrl + [</td>
+<td>跳转到代码块结束、开始</td>
+</tr>
+<tr>
+<td><strong>查找、替换类</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>替换</td>
+</tr>
+<tr>
+<td>Ctrl + F</td>
+<td>查找</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F</td>
+<td>全局文件查找内容</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + R</td>
+<td>全局替换</td>
+</tr>
+<tr>
+<td>连击两次 Shift</td>
+<td>全局查找文件</td>
+</tr>
+<tr>
+<td><strong>重构类</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Shift + F6</td>
+<td>重命名</td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>最近打开的文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> clion </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[C++STL]]></title>
+      <url>/cstl.html</url>
+      <content type="html"></content>
+      
+        
+        <tags>
+            
+            <tag> STL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[g2o]]></title>
+      <url>/g2o.html</url>
+      <content type="html"><![CDATA[<h1 id="g2o"><a class="markdownIt-Anchor" href="#g2o"></a> G2O</h1>
+<h2 id="example"><a class="markdownIt-Anchor" href="#example"></a> Example</h2>
+<p><strong>最小化重投影误差求解PnP</strong></p>
+<p>像素点与空间点位置关系：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub><msub><mi>u</mi><mi>i</mi></msub><mo>=</mo><mi>K</mi><mi>T</mi><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_iu_i=KTP_i
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">u</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<p>其中：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>：相机坐标系下点的深度，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>u</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">u_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">u</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>：点的像素坐标，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span>：相机内参，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span>：相机位姿，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">P_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>：世界坐标系下的点的坐标</p>
+<p>误差关系：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mo>=</mo><msub><mi>u</mi><mi>i</mi></msub><mo>−</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow></mfrac><mi>K</mi><mi>T</mi><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">e=u_i-\frac{1}{s_i}KTP_i
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.1574400000000002em;vertical-align:-0.8360000000000001em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">e</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">u</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit">s</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<p>优化关系：</p>
+T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s_i}KTP_i||
+
+<blockquote>
+<h2 id="最小二乘问题"><a class="markdownIt-Anchor" href="#最小二乘问题"></a> 最小二乘问题</h2>
+\underset{x}{min}F(x)=\frac{1}{2}||f(x)||^2_2
+
+<p><strong>一阶和二阶梯度法</strong></p>
+<p>考虑第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>次迭代，将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">F(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>进行展开：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>+</mo><mi>δ</mi><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo><mo>≈</mo><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>J</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><msup><mo>)</mo><mi>T</mi></msup><mi>δ</mi><msub><mi>x</mi><mi>k</mi></msub><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi>δ</mi><msubsup><mi>x</mi><mi>k</mi><mi>T</mi></msubsup><mi>H</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo><mi>δ</mi><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">F(x_k+\delta x_k)\approx F(x)+J(x_k)^T\delta x_k+\frac{1}{2}\delta x_k^TH(x_k)\delta x_k
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mrel">≈</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose"><span class="mclose">)</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.247em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<p>其中：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mo>(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">J(x_k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span>是关于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">F(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>的一阶导数（梯度），<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span></span>为二阶导数。</p>
+<p>。。。。。。</p>
+<p>高斯牛顿法：</p>
+<p>将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>进行展开：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>δ</mi><mi>x</mi><mo>)</mo><mo>≈</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>J</mi><mo>(</mo><mi>x</mi><msup><mo>)</mo><mi>T</mi></msup><mi>δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x+\delta x)\approx f(x)+J(x)^T\delta x
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8913309999999999em;"></span><span class="strut bottom" style="height:1.1413309999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">≈</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose"><span class="mclose">)</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span></span></span></span></span></p>
+<p>…</p>
+<p>得到如下方程组：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>J</mi><mo>(</mo><mi>x</mi><msup><mo>)</mo><mi>T</mi></msup><mi>δ</mi><mi>x</mi><mo>=</mo><mo>−</mo><mi>J</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">J(x)J(x)^T\delta x=-J(x)f(x)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8913309999999999em;"></span><span class="strut bottom" style="height:1.1413309999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose"><span class="mclose">)</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span><span class="mrel">=</span><span class="mord">−</span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p>亦即：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>δ</mi><mi>x</mi><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">H\delta x = g
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span></span></p>
+</blockquote>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>δ</mi><mi>x</mi><mo>)</mo><mo>≈</mo><mi>e</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><msup><mi>J</mi><mi>T</mi></msup><mi>δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">e(x+\delta x)\approx e(x)+J^T\delta x
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8913309999999999em;"></span><span class="strut bottom" style="height:1.1413309999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">≈</span><span class="mord mathit">e</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mord mathit">x</span></span></span></span></span></p>
+<p>在g2o中，</p>
+<p>顶点要做的就是实现加法，</p>
+<p>边要做的就是要实现e的计算以及<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">J</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.09618em;">J</span></span></span></span></p>
+<ol>
+<li>顶点的定义</li>
+</ol>
+<blockquote>
+<p>继承<code>BaseVertex&lt;顶点维度, 顶点结构体&gt;</code></p>
+<p>实现<code>setToOriginImpl()override</code>函数，里面给<code>_estimate</code>成员赋初值(<code>_estimate</code> 的类型就是模板里指定的顶点结构体)</p>
+<p>实现<code>oplusImpl(const double* update)override</code>函数，<code>update</code>是指向更新值的指针（实现加法更新运算）使用前需要转换成真实的结构类型。不一定是顶点类型。比如<code>update</code>可以是李代数，但顶点类型是李群。</p>
+<p>可以使用<code>esitimate()</code>函数得到顶点的值，类型同上面的顶点结构体。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">VertexPose</span> : <span class="keyword">public</span> g2o::BaseVertex&lt;<span class="number">6</span>, Sophus::SE3d&gt; &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;</span><br><span class="line"><span class="comment">// 初始化估计值</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">setToOriginImpl</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">    _estimate = Sophus::<span class="built_in">SE3d</span>(); <span class="comment">// 使用模板中声明的类型初始化</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/// 加法运算（更新估计）</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">oplusImpl</span><span class="params">(<span class="type">const</span> <span class="type">double</span> *update)</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">    Eigen::Matrix&lt;<span class="type">double</span>, <span class="number">6</span>, <span class="number">1</span>&gt; update_eigen;</span><br><span class="line">    update_eigen &lt;&lt; update[<span class="number">0</span>], update[<span class="number">1</span>], update[<span class="number">2</span>], update[<span class="number">3</span>], update[<span class="number">4</span>], update[<span class="number">5</span>];</span><br><span class="line">    _estimate = Sophus::SE3d::<span class="built_in">exp</span>(update_eigen) * _estimate; <span class="comment">// 使用定义的加法</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 读写操作</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">bool</span> <span class="title">read</span><span class="params">(istream &amp;in)</span> <span class="keyword">override</span> </span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">bool</span> <span class="title">write</span><span class="params">(ostream &amp;out)</span> <span class="type">const</span> <span class="keyword">override</span> </span>&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>边的定义</li>
+</ol>
+<blockquote>
+<ol>
+<li>继承<code>BaseBinaryEdge&lt;观测值维度，观测值结构体，第一个顶点的类型，第二个顶点的类型&gt;</code>				// 二元边</li>
+</ol>
+<p>或继承<code>BaseUnaryEdge&lt;观测值维度，观测值结构体，顶点的类型&gt;</code>						                               // 一元边</p>
+<ol start="2">
+<li>
+<p>实现函数<code>computeError()override</code>,函数里面需要计算<code>_error</code>的值（使用误差公式，即利用观测值减去顶点的观测模型的预测值）</p>
+</li>
+<li>
+<p>实现<code>linearizeOplus()override</code>，单顶点的计算<code>_jacobianOplusXi</code>矩阵，双顶点的还要计算<code>_jacobianOplusXj</code>矩阵</p>
+</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">EdgeProjection</span> : <span class="keyword">public</span> g2o::BaseUnaryEdge&lt;<span class="number">2</span>, Eigen::Vector2d, VertexPose&gt; &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">EdgeProjection</span>(<span class="type">const</span> Eigen::Vector3d &amp;pos, <span class="type">const</span> Eigen::Matrix3d &amp;K) : _pos3d(pos), _K(K) &#123;&#125;</span><br><span class="line"><span class="comment">// 计算误差</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">computeError</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">    <span class="type">const</span> VertexPose *v = <span class="built_in">static_cast</span>&lt;VertexPose *&gt; (_vertices[<span class="number">0</span>]);</span><br><span class="line">    Sophus::SE3d T = v-&gt;<span class="built_in">estimate</span>();</span><br><span class="line">    Eigen::Vector3d pos_pixel = _K * (T * _pos3d);</span><br><span class="line">    pos_pixel /= pos_pixel[<span class="number">2</span>];</span><br><span class="line">    _error = _measurement - pos_pixel.<span class="built_in">head</span>&lt;<span class="number">2</span>&gt;();</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 计算雅可比矩阵</span></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">linearizeOplus</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">    <span class="type">const</span> VertexPose *v = <span class="built_in">static_cast</span>&lt;VertexPose *&gt; (_vertices[<span class="number">0</span>]);</span><br><span class="line">    Sophus::SE3d T = v-&gt;<span class="built_in">estimate</span>();</span><br><span class="line">    Eigen::Vector3d pos_cam = T * _pos3d;</span><br><span class="line">    <span class="type">double</span> fx = _K(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="type">double</span> fy = _K(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="type">double</span> cx = _K(<span class="number">0</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="type">double</span> cy = _K(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="type">double</span> X = pos_cam[<span class="number">0</span>];</span><br><span class="line">    <span class="type">double</span> Y = pos_cam[<span class="number">1</span>];</span><br><span class="line">    <span class="type">double</span> Z = pos_cam[<span class="number">2</span>];</span><br><span class="line">    <span class="type">double</span> Z2 = Z * Z;</span><br><span class="line">    _jacobianOplusXi</span><br><span class="line">      &lt;&lt; -fx / Z, <span class="number">0</span>, fx * X / Z2, fx * X * Y / Z2, -fx - fx * X * X / Z2, fx * Y / Z,</span><br><span class="line">      <span class="number">0</span>, -fy / Z, fy * Y / (Z * Z), fy + fy * Y * Y / Z2, -fy * X * Y / Z2, -fy * X / Z;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">bool</span> <span class="title">read</span><span class="params">(istream &amp;in)</span> <span class="keyword">override</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="type">bool</span> <span class="title">write</span><span class="params">(ostream &amp;out)</span> <span class="type">const</span> <span class="keyword">override</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  Eigen::Vector3d _pos3d;</span><br><span class="line">  Eigen::Matrix3d _K;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><code>SparseOptimizer</code><br />
+这个应该是总的流程和数据管理器<br />
+<code>setAlgorithm</code>设置具体计算更新值得算法<br />
+<code>addVertex</code>加入顶点<br />
+<code>addEdge()</code><br />
+<code>addParameter()</code>可以传入一些超参<br />
+<code>initializeOptimization()</code>给顶点填入初始值<br />
+<code>optimize()</code>启动优化流程:
+<ol>
+<li>调用所有边的linearizeOplus()函数，得到每个边的雅克比矩阵，然后把矩阵连接成一个大矩阵</li>
+<li>调用所有边的computeError()，得到误差矩阵</li>
+<li>基于雅克比和误差，使用优化器计算更新值（矩阵求逆，主要时间花费在这里）</li>
+<li>把拆分成各个顶点的值</li>
+<li>调用顶点的oplusImpl函数，更新顶点的_estimate变量</li>
+<li>回到第一步</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> wuwu </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> haha </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[李群李代数]]></title>
+      <url>/li-qun-li-dai-shu.html</url>
+      <content type="html"><![CDATA[<h1 id="李群李代数"><a class="markdownIt-Anchor" href="#李群李代数"></a> 李群李代数</h1>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ln</mi><mo>(</mo><mi>exp</mi><mo>(</mo><msub><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo>^</mo></mover><mn>1</mn></msub><mo>)</mo><mi>exp</mi><mo>(</mo><msub><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo>^</mo></mover><mn>2</mn></msub><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\ln (\exp (\hat{\phi}_1)\exp(\hat{\phi}_2))
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9578799999999998em;"></span><span class="strut bottom" style="height:1.2078799999999998em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mop">ln</span><span class="mopen">(</span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">ϕ</span></span></span><span style="top:-0.26343999999999995em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">ϕ</span></span></span><span style="top:-0.26343999999999995em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title></title>
       <url>/paper/bi-ji.html</url>
       <content type="html"><![CDATA[<h2 id="置顶快捷键"><a class="markdownIt-Anchor" href="#置顶快捷键"></a> 置顶快捷键</h2>
@@ -760,8 +1037,6 @@
         <categories>
             
             <category> C++ </category>
-            
-            <category> 面向对象 </category>
             
         </categories>
         
@@ -1588,16 +1863,7 @@ obj/*.txt<br />
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n=10         <span class="comment">#True</span></span><br><span class="line">n = 10       <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
 <p>Shell是一种弱类型的编程语言。(类似Python)</p>
 <h2 id="重定向"><a class="markdownIt-Anchor" href="#重定向"></a> 重定向</h2>
-<p>与 Unix 主题“任何东西都是一个文件”保持一致，程序，比方说 ls，实际上把他们的运行<br />
-结果输送到一个叫做标准输出的特殊文件（经常用 stdout 表示），而它们的状态信息则送到另<br />
-一个叫做标准错误的文件（stderr）。默认情况下，标准输出和标准错误都连接到屏幕，而不是<br />
-保存到磁盘文件。除此之外，许多程序从一个叫做标准输入（stdin）的设备得到输入，默认情<br />
-况下，标准输入连接到键盘。</p>
-<p>I/O 重定向允许我们更改输出地点和输入来源。一般地，输出送到屏幕，输入来自键盘，但<br />
-是通过 I/O 重定向，我们可以做出改变。</p>
-<p>I/O 重定向允许我们来重定义标准输出的地点。我们使用 “&gt;” 重定向符后接文件名将标准输<br />
-出重定向到除屏幕以外的另一个文件。为什么我们要这样做呢？因为有时候把一个命令的运<br />
-行结果存储到一个文件很有用处。例如，我们可以告诉 shell 把 ls 命令的运行结果输送到文件<br />
+<p>与 Unix 主题“任何东西都是一个文件”保持一致，程序，比方说 ls，实际上把他们的运行结果输送到一个叫做标准输出的特殊文件（经常用 stdout 表示），而它们的状态信息则送到另一个叫做标准错误的文件（stderr）。默认情况下，标准输出和标准错误都连接到屏幕，而不是保存到磁盘文件。除此之外，许多程序从一个叫做标准输入（stdin）的设备得到输入，默认情况下，标准输入连接到键盘。I/O 重定向允许我们更改输出地点和输入来源。一般地，输出送到屏幕，输入来自键盘，但是通过 I/O 重定向，我们可以做出改变。I/O 重定向允许我们来重定义标准输出的地点。我们使用 “&gt;” 重定向符后接文件名将标准输出重定向到除屏幕以外的另一个文件。为什么我们要这样做呢？因为有时候把一个命令的运行结果存储到一个文件很有用处。例如，我们可以告诉 shell 把 ls 命令的运行结果输送到文件<br />
 ls-output.txt 中去，由文件代替屏幕。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l /usr/bin &gt; ls-output.txt</span><br></pre></td></tr></table></figure>
 <p>这里，我们创建了一个长长的目录/usr/bin 列表，并且输送程序运行结果到文件 ls-output.txt<br />
@@ -1670,8 +1936,6 @@ ls-output.txt 中去，由文件代替屏幕。</p>
         <categories>
             
             <category> ubuntu </category>
-            
-            <category> bash </category>
             
         </categories>
         
@@ -1916,14 +2180,44 @@ ls-output.txt 中去，由文件代替屏幕。</p>
     <entry>
       <title><![CDATA[cmake]]></title>
       <url>/cmake.html</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h2 id="cmake模板"><a class="markdownIt-Anchor" href="#cmake模板"></a> CMake模板</h2>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 设置cmake版本</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.16</span>)</span><br><span class="line"><span class="comment">## 设置生成项目名称</span></span><br><span class="line"><span class="keyword">project</span>(MyProject)</span><br><span class="line"><span class="comment">## 设置c++标准</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">11</span>)</span><br><span class="line"><span class="comment">## set Debug or Release</span></span><br><span class="line"><span class="keyword">SET</span>(CMAKE_BUILD_TYPE Release)</span><br><span class="line"><span class="comment">## 追加cmake查找目录</span></span><br><span class="line"><span class="comment"># LIST(APPEND CMAKE_MODULE_PATH $&#123;PROJECT_SOURCE_DIR&#125;/cmake_modules)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 控制输出路径</span></span><br><span class="line"><span class="comment"># set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY $&#123;path_dir&#125;) # 1. 默认存放静态库的文件夹位置</span></span><br><span class="line"><span class="comment"># set (CMAKE_LIBRARY_OUTPUT_DIRECTORY $&#123;path_dir&#125;) # 2. 默认存放动态库的文件夹位置</span></span><br><span class="line"><span class="comment"># set (LIBRARY_OUTPUT_PATH $&#123;path_dir&#125;) # 3. 默认存放库文件的位置，如果产生的是静态库并且没有指定CMAKE_ARCHIVE_OUTPUT_DIRECTORY 则存放在该目录下，动态库也类似； </span></span><br><span class="line"><span class="comment"># set (CMAKE_RUNTIME_OUTPUT_DIRECTORY $&#123;path_dir&#125;) # 4. 存放可执行软件的目录；</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 查找库文件</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV <span class="number">3</span> REQUIRED)</span><br><span class="line"><span class="comment">## 添加头文件目录</span></span><br><span class="line"><span class="keyword">include_directories</span>(</span><br><span class="line"><span class="comment">#include:</span></span><br><span class="line">        <span class="variable">$&#123;OpenCV_INCLUDE_DIRS&#125;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 生成lib库</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_LIBRARY_OUTPUT_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib)</span><br><span class="line"><span class="keyword">aux_source_directory</span>(./src DIR_SRCS)</span><br><span class="line"><span class="keyword">add_library</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;DIR_SRCS&#125;</span>)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span></span><br><span class="line">        <span class="comment"># lib_path:</span></span><br><span class="line">        <span class="variable">$&#123;OpenCV_LIBRARY_DIRS&#125;</span></span><br><span class="line">        )</span><br><span class="line"><span class="comment">## 添加子目录</span></span><br><span class="line"><span class="comment">#add_subdirectory(src)</span></span><br><span class="line"><span class="comment">#add_subdirectory(example)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Build examples</span></span><br><span class="line"><span class="keyword">set</span>(CMAKE_RUNTIME_OUTPUT_DIRECTORY <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/example)</span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span></span><br><span class="line">        example/app.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="keyword">test</span> <span class="variable">$&#123;PROJECT_NAME&#125;</span>)</span><br></pre></td></tr></table></figure>
+<p>执行：<code>project(MyProject)</code>，就是定义了一个项目的名称为：<code>MyProject</code>，对应的<br />
+就会生成两个变量：<code>&lt;projectname&gt;_BINARY_DIR</code>和<code>&lt;projectname&gt;_SOURCE_DIR</code>，但是cmake中其实已经有两个预定义的变量：<code>PROJECT_BINARY_DIR</code>和<code>PROJECT_SOURCR_DIR</code></p>
+<p>获取文件路径中所有的源文件：<code>aux_sourcr_directory(&lt;dir&gt; &lt;variable&gt;)</code></p>
+<p>example:将当前目录下的源文件名字存放到变量<code>DIR_SRCS</code>里面<code>aux_sourcr_directory(. DIR_SRCS)</code></p>
+<h2 id="变量和缓存"><a class="markdownIt-Anchor" href="#变量和缓存"></a> 变量和缓存</h2>
+<h3 id="局部变量"><a class="markdownIt-Anchor" href="#局部变量"></a> 局部变量</h3>
+<ul>
+<li>CMakeLists.txt相当于一个函数，第一个执行的CMakeLists.txt相当于主函数，正常设置的变量不能跨越CMakeLists.txt文件，相当于局部变量只在当前函数域里面作用一样，</li>
+<li>设置变量：<code>set(MY_VARIABLE &quot;value&quot;)</code></li>
+<li>变量的名称通常大写</li>
+<li>访问变量：<code>$&#123;MY_VARIABLE&#125;</code></li>
+</ul>
+<h3 id="缓存变量"><a class="markdownIt-Anchor" href="#缓存变量"></a> 缓存变量</h3>
+<ul>
+<li><strong>缓存变量就是cache变量，相当于全局变量，都是在第一个执行的CMakeLists.txt里面被设置的</strong>，不过在子项目的CMakeLists.txt文件里面也是可以修改这个变量的，此时会影响父目录的CMakeLists.txt，这些变量用来配置整个工程，配置好之后对整个工程使用。</li>
+</ul>
+<h3 id="环境变量"><a class="markdownIt-Anchor" href="#环境变量"></a> 环境变量</h3>
+<ul>
+<li>设置环境变量：<code>set(ENV&#123;variable_name&#125; value)</code></li>
+<li>获取环境变量：<code>$ENV&#123;variable_name&#125;</code></li>
+</ul>
+<h3 id="内置变量"><a class="markdownIt-Anchor" href="#内置变量"></a> 内置变量</h3>
+]]></content>
       
         <categories>
             
-            <category> cmake </category>
+            <category> C++ </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> cmake </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2234,11 +2528,7 @@ hexo d
         
         <tags>
             
-            <tag> Github </tag>
-            
             <tag> Hexo </tag>
-            
-            <tag> 博客搭建 </tag>
             
         </tags>
         

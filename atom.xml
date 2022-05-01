@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hpstu.cn/"/>
-  <updated>2022-03-24T14:47:08.821Z</updated>
+  <updated>2022-04-29T03:32:45.402Z</updated>
   <id>https://www.hpstu.cn/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>clion</title>
+    <link href="https://www.hpstu.cn/clion.html"/>
+    <id>https://www.hpstu.cn/clion.html</id>
+    <published>2022-04-27T09:26:47.000Z</published>
+    <updated>2022-04-29T03:32:45.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;快捷键&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#快捷键&quot;&gt;&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="clion" scheme="https://www.hpstu.cn/tags/clion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++STL</title>
+    <link href="https://www.hpstu.cn/cstl.html"/>
+    <id>https://www.hpstu.cn/cstl.html</id>
+    <published>2022-04-19T04:21:17.000Z</published>
+    <updated>2022-04-19T04:22:48.104Z</updated>
+    
+    <summary type="html">
+    
+      侯捷C++STL学习笔记
+    
+    </summary>
+    
+    
+      <category term="STL" scheme="https://www.hpstu.cn/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>g2o</title>
+    <link href="https://www.hpstu.cn/g2o.html"/>
+    <id>https://www.hpstu.cn/g2o.html</id>
+    <published>2022-03-26T13:07:01.000Z</published>
+    <updated>2022-05-01T12:51:21.507Z</updated>
+    
+    <summary type="html">
+    
+      nini
+    
+    </summary>
+    
+      <category term="wuwu" scheme="https://www.hpstu.cn/categories/wuwu/"/>
+    
+    
+      <category term="haha" scheme="https://www.hpstu.cn/tags/haha/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>李群李代数</title>
+    <link href="https://www.hpstu.cn/li-qun-li-dai-shu.html"/>
+    <id>https://www.hpstu.cn/li-qun-li-dai-shu.html</id>
+    <published>2022-03-24T14:50:40.000Z</published>
+    <updated>2022-03-24T15:08:52.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;李群李代数&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#李群李代数&quot;&gt;&lt;/a&gt; 李群李代数&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -43,7 +128,7 @@
     <link href="https://www.hpstu.cn/vinsnote.html"/>
     <id>https://www.hpstu.cn/vinsnote.html</id>
     <published>2022-03-24T12:48:35.000Z</published>
-    <updated>2022-03-24T14:47:08.516Z</updated>
+    <updated>2022-03-24T14:50:13.762Z</updated>
     
     <summary type="html">
     
@@ -301,7 +386,7 @@
     <link href="https://www.hpstu.cn/c-mian-xiang-dui-xiang.html"/>
     <id>https://www.hpstu.cn/c-mian-xiang-dui-xiang.html</id>
     <published>2022-03-11T02:39:35.000Z</published>
-    <updated>2022-03-24T14:47:08.512Z</updated>
+    <updated>2022-05-01T12:55:24.671Z</updated>
     
     <summary type="html">
     
@@ -317,8 +402,6 @@
     </summary>
     
       <category term="C++" scheme="https://www.hpstu.cn/categories/C/"/>
-    
-      <category term="面向对象" scheme="https://www.hpstu.cn/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
     
   </entry>
@@ -399,7 +482,7 @@
     <link href="https://www.hpstu.cn/bash.html"/>
     <id>https://www.hpstu.cn/bash.html</id>
     <published>2022-03-06T04:16:37.000Z</published>
-    <updated>2022-03-24T14:47:08.517Z</updated>
+    <updated>2022-05-01T12:56:57.721Z</updated>
     
     <summary type="html">
     
@@ -415,86 +498,8 @@
     
       <category term="ubuntu" scheme="https://www.hpstu.cn/categories/ubuntu/"/>
     
-      <category term="bash" scheme="https://www.hpstu.cn/categories/ubuntu/bash/"/>
-    
     
       <category term="bash" scheme="https://www.hpstu.cn/tags/bash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 命令</title>
-    <link href="https://www.hpstu.cn/ubuntu.html"/>
-    <id>https://www.hpstu.cn/ubuntu.html</id>
-    <published>2022-03-06T02:54:21.000Z</published>
-    <updated>2022-03-24T14:47:08.515Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;ubuntu-命令&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#ubuntu-命令&quot;&gt;&lt;/a&gt; Ubuntu 命令&lt;/h1&gt;
-&lt;h2 id=&quot;1-文件文件夹管理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Ubuntu" scheme="https://www.hpstu.cn/categories/Ubuntu/"/>
-    
-    
-      <category term="ubuntu" scheme="https://www.hpstu.cn/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cmake</title>
-    <link href="https://www.hpstu.cn/cmake.html"/>
-    <id>https://www.hpstu.cn/cmake.html</id>
-    <published>2022-03-05T13:47:10.000Z</published>
-    <updated>2022-03-24T14:47:08.518Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="cmake" scheme="https://www.hpstu.cn/categories/cmake/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Github + Hexo 搭建个人博客超详细教程</title>
-    <link href="https://www.hpstu.cn/1.html"/>
-    <id>https://www.hpstu.cn/1.html</id>
-    <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2022-03-24T14:47:08.508Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;作为一名计算机爱好者，摸索了一周搭建出自己的博客。目前只学   
-        
-      
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://www.hpstu.cn/categories/Blog/"/>
-    
-    
-      <category term="Github" scheme="https://www.hpstu.cn/tags/Github/"/>
-    
-      <category term="Hexo" scheme="https://www.hpstu.cn/tags/Hexo/"/>
-    
-      <category term="博客搭建" scheme="https://www.hpstu.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   

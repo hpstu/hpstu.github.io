@@ -17,19 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>分类: bash | Hexo</title>
-  <meta name="description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hpstu&#96;s Blog">
-<meta property="og:url" content="https://www.hpstu.cn/categories/ubuntu/bash/index.html">
+  <title>C++STL | Hexo</title>
+  <meta name="description" content="侯捷C++STL学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++STL">
+<meta property="og:url" content="https://www.hpstu.cn/cstl.html">
 <meta property="og:site_name" content="hpstu&#96;s Blog">
-<meta property="og:description" content="C++ | Python | Ubuntu | SLAM | Deep Learning | LeetCode">
+<meta property="og:description" content="侯捷C++STL学习笔记">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-19T04:21:17.000Z">
+<meta property="article:modified_time" content="2022-04-19T04:22:48.104Z">
 <meta property="article:author" content="HP">
-<meta property="article:tag" content="被动学习">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://www.hpstu.cn/categories/ubuntu/bash/index.html">
+  <link rel="canonical" href="https://www.hpstu.cn/cstl.html">
   
     <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
   
@@ -39,6 +41,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -284,7 +288,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/">关键字</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/RANSAC/">RANSAC</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/">SLAM库</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/Eigen/">Eigen</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cmake/">cmake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/bash/">bash</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/">关键字</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E5%AE%B9%E5%99%A8/">容器</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/%E6%8C%87%E9%92%88/">指针</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/RANSAC/">RANSAC</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/">SLAM库</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM%E5%BA%93/Eigen/">Eigen</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wuwu/">wuwu</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -294,7 +298,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clion/" rel="tag">clion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/" rel="tag">cmake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/haha/" rel="tag">haha</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -304,7 +308,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/Github/" style="font-size: 13px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 13px;">博客搭建</a>
+      <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/STL/" style="font-size: 13px;">STL</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/clion/" style="font-size: 13px;">clion</a> <a href="/tags/cmake/" style="font-size: 13px;">cmake</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/haha/" style="font-size: 13px;">haha</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a>
     </div>
   </div>
 
@@ -313,7 +317,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -332,70 +336,70 @@
                 
               </p>
               <p class="item-title">
+                <a href="/clion.html" class="title">clion</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-27T09:26:47.000Z" itemprop="datePublished">2022-04-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/cstl.html" class="title">C++STL</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-19T04:21:17.000Z" itemprop="datePublished">2022-04-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/wuwu/">wuwu</a>
+              </p>
+              <p class="item-title">
+                <a href="/g2o.html" class="title">g2o</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-26T13:07:01.000Z" itemprop="datePublished">2022-03-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/li-qun-li-dai-shu.html" class="title">李群李代数</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-03-24T14:50:40.000Z" itemprop="datePublished">2022-03-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
                 <a href="/paper/bi-ji.html" class="title">(no title)</a>
               </p>
               <p class="item-date">
                 <time datetime="2022-03-24T14:47:08.821Z" itemprop="datePublished">2022-03-24</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/vinsnote.html" class="title">VINSnote</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-24T12:48:35.000Z" itemprop="datePublished">2022-03-24</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/ctips.html" class="title">C++ Tips</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-17T10:07:40.000Z" itemprop="datePublished">2022-03-17</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/C/">C++</a>
-              </p>
-              <p class="item-title">
-                <a href="/c-mo-ban.html" class="title">C++模板</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-16T14:19:21.000Z" itemprop="datePublished">2022-03-16</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/C/">C++</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/">内置库和函数</a>
-              </p>
-              <p class="item-title">
-                <a href="/c-nei-zhi-ku-he-han-shu.html" class="title">C++内置库以及函数</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-15T05:32:14.000Z" itemprop="datePublished">2022-03-15</time>
               </p>
             </div>
           </li>
@@ -410,85 +414,121 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">分类: bash</h1>
-      <p class="hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/Blog/">Blog</a></li>
-          
-          <li><a href="/categories/C/">C++</a></li>
-          
-          <li><a href="/categories/C/内置库和函数/">内置库和函数</a></li>
-          
-          <li><a href="/categories/C/关键字/">关键字</a></li>
-          
-          <li><a href="/categories/SLAM库/">SLAM库</a></li>
-          
-          <li><a href="/categories/Markdown/">Markdown</a></li>
-          
-          <li><a href="/categories/C/面向对象/">面向对象</a></li>
-          
-          <li><a href="/categories/SLAM/">SLAM</a></li>
-          
-          <li><a href="/categories/ubuntu/">ubuntu</a></li>
-          
-          <li><a href="/categories/C/容器/">容器</a></li>
-          
-          <li><a href="/categories/Ubuntu/">Ubuntu</a></li>
-          
-          <li><a href="/categories/cmake/">cmake</a></li>
-          
-          <li><a href="/categories/SLAM库/Eigen/">Eigen</a></li>
-          
-          <li><a href="/categories/SLAM/RANSAC/">RANSAC</a></li>
-          
-          <li><a href="/categories/ubuntu/bash/">bash</a></li>
-          
-          <li><a href="/categories/C/多线程/">多线程</a></li>
-          
-          <li><a href="/categories/C/指针/">指针</a></li>
-          
-          <li><a href="/categories/git/">git</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapsebash" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              bash
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-        </h4>
-    </div>
-    <div id="collapsebash" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingbash">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/bash.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-06T04:16:37.000Z" itemprop="datePublished">2022-03-06</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> bash
-</a>
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-CSTL" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++STL
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/cstl.html" class="article-date">
+	  <time datetime="2022-04-19T04:21:17.000Z" itemprop="datePublished">2022-04-19</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/STL/" rel="tag">STL</a>
+  </span>
 
 
-              
-            </div>
-        </div>
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/cstl.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
     </div>
-</div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/cstl.html" title="C++STL" target="_blank" rel="external">https://www.hpstu.cn/cstl.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/clion.html" title="clion"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/g2o.html" title="g2o"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -541,6 +581,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
