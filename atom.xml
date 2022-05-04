@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hpstu.cn/"/>
-  <updated>2022-05-04T13:34:24.337Z</updated>
+  <updated>2022-05-04T13:45:18.398Z</updated>
   <id>https://www.hpstu.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.hpstu.cn/pdf.html"/>
     <id>https://www.hpstu.cn/pdf.html</id>
     <published>2022-05-04T13:00:15.000Z</published>
-    <updated>2022-05-04T13:34:24.337Z</updated>
+    <updated>2022-05-04T13:45:18.398Z</updated>
     
     <summary type="html">
     
@@ -30,8 +30,7 @@
         
         
           &lt;h1 id=&quot;ds&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#ds&quot;&gt;&lt;/a&gt; ds&lt;/h1&gt;
-&lt;p&gt;&lt;object data=&quot;https://cloud.tsinghua.edu.cn/f/952edbd1e02d409cbd01/&quot;
-
+&lt;iframe data=&quot;./pdf/Linux.pdf&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot;
         
       
     
