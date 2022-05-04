@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.hpstu.cn/cmake.html</loc>
+    <loc>https://www.hpstu.cn/pdf.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/stock.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/python.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-guan-jian-zi.html</loc>
     
     <lastmod>2022-05-01</lastmod>
     
@@ -11,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/1.html</loc>
+    <loc>https://www.hpstu.cn/ubuntu.html</loc>
     
     <lastmod>2022-05-01</lastmod>
     
@@ -20,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/bash.html</loc>
+    <loc>https://www.hpstu.cn/li-qun-li-dai-shu.html</loc>
     
     <lastmod>2022-05-01</lastmod>
     
@@ -29,7 +56,25 @@
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/c-mian-xiang-dui-xiang.html</loc>
+    <loc>https://www.hpstu.cn/vinsnote.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/markdown-yu-fa.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/git2.html</loc>
     
     <lastmod>2022-05-01</lastmod>
     
@@ -47,9 +92,45 @@
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/clion.html</loc>
+    <loc>https://www.hpstu.cn/eigen.html</loc>
     
-    <lastmod>2022-04-29</lastmod>
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-mo-ban.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-mian-xiang-dui-xiang.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-duo-xian-cheng.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/ctips.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,25 +139,79 @@
   <url>
     <loc>https://www.hpstu.cn/cstl.html</loc>
     
-    <lastmod>2022-04-19</lastmod>
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/li-qun-li-dai-shu.html</loc>
+    <loc>https://www.hpstu.cn/clion.html</loc>
     
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/vinsnote.html</loc>
+    <loc>https://www.hpstu.cn/1.html</loc>
     
-    <lastmod>2022-03-24</lastmod>
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/ransac.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-zhi-zhen.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-rong-qi.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/cmake.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/bash.html</loc>
+    
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -146,115 +281,7 @@
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/git2.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.hpstu.cn/git.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-duo-xian-cheng.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-zhi-zhen.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/ctips.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/ubuntu.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/ransac.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/markdown-yu-fa.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/eigen.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-rong-qi.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-mo-ban.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-nei-zhi-ku-he-han-shu.html</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/c-guan-jian-zi.html</loc>
     
     <lastmod>2022-03-24</lastmod>
     
@@ -274,7 +301,7 @@
 
   <url>
     <loc>https://www.hpstu.cn/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -282,70 +309,154 @@
   
   <url>
     <loc>https://www.hpstu.cn/tags/Hexo/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/tags/ubuntu/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/bash/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/git/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/RANSAC/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/tags/C/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/STL/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/clion/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/tags/haha/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/tags/cmake/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E5%86%85%E7%BD%AE%E5%BA%93/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/%E5%AE%B9%E5%99%A8/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/Eigen/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/Markdown/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/VINS/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/C-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/g2o/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/ubuntu%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/python%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/tags/%E6%9D%8E%E7%BE%A4%E6%9D%8E%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -354,112 +465,56 @@
   
   <url>
     <loc>https://www.hpstu.cn/categories/Blog/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/categories/C/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/C/%E5%86%85%E7%BD%AE%E5%BA%93%E5%92%8C%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/C/%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/SLAM%E5%BA%93/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/categories/Markdown/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/categories/SLAM/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/categories/ubuntu/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/C/%E5%AE%B9%E5%99%A8/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/Ubuntu/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/SLAM%E5%BA%93/Eigen/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/SLAM/RANSAC/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/C/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2022-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hpstu.cn/categories/C/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.hpstu.cn/categories/git/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.hpstu.cn/categories/wuwu/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <loc>https://www.hpstu.cn/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.hpstu.cn/categories/python/</loc>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

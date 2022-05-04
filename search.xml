@@ -3,6 +3,199 @@
   
     
     <entry>
+      <title><![CDATA[pdf]]></title>
+      <url>/pdf.html</url>
+      <content type="html"><![CDATA[<h1 id="ds"><a class="markdownIt-Anchor" href="#ds"></a> ds</h1>
+<p><object data="https://cloud.tsinghua.edu.cn/f/952edbd1e02d409cbd01/"
+ type="application/pdf" width="100%" height="800px"></p>
+<p>&lt;object data=&quot;./pdf/Linux.pdf&quot;type=“application/pdf” width=“100%” height=“800px”&gt;</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[stock]]></title>
+      <url>/stock.html</url>
+      <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d7c5d1498b8407e7d44e504f2fa45c7e95b387e1e0d9670e23ef187880977f03">a8e1a6543e9c049066e7283583444353426a2829fd4274491e1f9b4f8a24e941e9cfa8069c659c91e9de47187bdc0a1f5936af7eb35d1c1e5437fa2997dc53f9a5af2eced5c4b5637ea860d8e95b7ae8c24597f8c15c62cbfe6ca208fa5447c1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[python]]></title>
+      <url>/python.html</url>
+      <content type="html"><![CDATA[<h1 id="基础概念"><a class="markdownIt-Anchor" href="#基础概念"></a> 基础概念</h1>
+<h2 id="对象"><a class="markdownIt-Anchor" href="#对象"></a> 对象</h2>
+<p>==<strong>Python中，一切皆对象。每个对象由：标识（identity）、类型（type）、value（值）组成。</strong>==</p>
+<ol>
+<li>标识用于唯一标识对象，通常对应于对象在计算机内存中的地址。使用内置函数<code>id(obj)</code>可返回对象obj的标识。</li>
+<li>类型用于表示对象存储的“数据”的类型。类型可以限制对象的取值范围以及可执行的操作。可以使用<code>type(obj)</code>获得对象的所属类型。(类型也是对象，也有内存)</li>
+<li>值表示对象所存储的数据的信息。使用<code>print(obj)</code>可以直接打印出值</li>
+</ol>
+<h2 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h2>
+<p>在Python中，变量也成为：对象的引用。因为，**变量存储的就是对象的地址。**变量通过地址引用了“对象”。</p>
+<ul>
+<li>变量位于：栈内存</li>
+<li>对象位于：堆内存</li>
+</ul>
+<p><img src="./python/%E5%A0%86%E6%A0%88.png" alt="" /></p>
+<p>变量的声明和赋值用于将一个变量绑定到一个对象上，格式如下：</p>
+<p>变量名=表达式</p>
+<p>最简单的表达式就是字面量。比如：<code>a=123</code>。运行过程中，解释器先运行右边的表达式，生成一个代表表达式运算结果的对象；然后，<strong>将这个对象地址赋值给左边的变量。</strong></p>
+<h2 id="常量"><a class="markdownIt-Anchor" href="#常量"></a> 常量</h2>
+<p>python不支持常量，即没有语法规则限制改变一个常量的值。</p>
+<hr />
+<p>Python3中，int可以存储任意大小的整数。</p>
+<p>Python仅仅对比较小的整数对象进行缓存（范围为[-5,256]）缓存起来，而并非是所有整数对象。</p>
+<h2 id="比较"><a class="markdownIt-Anchor" href="#比较"></a> 比较</h2>
+<ol>
+<li><code>is</code>比较两个对象的<code>id</code>值是否相等，是否指向同一个内存地址；</li>
+<li><code>==</code>比较的是两个对象的内容是否相等，值是否相等；</li>
+<li>小整数对象[-5,256]在全局解释器范围内被放入缓存供重复使用；</li>
+<li><code>is</code>运算符比<code>==</code>效率高，在变量和<code>None</code>进行比较时，应该使用<code>is</code>。</li>
+</ol>
+<h1 id="字符串"><a class="markdownIt-Anchor" href="#字符串"></a> 字符串</h1>
+<p>**字符串的本质是：字符序列。**Python 的字符串是不可变的，我们无法对原字符串做任何修改。但，可以将字符串的一部分复制到新创建的字符串，达到“看起来修改”的效果。</p>
+<p>Python不支持单字符类型，单字符也是作为一个字符串使用的。</p>
+<h2 id="空字符串和-len函数"><a class="markdownIt-Anchor" href="#空字符串和-len函数"></a> 空字符串和 <code>len()</code>函数</h2>
+<p>Python允许空字符串的存在，不包含任何字符且长度为 0。</p>
+<p>len()用于计算字符串含有多少字符。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="string">&#x27;abc尚学堂&#x27;</span></span><br><span class="line"><span class="built_in">len</span>(d)</span><br><span class="line">c = <span class="string">&#x27;&#x27;</span> <span class="comment"># (没有空格)</span></span><br><span class="line"><span class="built_in">len</span>(c)</span><br><span class="line"><span class="comment"># 结果为:6，0</span></span><br></pre></td></tr></table></figure>
+<h1 id="序列"><a class="markdownIt-Anchor" href="#序列"></a> 序列</h1>
+<p>由于 Python3中一切皆对象，在内存中实际是按照如下方式存储的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]</span><br></pre></td></tr></table></figure>
+<p><img src="./python/%E5%BA%8F%E5%88%97.png" alt="" /></p>
+<p>从图示中，我们可以看出序列中存储的是整数对象的地址，而不是整数对象的值。python中常用的序列结构有：</p>
+<blockquote>
+<p>字符串、列表、元组、字典、集合</p>
+</blockquote>
+<h2 id="列表-list"><a class="markdownIt-Anchor" href="#列表-list"></a> 列表 list</h2>
+<p><strong>列表：用于存储任意数目、任意类型的数据集合。</strong>(由于列表中存储的是对象的地址，所以可以存储任意不同类型对象)，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="string">&#x27;abc&#x27;</span>,<span class="literal">True</span>]</span><br></pre></td></tr></table></figure>
+<p>列表对象的常用方法汇总如下:</p>
+<p><img src="./python/%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95.png" alt="" /></p>
+<p>Python的列表大小可变，根据需要随时增加或缩小。</p>
+<p>字符串和列表都是序列类型，一个字符串是一个字符序列，一个列表是任何元素的序列。</p>
+<h3 id="列表的创建"><a class="markdownIt-Anchor" href="#列表的创建"></a> 列表的创建</h3>
+<ol>
+<li>基本语法[]创建</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;sxt&#x27;</span>]</span><br><span class="line">a = [] <span class="comment"># 创建一个空的列表对象</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>list()创建</li>
+</ol>
+<p><strong>使用 list()可以将任何可迭代的数据转化成列表。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>() <span class="comment">#创建一个空的列表对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>(<span class="string">&quot;gaoqi,sxt&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;q&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;t&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>推导式生成列表</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)] <span class="comment">#循环创建多个元素</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>) <span class="keyword">if</span> x%<span class="number">9</span>==<span class="number">0</span>] <span class="comment">#通过 if过滤元素</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">18</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">72</span>, <span class="number">90</span>, <span class="number">108</span>, <span class="number">126</span>, <span class="number">144</span>, <span class="number">162</span>, <span class="number">180</span>, <span class="number">198</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="元组"><a class="markdownIt-Anchor" href="#元组"></a> 元组</h2>
+<p>列表属于可变序列，可以任意修改列表中的元素。元组属于不可变序列，不能修改元组中的元素。因此，元组没有增加元素、修改元素、删除元素相关的方法。</p>
+<p>因此，我们只需要学习元组的创建和删除，元组中元素的访问和计数即可。</p>
+<h3 id="元组的创建"><a class="markdownIt-Anchor" href="#元组的创建"></a> 元组的创建</h3>
+<ol>
+<li>通过()创建元组。小括号可以省略。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>) <span class="comment"># 或者 </span></span><br><span class="line">b = <span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 <code>tuple()</code>创建元组</li>
+</ol>
+<p><code>tuple(可迭代的对象)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="built_in">tuple</span>() <span class="comment">#创建一个空元组对象</span></span><br><span class="line">b = <span class="built_in">tuple</span>(<span class="string">&quot;abc&quot;</span>)</span><br><span class="line">b = <span class="built_in">tuple</span>(<span class="built_in">range</span>(<span class="number">3</span>))</span><br><span class="line">b = <span class="built_in">tuple</span>([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>总结：<br />
+tuple()可以接收列表、字符串、其他序列类型、迭代器等生成元组。<br />
+list()    可以接收元组、字符串、其他序列类型、迭代器等生成列表。</p>
+</blockquote>
+<ol start="3">
+<li>生成器推导式创建元组</li>
+</ol>
+<p>从形式上看，生成器推导式与列表推导式类似，只是生成器推导式使用小括号。列表推导式直接生成列表对象，生成器推导式生成的不是列表也不是元组，而是一个生成器对象。我们可以通过生成器对象，转化成列表或者元组。也可以使用生成器对象的__next__()方法进行遍历，或者直接作为迭代器对象来使用。不管什么方式使用，元素访问结束后，如果需要重新访问其中的元素，必须重新创建该生成器对象。</p>
+<p>【操作】生成器的使用测试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = (x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&lt;generator <span class="built_in">object</span> &lt;genexpr&gt; at <span class="number">0x0000000002BDEB48</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">tuple</span>(s)</span><br><span class="line">(<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(s) <span class="comment">#只能访问一次元素。第二次就为空了。需要再生成一次</span></span><br><span class="line">[]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&lt;generator <span class="built_in">object</span> &lt;genexpr&gt; at <span class="number">0x0000000002BDEB48</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">tuple</span>(s)</span><br><span class="line">()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = (x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h3 id="zip"><a class="markdownIt-Anchor" href="#zip"></a> zip()</h3>
+<p>zip(列表 1，列表 2，…)将多个列表对应位置的元素组合成为元组，并返回这个 zip对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = [<span class="number">70</span>,<span class="number">80</span>,<span class="number">90</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">zip</span>(a,b,c)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(d)</span><br><span class="line">[(<span class="number">10</span>, <span class="number">40</span>, <span class="number">70</span>), (<span class="number">20</span>, <span class="number">50</span>, <span class="number">80</span>), (<span class="number">30</span>, <span class="number">60</span>, <span class="number">90</span>)]</span><br></pre></td></tr></table></figure>
+<h3 id="元组总结"><a class="markdownIt-Anchor" href="#元组总结"></a> 元组总结</h3>
+<ol>
+<li>元组的核心特点是：不可变序列。</li>
+<li>元组的访问和处理速度比列表快。</li>
+<li>与整数和字符串一样，元组可以作为字典的键，列表则永远不能作为字典的键使用。</li>
+</ol>
+<h2 id="字典"><a class="markdownIt-Anchor" href="#字典"></a> 字典</h2>
+<p>字典是**“键值对”<strong>的无序可变序列，字典中的每个元素都是一个“键值对”，包含：“键对象”和“值对象”。可以通过“键对象”实现快速获取、删除、更新对应的“值对象”。列表中我们通过“下标数字”找到对应的对象。字典中通过“键对象”找到对应的“值对象”。</strong>“键”是任意的不可变数据**，比如：整数、浮点数、字符串、元组。但是：列表、字典、集合这些可变对象，不能作为“键”。并且“键”不可重复。<strong>“值”可以是任意的数据，并且可重复。</strong></p>
+<h3 id="字典的创建"><a class="markdownIt-Anchor" href="#字典的创建"></a> 字典的创建</h3>
+<ol>
+<li>通过{}、dict()来创建字典对象。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="built_in">dict</span>(name=<span class="string">&#x27;gaoqi&#x27;</span>,age=<span class="number">18</span>,job=<span class="string">&#x27;programmer&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">dict</span>([(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;gaoqi&quot;</span>),(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>)])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = &#123;&#125; <span class="comment">#空的字典对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">dict</span>() <span class="comment">#空的字典对象</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 zip()创建字典对象</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>k = [<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;job&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>v = [<span class="string">&#x27;gaoqi&#x27;</span>,<span class="number">18</span>,<span class="string">&#x27;techer&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">dict</span>(<span class="built_in">zip</span>(k,v))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d</span><br><span class="line">&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;gaoqi&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">18</span>, <span class="string">&#x27;job&#x27;</span>: <span class="string">&#x27;techer&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>通过 fromkeys创建值为空的字典</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">dict</span>.fromkeys([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;job&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">&#123;<span class="string">&#x27;name&#x27;</span>: <span class="literal">None</span>, <span class="string">&#x27;age&#x27;</span>: <span class="literal">None</span>, <span class="string">&#x27;job&#x27;</span>: <span class="literal">None</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字典元素的访问"><a class="markdownIt-Anchor" href="#字典元素的访问"></a> 字典元素的访问</h3>
+<p>为了测试各种访问方法，我们这里设定一个字典对象：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>通过 [键] 获得“值”。若键不存在，则抛出异常。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line"><span class="string">&#x27;gaoqi&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;age&#x27;</span>]</span><br><span class="line"><span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;sex&#x27;</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">File <span class="string">&quot;&lt;pyshell#374&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">a[<span class="string">&#x27;sex&#x27;</span>]</span><br><span class="line">KeyError: <span class="string">&#x27;sex&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过get()方法获得“值”。推荐使用。优点是：指定键不存在，返回None；也可以设定指定键不存在时默认返回的对象。推荐使用get()获取“值对象”。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;gaoqi&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;sex&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;sex&#x27;</span>,<span class="string">&#x27;一个男人&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;一个男人&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>列出所有的键值对</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.items()</span><br><span class="line">dict_items([(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;gaoqi&#x27;</span>), (<span class="string">&#x27;age&#x27;</span>, <span class="number">18</span>), (<span class="string">&#x27;job&#x27;</span>, <span class="string">&#x27;programmer&#x27;</span>)])</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>列出所有的键，列出所有的值</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.keys()</span><br><span class="line">dict_keys([<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;job&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.values()</span><br><span class="line">dict_values([<span class="string">&#x27;gaoqi&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;programmer&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>len()键值对的个数</li>
+<li>检测一个“键”是否在字典中</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;gaoqi&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">18</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&quot;name&quot;</span> <span class="keyword">in</span> a</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<h1 id="控制语句"><a class="markdownIt-Anchor" href="#控制语句"></a> 控制语句</h1>
+<h1 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h1>
+<h1 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h1>
+<h1 id="文件"><a class="markdownIt-Anchor" href="#文件"></a> 文件</h1>
+]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python基础 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[clion]]></title>
       <url>/clion.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键"></a> 快捷键</h2>
@@ -138,6 +331,12 @@
 </table>
 ]]></content>
       
+        <categories>
+            
+            <category> 软件工具 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -152,6 +351,12 @@
       <url>/cstl.html</url>
       <content type="html"></content>
       
+        <categories>
+            
+            <category> C++ </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -255,14 +460,14 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
       
         <categories>
             
-            <category> wuwu </category>
+            <category> SLAM </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> haha </tag>
+            <tag> g2o </tag>
             
         </tags>
         
@@ -276,6 +481,18 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9578799999999998em;"></span><span class="strut bottom" style="height:1.2078799999999998em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mop">ln</span><span class="mopen">(</span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">ϕ</span></span></span><span style="top:-0.26343999999999995em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">ϕ</span></span></span><span style="top:-0.26343999999999995em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
 ]]></content>
       
+        <categories>
+            
+            <category> SLAM </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 李群李代数 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -394,6 +611,18 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
 <img src="https://img-blog.csdnimg.cn/20191123115656646.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTcwNjI2,size_16,color_FFFFFF,t_70" alt="" /></p>
 ]]></content>
       
+        <categories>
+            
+            <category> SLAM </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> VINS </tag>
+            
+        </tags>
         
     </entry>
     
@@ -464,10 +693,16 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!ifs.<span class="built_in">is_open</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件打开失败&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//第一种方式</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs &gt;&gt; buf)</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第二种</span></span><br><span class="line">	<span class="comment">//char buf[1024] = &#123; 0 &#125;;</span></span><br><span class="line">	<span class="comment">//while (ifs.getline(buf,sizeof(buf)))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第三种</span></span><br><span class="line">	<span class="comment">//string buf;</span></span><br><span class="line">	<span class="comment">//while (getline(ifs, buf))</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//	cout &lt;&lt; buf &lt;&lt; endl;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	<span class="keyword">while</span> ((c = ifs.<span class="built_in">get</span>()) != EOF)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; c;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ifs.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> C++ </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> C++ </tag>
+            <tag> C++文件操作 </tag>
             
         </tags>
         
@@ -498,6 +733,12 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> C++模板 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -591,10 +832,14 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
             <category> C++ </category>
             
-            <category> 内置库和函数 </category>
-            
         </categories>
         
+        
+        <tags>
+            
+            <tag> C++内置库 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -638,8 +883,6 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
         <categories>
             
             <category> SLAM </category>
-            
-            <category> RANSAC </category>
             
         </categories>
         
@@ -766,10 +1009,14 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
             <category> C++ </category>
             
-            <category> 容器 </category>
-            
         </categories>
         
+        
+        <tags>
+            
+            <tag> 容器 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -794,10 +1041,14 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
             <category> C++ </category>
             
-            <category> 指针 </category>
-            
         </categories>
         
+        
+        <tags>
+            
+            <tag> 指针 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -920,6 +1171,12 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
         </categories>
         
         
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -932,12 +1189,16 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
       
         <categories>
             
-            <category> SLAM库 </category>
-            
-            <category> Eigen </category>
+            <category> SLAM </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Eigen </tag>
+            
+        </tags>
         
     </entry>
     
@@ -990,10 +1251,14 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
             <category> C++ </category>
             
-            <category> 多线程 </category>
-            
         </categories>
         
+        
+        <tags>
+            
+            <tag> C++多线程 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1040,6 +1305,12 @@ T^{\star} = \underset{T}{arg\,min}\frac{1}{2}\sum\limits_{i=1}^n||u_i-\frac{1}{s
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> C++面向对象 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1230,10 +1501,14 @@ C++中const修饰的全局常量据有跟static相同的特性，即它们只能
             
             <category> C++ </category>
             
-            <category> 关键字 </category>
-            
         </categories>
         
+        
+        <tags>
+            
+            <tag> C++关键字 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1266,6 +1541,12 @@ C++中const修饰的全局常量据有跟static相同的特性，即它们只能
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2164,14 +2445,14 @@ ls-output.txt 中去，由文件代替屏幕。</p>
       
         <categories>
             
-            <category> Ubuntu </category>
+            <category> ubuntu </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> ubuntu </tag>
+            <tag> ubuntu命令 </tag>
             
         </tags>
         

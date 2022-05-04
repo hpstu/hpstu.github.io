@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>python | Hexo</title>
+  <meta name="description" content="基础概念  对象 &#x3D;&#x3D;Python中，一切皆对象。每个对象由：标识（identity）、类型（type）、value（值）组成。&#x3D;&#x3D;  标识用于唯一标识对象，通常对应于对象在计算机内存中的地址。使用内置函数id(obj)可返回对象obj的标识。 类型用于表示对象存储的“数据”的类型。类型可以限制对象的取值范围以及可执行的操作。可以使用type(obj)获得对象的所属类型。(类型也是对象，也有内存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="https://www.hpstu.cn/python.html">
+<meta property="og:site_name" content="hpstu&#96;s Blog">
+<meta property="og:description" content="基础概念  对象 &#x3D;&#x3D;Python中，一切皆对象。每个对象由：标识（identity）、类型（type）、value（值）组成。&#x3D;&#x3D;  标识用于唯一标识对象，通常对应于对象在计算机内存中的地址。使用内置函数id(obj)可返回对象obj的标识。 类型用于表示对象存储的“数据”的类型。类型可以限制对象的取值范围以及可执行的操作。可以使用type(obj)获得对象的所属类型。(类型也是对象，也有内存">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.hpstu.cn/python/%E5%A0%86%E6%A0%88.png">
+<meta property="og:image" content="https://www.hpstu.cn/python/%E5%BA%8F%E5%88%97.png">
+<meta property="og:image" content="https://www.hpstu.cn/python/%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95.png">
+<meta property="article:published_time" content="2022-05-01T13:22:18.000Z">
+<meta property="article:modified_time" content="2022-05-04T11:10:55.714Z">
+<meta property="article:author" content="HP">
+<meta property="article:tag" content="python基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hpstu.cn/python/%E5%A0%86%E6%A0%88.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://www.hpstu.cn/python.html">
+  
+    <link rel="alternate" href="/atom.xml" title="hpstu`s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loaderҳ����ʧ���ý����ķ�ʽ*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo���ֶ��� */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//ʹ�ý����ķ�������loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },1000); 
+        },1000);//ǿ����ʾloading page 1s  
+    };
+    loaded();
+})()
+ </script><meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享学习心得！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SLAM/">SLAM</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">C++关键字</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E5%86%85%E7%BD%AE%E5%BA%93/" rel="tag">C++内置库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">C++多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" rel="tag">C++文件操作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E6%A8%A1%E6%9D%BF/" rel="tag">C++模板</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">C++面向对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eigen/" rel="tag">Eigen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RANSAC/" rel="tag">RANSAC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/" rel="tag">STL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VINS/" rel="tag">VINS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clion/" rel="tag">clion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/" rel="tag">cmake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g2o/" rel="tag">g2o</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E5%91%BD%E4%BB%A4/" rel="tag">ubuntu命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%8E%E7%BE%A4%E6%9D%8E%E4%BB%A3%E6%95%B0/" rel="tag">李群李代数</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/C-%E5%85%B3%E9%94%AE%E5%AD%97/" style="font-size: 13px;">C++关键字</a> <a href="/tags/C-%E5%86%85%E7%BD%AE%E5%BA%93/" style="font-size: 13px;">C++内置库</a> <a href="/tags/C-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13px;">C++多线程</a> <a href="/tags/C-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 13px;">C++文件操作</a> <a href="/tags/C-%E6%A8%A1%E6%9D%BF/" style="font-size: 13px;">C++模板</a> <a href="/tags/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 13px;">C++面向对象</a> <a href="/tags/Eigen/" style="font-size: 13px;">Eigen</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 13px;">Markdown</a> <a href="/tags/RANSAC/" style="font-size: 13px;">RANSAC</a> <a href="/tags/STL/" style="font-size: 13px;">STL</a> <a href="/tags/VINS/" style="font-size: 13px;">VINS</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/clion/" style="font-size: 13px;">clion</a> <a href="/tags/cmake/" style="font-size: 13px;">cmake</a> <a href="/tags/g2o/" style="font-size: 13px;">g2o</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">python基础</a> <a href="/tags/ubuntu%E5%91%BD%E4%BB%A4/" style="font-size: 13px;">ubuntu命令</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 13px;">容器</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 13px;">指针</a> <a href="/tags/%E6%9D%8E%E7%BE%A4%E6%9D%8E%E4%BB%A3%E6%95%B0/" style="font-size: 13px;">李群李代数</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/pdf.html" class="title">pdf</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-04T13:00:15.000Z" itemprop="datePublished">2022-05-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/stock.html" class="title">stock</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-04T12:37:09.000Z" itemprop="datePublished">2022-05-04</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/python/">python</a>
+              </p>
+              <p class="item-title">
+                <a href="/python.html" class="title">python</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-05-01T13:22:18.000Z" itemprop="datePublished">2022-05-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+              </p>
+              <p class="item-title">
+                <a href="/clion.html" class="title">clion</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-27T09:26:47.000Z" itemprop="datePublished">2022-04-27</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/C/">C++</a>
+              </p>
+              <p class="item-title">
+                <a href="/cstl.html" class="title">C++STL</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-04-19T04:21:17.000Z" itemprop="datePublished">2022-04-19</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text"> 基础概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text"> 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text"> 引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text"> 常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83"><span class="toc-number">1.4.</span> <span class="toc-text"> 比较</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.</span> <span class="toc-text"> 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C-len%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text"> 空字符串和 len()函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%8F%E5%88%97"><span class="toc-number">3.</span> <span class="toc-text"> 序列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8-list"><span class="toc-number">3.1.</span> <span class="toc-text"> 列表 list</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 列表的创建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E7%BB%84"><span class="toc-number">3.2.</span> <span class="toc-text"> 元组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 元组的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip"><span class="toc-number">3.2.2.</span> <span class="toc-text"> zip()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E6%80%BB%E7%BB%93"><span class="toc-number">3.2.3.</span> <span class="toc-text"> 元组总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%85%B8"><span class="toc-number">3.3.</span> <span class="toc-text"> 字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">3.3.1.</span> <span class="toc-text"> 字典的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="toc-number">3.3.2.</span> <span class="toc-text"> 字典元素的访问</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.</span> <span class="toc-text"> 控制语句</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">5.</span> <span class="toc-text"> 函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text"> 面向对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text"> 文件</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-python" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/python.html" class="article-date">
+	  <time datetime="2022-05-01T13:22:18.000Z" itemprop="datePublished">2022-05-01</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/python.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="基础概念"><a class="markdownIt-Anchor" href="#基础概念"></a> 基础概念</h1>
+<h2 id="对象"><a class="markdownIt-Anchor" href="#对象"></a> 对象</h2>
+<p>==<strong>Python中，一切皆对象。每个对象由：标识（identity）、类型（type）、value（值）组成。</strong>==</p>
+<ol>
+<li>标识用于唯一标识对象，通常对应于对象在计算机内存中的地址。使用内置函数<code>id(obj)</code>可返回对象obj的标识。</li>
+<li>类型用于表示对象存储的“数据”的类型。类型可以限制对象的取值范围以及可执行的操作。可以使用<code>type(obj)</code>获得对象的所属类型。(类型也是对象，也有内存)</li>
+<li>值表示对象所存储的数据的信息。使用<code>print(obj)</code>可以直接打印出值</li>
+</ol>
+<h2 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h2>
+<p>在Python中，变量也成为：对象的引用。因为，**变量存储的就是对象的地址。**变量通过地址引用了“对象”。</p>
+<ul>
+<li>变量位于：栈内存</li>
+<li>对象位于：堆内存</li>
+</ul>
+<p><img src="./python/%E5%A0%86%E6%A0%88.png" alt="" /></p>
+<p>变量的声明和赋值用于将一个变量绑定到一个对象上，格式如下：</p>
+<p>变量名=表达式</p>
+<p>最简单的表达式就是字面量。比如：<code>a=123</code>。运行过程中，解释器先运行右边的表达式，生成一个代表表达式运算结果的对象；然后，<strong>将这个对象地址赋值给左边的变量。</strong></p>
+<h2 id="常量"><a class="markdownIt-Anchor" href="#常量"></a> 常量</h2>
+<p>python不支持常量，即没有语法规则限制改变一个常量的值。</p>
+<hr />
+<p>Python3中，int可以存储任意大小的整数。</p>
+<p>Python仅仅对比较小的整数对象进行缓存（范围为[-5,256]）缓存起来，而并非是所有整数对象。</p>
+<h2 id="比较"><a class="markdownIt-Anchor" href="#比较"></a> 比较</h2>
+<ol>
+<li><code>is</code>比较两个对象的<code>id</code>值是否相等，是否指向同一个内存地址；</li>
+<li><code>==</code>比较的是两个对象的内容是否相等，值是否相等；</li>
+<li>小整数对象[-5,256]在全局解释器范围内被放入缓存供重复使用；</li>
+<li><code>is</code>运算符比<code>==</code>效率高，在变量和<code>None</code>进行比较时，应该使用<code>is</code>。</li>
+</ol>
+<h1 id="字符串"><a class="markdownIt-Anchor" href="#字符串"></a> 字符串</h1>
+<p>**字符串的本质是：字符序列。**Python 的字符串是不可变的，我们无法对原字符串做任何修改。但，可以将字符串的一部分复制到新创建的字符串，达到“看起来修改”的效果。</p>
+<p>Python不支持单字符类型，单字符也是作为一个字符串使用的。</p>
+<h2 id="空字符串和-len函数"><a class="markdownIt-Anchor" href="#空字符串和-len函数"></a> 空字符串和 <code>len()</code>函数</h2>
+<p>Python允许空字符串的存在，不包含任何字符且长度为 0。</p>
+<p>len()用于计算字符串含有多少字符。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="string">&#x27;abc尚学堂&#x27;</span></span><br><span class="line"><span class="built_in">len</span>(d)</span><br><span class="line">c = <span class="string">&#x27;&#x27;</span> <span class="comment"># (没有空格)</span></span><br><span class="line"><span class="built_in">len</span>(c)</span><br><span class="line"><span class="comment"># 结果为:6，0</span></span><br></pre></td></tr></table></figure>
+<h1 id="序列"><a class="markdownIt-Anchor" href="#序列"></a> 序列</h1>
+<p>由于 Python3中一切皆对象，在内存中实际是按照如下方式存储的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>]</span><br></pre></td></tr></table></figure>
+<p><img src="./python/%E5%BA%8F%E5%88%97.png" alt="" /></p>
+<p>从图示中，我们可以看出序列中存储的是整数对象的地址，而不是整数对象的值。python中常用的序列结构有：</p>
+<blockquote>
+<p>字符串、列表、元组、字典、集合</p>
+</blockquote>
+<h2 id="列表-list"><a class="markdownIt-Anchor" href="#列表-list"></a> 列表 list</h2>
+<p><strong>列表：用于存储任意数目、任意类型的数据集合。</strong>(由于列表中存储的是对象的地址，所以可以存储任意不同类型对象)，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="string">&#x27;abc&#x27;</span>,<span class="literal">True</span>]</span><br></pre></td></tr></table></figure>
+<p>列表对象的常用方法汇总如下:</p>
+<p><img src="./python/%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95.png" alt="" /></p>
+<p>Python的列表大小可变，根据需要随时增加或缩小。</p>
+<p>字符串和列表都是序列类型，一个字符串是一个字符序列，一个列表是任何元素的序列。</p>
+<h3 id="列表的创建"><a class="markdownIt-Anchor" href="#列表的创建"></a> 列表的创建</h3>
+<ol>
+<li>基本语法[]创建</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">10</span>,<span class="number">20</span>,<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;sxt&#x27;</span>]</span><br><span class="line">a = [] <span class="comment"># 创建一个空的列表对象</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>list()创建</li>
+</ol>
+<p><strong>使用 list()可以将任何可迭代的数据转化成列表。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>() <span class="comment">#创建一个空的列表对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">list</span>(<span class="string">&quot;gaoqi,sxt&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;q&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;t&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>推导式生成列表</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)] <span class="comment">#循环创建多个元素</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>) <span class="keyword">if</span> x%<span class="number">9</span>==<span class="number">0</span>] <span class="comment">#通过 if过滤元素</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">0</span>, <span class="number">18</span>, <span class="number">36</span>, <span class="number">54</span>, <span class="number">72</span>, <span class="number">90</span>, <span class="number">108</span>, <span class="number">126</span>, <span class="number">144</span>, <span class="number">162</span>, <span class="number">180</span>, <span class="number">198</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="元组"><a class="markdownIt-Anchor" href="#元组"></a> 元组</h2>
+<p>列表属于可变序列，可以任意修改列表中的元素。元组属于不可变序列，不能修改元组中的元素。因此，元组没有增加元素、修改元素、删除元素相关的方法。</p>
+<p>因此，我们只需要学习元组的创建和删除，元组中元素的访问和计数即可。</p>
+<h3 id="元组的创建"><a class="markdownIt-Anchor" href="#元组的创建"></a> 元组的创建</h3>
+<ol>
+<li>通过()创建元组。小括号可以省略。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>) <span class="comment"># 或者 </span></span><br><span class="line">b = <span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 <code>tuple()</code>创建元组</li>
+</ol>
+<p><code>tuple(可迭代的对象)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="built_in">tuple</span>() <span class="comment">#创建一个空元组对象</span></span><br><span class="line">b = <span class="built_in">tuple</span>(<span class="string">&quot;abc&quot;</span>)</span><br><span class="line">b = <span class="built_in">tuple</span>(<span class="built_in">range</span>(<span class="number">3</span>))</span><br><span class="line">b = <span class="built_in">tuple</span>([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>总结：<br />
+tuple()可以接收列表、字符串、其他序列类型、迭代器等生成元组。<br />
+list()    可以接收元组、字符串、其他序列类型、迭代器等生成列表。</p>
+</blockquote>
+<ol start="3">
+<li>生成器推导式创建元组</li>
+</ol>
+<p>从形式上看，生成器推导式与列表推导式类似，只是生成器推导式使用小括号。列表推导式直接生成列表对象，生成器推导式生成的不是列表也不是元组，而是一个生成器对象。我们可以通过生成器对象，转化成列表或者元组。也可以使用生成器对象的__next__()方法进行遍历，或者直接作为迭代器对象来使用。不管什么方式使用，元素访问结束后，如果需要重新访问其中的元素，必须重新创建该生成器对象。</p>
+<p>【操作】生成器的使用测试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = (x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&lt;generator <span class="built_in">object</span> &lt;genexpr&gt; at <span class="number">0x0000000002BDEB48</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">tuple</span>(s)</span><br><span class="line">(<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(s) <span class="comment">#只能访问一次元素。第二次就为空了。需要再生成一次</span></span><br><span class="line">[]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&lt;generator <span class="built_in">object</span> &lt;genexpr&gt; at <span class="number">0x0000000002BDEB48</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">tuple</span>(s)</span><br><span class="line">()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = (x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.__next__()</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h3 id="zip"><a class="markdownIt-Anchor" href="#zip"></a> zip()</h3>
+<p>zip(列表 1，列表 2，…)将多个列表对应位置的元素组合成为元组，并返回这个 zip对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = [<span class="number">70</span>,<span class="number">80</span>,<span class="number">90</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">zip</span>(a,b,c)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span>(d)</span><br><span class="line">[(<span class="number">10</span>, <span class="number">40</span>, <span class="number">70</span>), (<span class="number">20</span>, <span class="number">50</span>, <span class="number">80</span>), (<span class="number">30</span>, <span class="number">60</span>, <span class="number">90</span>)]</span><br></pre></td></tr></table></figure>
+<h3 id="元组总结"><a class="markdownIt-Anchor" href="#元组总结"></a> 元组总结</h3>
+<ol>
+<li>元组的核心特点是：不可变序列。</li>
+<li>元组的访问和处理速度比列表快。</li>
+<li>与整数和字符串一样，元组可以作为字典的键，列表则永远不能作为字典的键使用。</li>
+</ol>
+<h2 id="字典"><a class="markdownIt-Anchor" href="#字典"></a> 字典</h2>
+<p>字典是**“键值对”<strong>的无序可变序列，字典中的每个元素都是一个“键值对”，包含：“键对象”和“值对象”。可以通过“键对象”实现快速获取、删除、更新对应的“值对象”。列表中我们通过“下标数字”找到对应的对象。字典中通过“键对象”找到对应的“值对象”。</strong>“键”是任意的不可变数据**，比如：整数、浮点数、字符串、元组。但是：列表、字典、集合这些可变对象，不能作为“键”。并且“键”不可重复。<strong>“值”可以是任意的数据，并且可重复。</strong></p>
+<h3 id="字典的创建"><a class="markdownIt-Anchor" href="#字典的创建"></a> 字典的创建</h3>
+<ol>
+<li>通过{}、dict()来创建字典对象。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="built_in">dict</span>(name=<span class="string">&#x27;gaoqi&#x27;</span>,age=<span class="number">18</span>,job=<span class="string">&#x27;programmer&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">dict</span>([(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;gaoqi&quot;</span>),(<span class="string">&quot;age&quot;</span>,<span class="number">18</span>)])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = &#123;&#125; <span class="comment">#空的字典对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">dict</span>() <span class="comment">#空的字典对象</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过 zip()创建字典对象</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>k = [<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;job&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>v = [<span class="string">&#x27;gaoqi&#x27;</span>,<span class="number">18</span>,<span class="string">&#x27;techer&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="built_in">dict</span>(<span class="built_in">zip</span>(k,v))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d</span><br><span class="line">&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;gaoqi&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">18</span>, <span class="string">&#x27;job&#x27;</span>: <span class="string">&#x27;techer&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>通过 fromkeys创建值为空的字典</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="built_in">dict</span>.fromkeys([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;job&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">&#123;<span class="string">&#x27;name&#x27;</span>: <span class="literal">None</span>, <span class="string">&#x27;age&#x27;</span>: <span class="literal">None</span>, <span class="string">&#x27;job&#x27;</span>: <span class="literal">None</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字典元素的访问"><a class="markdownIt-Anchor" href="#字典元素的访问"></a> 字典元素的访问</h3>
+<p>为了测试各种访问方法，我们这里设定一个字典对象：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>通过 [键] 获得“值”。若键不存在，则抛出异常。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;gaoqi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">18</span>,<span class="string">&#x27;job&#x27;</span>:<span class="string">&#x27;programmer&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line"><span class="string">&#x27;gaoqi&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;age&#x27;</span>]</span><br><span class="line"><span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="string">&#x27;sex&#x27;</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">File <span class="string">&quot;&lt;pyshell#374&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">a[<span class="string">&#x27;sex&#x27;</span>]</span><br><span class="line">KeyError: <span class="string">&#x27;sex&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>通过get()方法获得“值”。推荐使用。优点是：指定键不存在，返回None；也可以设定指定键不存在时默认返回的对象。推荐使用get()获取“值对象”。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;gaoqi&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;sex&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.get(<span class="string">&#x27;sex&#x27;</span>,<span class="string">&#x27;一个男人&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;一个男人&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>列出所有的键值对</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.items()</span><br><span class="line">dict_items([(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;gaoqi&#x27;</span>), (<span class="string">&#x27;age&#x27;</span>, <span class="number">18</span>), (<span class="string">&#x27;job&#x27;</span>, <span class="string">&#x27;programmer&#x27;</span>)])</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>列出所有的键，列出所有的值</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.keys()</span><br><span class="line">dict_keys([<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;job&#x27;</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.values()</span><br><span class="line">dict_values([<span class="string">&#x27;gaoqi&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;programmer&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>len()键值对的个数</li>
+<li>检测一个“键”是否在字典中</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;gaoqi&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">18</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">&quot;name&quot;</span> <span class="keyword">in</span> a</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<h1 id="控制语句"><a class="markdownIt-Anchor" href="#控制语句"></a> 控制语句</h1>
+<h1 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h1>
+<h1 id="面向对象"><a class="markdownIt-Anchor" href="#面向对象"></a> 面向对象</h1>
+<h1 id="文件"><a class="markdownIt-Anchor" href="#文件"></a> 文件</h1>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://www.hpstu.cn/python.html" title="python" target="_blank" rel="external">https://www.hpstu.cn/python.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/stock.html" title="stock"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/clion.html" title="clion"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/hpstu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
